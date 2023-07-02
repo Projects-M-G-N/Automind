@@ -1,0 +1,16 @@
+{
+    "name": "dasdwfwfwefwef/capivara",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Kleber",
+            "email": "gabriel.kleber@academico.ifpb.edu.br"
+        }
+    ],
+    "require": {}
+}
