@@ -103,7 +103,7 @@
             <br>
 
             <label for="senha">SENHA</label>
-            <input type="password" name="pass" id="pass" placeholder="Digite sua senha">
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
             <br> 
           
         

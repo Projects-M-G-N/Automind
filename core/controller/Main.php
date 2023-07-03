@@ -16,14 +16,14 @@
 
         }
 
-        public function login()
-        {
+        // public function login()
+        // {
 
-            Functions::Layout([
-                'login'
-            ]);
+        //     Functions::Layout([
+        //         'login'
+        //     ]);
 
-        }
+        // }
 
     }
 

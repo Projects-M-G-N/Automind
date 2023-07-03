@@ -2,8 +2,7 @@
 
     // Coleção de rotas
     $rotas = [
-        'inicio' => 'main@inicio',
-        'login' => 'main@login'
+        'inicio' => 'main@inicio'
     ];
 
     // Ação por defeito
