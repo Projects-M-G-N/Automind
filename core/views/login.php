@@ -110,7 +110,7 @@
             <input type="submit" name="acao" value="Acessar">
         <div class="links">
             <a href="">Central de atendimento</a>
-            <a href="">Criar senha</a>
+            <a href="/Avaliacao-TRI/public/desejo_criar_senha/">Criar senha</a>
         </div>
 
     </form>

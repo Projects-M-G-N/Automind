@@ -7,7 +7,7 @@ session_start();
 require_once('../config.php');
 
 // Login validação(Vê se existe a sessão login)
-if(!isset($_SESSION['login'])){
+if(!isset($_SESSION['login']) || $_SESSION['login'] === false){
 
     // Verifica se o formulario foi enviado
     if(isset($_POST['acao'])){
@@ -20,12 +20,15 @@ if(!isset($_SESSION['login'])){
 
         // Preparação para o comando do BD(prevenir mysql injection)
         $comando = $gestor->prepare("SELECT * FROM usuarios WHERE email = :email AND senha = :senha LIMIT 1");
+
         // Execução do comando(apos a verificação da variavel email e senha)
         $comando->execute(
+
             [
                 ':email' => $_POST['email'],
                 ':senha' => $_POST['senha']
             ]
+
         );
 
         // Checagem para ver se o usuario existe
