@@ -1,7 +1,7 @@
 <?php 
 
 // Nome do aplicação
-define('APP_NAME', 'Capivara mecânica');
+define('APP_NAME', 'AutoMind');
 
 // Banco de Dados
 define('MYSQL_SERVER', 'localhost');

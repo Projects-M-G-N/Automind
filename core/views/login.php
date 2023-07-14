@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title><?= APP_NAME?> | Login</title>
     <style>
         /* Estilizando o bode de ipueira do documento */
         body{

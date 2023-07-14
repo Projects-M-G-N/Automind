@@ -3,20 +3,17 @@
 // Abrir sessão(Para saber se existe alguma sessão login)
 session_start();
 
-// Configurações(Carrega as configurações de base do site)
-require_once('../config.php');
-
 // Login validação(Vê se existe a sessão login)
 if(!isset($_SESSION['login']) || $_SESSION['login'] === false){
+
+    // Configurações(Carrega as configurações de base do site)
+    require_once('../config.php');
 
     // Verifica se o formulario foi enviado
     if(isset($_POST['acao'])){
 
-        // Ignore isso por enquanto
-        // $gestor = new PDO("mysql:host=". MYSQL_SERVER .";bdname=". MYSQL_DATABASE .";charset=utf8", MYSQL_USER, MYSQL_PASS);
-
         // Acessa o BD
-        $gestor = new PDO("mysql:host=localhost;dbname=teste;charset=utf8", "root", "");
+        $gestor = new PDO("mysql:host=" . MYSQL_SERVER . ";dbname=" . MYSQL_DATABASE . ";charset=utf8", MYSQL_USER, MYSQL_PASS);
 
         // Preparação para o comando do BD(prevenir mysql injection)
         $comando = $gestor->prepare("SELECT * FROM usuarios WHERE email = :email AND senha = :senha LIMIT 1");
