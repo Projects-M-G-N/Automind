@@ -18,7 +18,7 @@
             background-color: #fff;
             border-radius: 5px;
             margin-top: 100px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
         } 
         
         /* Estilizando o h2 para o cabeçalho na entrada*/
@@ -84,10 +84,7 @@
 
         /* colocando a imagem de fundo */
         body{
-            background-image: url('https://c0.wallpaperflare.com/preview/974/188/7/brazil-goias-chapada-dos-veadeiros-lago.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;           
+            background-color: #ededed;
         }
         
     </style>
@@ -98,12 +95,12 @@
         <br>
         <form action="" method="post">
             <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu email">
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
             <br> 
             <br>
 
             <label for="senha">SENHA</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
             <br> 
           
         

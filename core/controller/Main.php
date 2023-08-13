@@ -16,14 +16,14 @@
 
         }
 
-        // public function login()
-        // {
+        public function criarprova()
+        {
 
-        //     Functions::Layout([
-        //         'login'
-        //     ]);
+            Functions::Layout([
+                'criarProva'
+            ]);
 
-        // }
+        }
 
     }
 

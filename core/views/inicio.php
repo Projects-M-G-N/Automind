@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= APP_NAME?> | Inicio</title>
+  <title><?= APP_NAME ?> | Inicio</title>
   <style>
     /* Estilos globais */
     body {
@@ -48,7 +49,12 @@
     h3 {
       margin-top: 10px;
       font-weight: bold;
-      color: #FFA500; /* Laranja */
+      color: #FFA500;
+      /* Laranja */
+    }
+
+    h4 {
+      color: #c0810c;
     }
 
     label {
@@ -65,7 +71,8 @@
       padding: 12px;
       margin-top: 5px;
       margin-bottom: 5px;
-      border: 1px solid #FFA500; /* Laranja */
+      border: 1px solid #FFA500;
+      /* Laranja */
       border-radius: 4px;
       font-size: 16px;
       color: #555;
@@ -78,7 +85,8 @@
     input[type="submit"] {
       display: inline-block;
       padding: 12px 24px;
-      background-color: #FFA500; /* Laranja */
+      background-color: #FFA500;
+      /* Laranja */
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -87,7 +95,21 @@
     }
 
     input[type="submit"]:hover {
-      background-color: #ff8c00; /* Laranja mais escuro no hover */
+      background-color: #ff8c00;
+      /* Laranja mais escuro no hover */
+    }
+
+    a.gerar-prova {
+      text-decoration: none;
+      color: #FFA500;
+      transition: .8s;
+    }
+
+    a.gerar-prova:hover {
+      text-decoration: underline;
+      color: #000;
+      font-size: 1.2em;
+      font-weight: 500;
     }
 
     @media screen and (max-width: 800px) {
@@ -98,62 +120,74 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <form class="form" action="" method="post" autocomplete="off">
-<!-- ===================================================================================================================== -->
+    <form class="form" action="" method="post">
+      <!-- ===================================================================================================================== -->
 
       <div class="form-left">
         <div class="form-section">
           <h3>Cadastro de Questão</h3>
 
           <label for="questao">Texto da Questão*</label>
-          <input type="text" name="questao" id="questao" placeholder="Texto da Questão" required maxlength="1500">
+          <input type="text" name="questao" id="questao" placeholder="Texto da Questão" required>
 
           <label for="imagem">Imagem da Questão</label>
           <input type="file" name="imagem" id="imagem" accept="image/*">
 
           <label for="sub-questao">Pergunta da Questão</label>
-          <input type="text" name="sub-questao" id="sub-questao" placeholder="Pergunta da Questão" maxlength="1000">
-<!-- ===================================================================================================================== -->
+          <input type="text" name="sub-questao" id="sub-questao" placeholder="Pergunta da Questão">
+          <!-- ===================================================================================================================== -->
 
           <h3>Alternativas</h3>
+          <div class="form-section">
+            <h4>alternativa correta</h4>
+
+            <select name="alteCor" id="alteCor">
+              <option value="a">A</option>
+              <option value="b">B</option>
+              <option value="c">C</option>
+              <option value="d">D</option>
+              <option value="e">E</option>
+            </select>
+          </div>
 
           <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
 
           <div style="display: block;">
             <div>
               <label for="alternativa_a">Letra A*</label>
-              <input type="text" name="alternativa_a" id="alternativa_a" class="alternativa" required maxlength="800">
+              <input type="text" name="alternativa_a" id="alternativa_a" class="alternativa" required>
             </div>
-          <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
+            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
 
             <div>
               <label for="alternativa_b">Letra B*</label>
-              <input type="text" name="alternativa_b" id="alternativa_b" class="alternativa" required maxlength="800">
+              <input type="text" name="alternativa_b" id="alternativa_b" class="alternativa" required>
             </div>
-          <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
+            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
           </div>
           <div style="display: block;">
             <div>
               <label for="alternativa_c">Letra C*</label>
-              <input type="text" name="alternativa_c" id="alternativa_c" class="alternativa" required maxlength="800">
+              <input type="text" name="alternativa_c" id="alternativa_c" class="alternativa" required>
             </div>
-          <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
+            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
 
             <div>
               <label for="alternativa_d">Letra D*</label>
-              <input type="text" name="alternativa_d" id="alternativa_d" class="alternativa" required maxlength="800">
+              <input type="text" name="alternativa_d" id="alternativa_d" class="alternativa" required>
             </div>
-          <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
+            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
 
           </div>
           <div style="display: block;">
             <div>
               <label for="alternativa_e">Letra E*</label>
-              <input type="text" name="alternativa_e" id="alternativa_e" class="alternativa" required maxlength="800">
+              <input type="text" name="alternativa_e" id="alternativa_e" class="alternativa" required>
             </div>
-          <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
+            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
 
           </div>
         </div>
@@ -161,9 +195,9 @@
 
       <div class="form-right">
         <div class="form-section">
-<!-- ===================================================================================================================== -->
-          
-        <h3>Turmas</h3>
+          <!-- ===================================================================================================================== -->
+
+          <h3>Turmas</h3>
 
           <label for="edif"><input type="radio" name="turma" id="edif" value="edif" checked>Edificações</label>
           <label for="eletro"><input type="radio" name="turma" id="eletro" value="eletro">Eletrotécnica</label>
@@ -173,7 +207,7 @@
 
         <div class="form-section">
 
-<!-- ===================================================================================================================== -->
+          <!-- ===================================================================================================================== -->
 
           <h3>Período*</h3>
 
@@ -190,13 +224,15 @@
             <option value="4">4° Bimestre</option>
           </select>
         </div>
-<!-- ===================================================================================================================== -->
+        <!-- ===================================================================================================================== -->
         <!-- Botão "Cadastrar Questão" -->
         <div class="form-section" style="text-align: center;">
           <input type="submit" value="Cadastrar Questão">
         </div>
+        <a href="./?a=criarprova" class="gerar-prova">Gerar prova</a>
       </div>
     </form>
   </div>
 </body>
+
 </html>
