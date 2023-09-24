@@ -8,13 +8,13 @@ class Redirect{
 
         if(is_null($redirect)){
 
-            return header('Location:/');
+            return header('Location:./');
 
         }
 
         else{
 
-            return header("Location:/$redirect");
+            return header("Location:./$redirect");
             
         }
 

@@ -1,16 +1,17 @@
-<?php 
+<?php
 
 // Abrir sessão(Para saber se existe alguma sessão login)
 session_start();
 
+
 // Login validação(Vê se existe a sessão login)
-if(!isset($_SESSION['login']) || $_SESSION['login'] === false){
+if (!isset($_SESSION['login']) || $_SESSION['login'] === false) {
 
     // Configurações(Carrega as configurações de base do site)
     require_once('../config.php');
 
     // Verifica se o formulario foi enviado
-    if(isset($_POST['acao'])){
+    if (isset($_POST['acao'])) {
 
         // Acessa o BD
         $gestor = new PDO("mysql:host=" . MYSQL_SERVER . ";dbname=" . MYSQL_DATABASE . ";charset=utf8", MYSQL_USER, MYSQL_PASS);
@@ -27,6 +28,7 @@ if(!isset($_SESSION['login']) || $_SESSION['login'] === false){
             ]
 
         );
+        $_SESSION['professor'] = $_POST['email'];
 
         // Checagem para ver se o usuario existe
         if ($comando->rowCount() == 1) {
@@ -35,22 +37,18 @@ if(!isset($_SESSION['login']) || $_SESSION['login'] === false){
 
             // Redirecionamento para a página inicial
             header('Location: /Avaliacao-TRI/public/');
-
         }
-
     }
 
     // Ficar repetindo a tela de login até o usuario entrar
     include('../core/views/login.php');
-
 }
 // Verifica se a sessão esta criada e se ela é verdadeira
-elseif(isset($_SESSION['login']) && $_SESSION['login'] === true){
+elseif (isset($_SESSION['login']) && $_SESSION['login'] === true) {
 
     // Auto load(Conectar as rotas)
     require_once('../vendor/autoload.php');
 
     // Rotas(Gerir as rotas)
     require_once('../core/rotas.php');
-
 }
