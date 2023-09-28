@@ -71,7 +71,7 @@
 <body>
     <div class="entrada">
         <h1>Criação de prova</h1>
-        <form action="" method="post">
+        <form action="?a=gerarProvas" method="post">
 
             <!-- ===================================================================================================================== -->
 

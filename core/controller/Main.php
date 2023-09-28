@@ -16,11 +16,29 @@
 
         }
 
+        public function cadProva()
+        {
+
+            Functions::Layout([
+                'cadProva'
+            ]);
+
+        }
+
         public function criarprova()
         {
 
             Functions::Layout([
                 'criarProva'
+            ]);
+
+        }
+
+        public function gerarProvas()
+        {
+
+            Functions::Layout([
+                'gerarProvas'
             ]);
 
         }

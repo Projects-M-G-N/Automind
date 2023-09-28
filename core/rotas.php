@@ -3,7 +3,9 @@
     // Coleção de rotas
     $rotas = [
         'inicio' => 'main@inicio',
-        'criarprova' => 'main@criarprova'
+        'cadProva' => 'main@cadProva',
+        'criarprova' => 'main@criarprova',
+        'gerarProvas' => 'main@gerarProvas'
     ];
 
     // Ação por defeito
