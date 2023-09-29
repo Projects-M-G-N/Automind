@@ -106,7 +106,7 @@
 
             <!-- ===================================================================================================================== -->
 
-            <input type="submit" value="Criar provas">
+            <input type="submit" value="Criar provas" name="criarprovas">
 
         </form>
     </div>
