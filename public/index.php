@@ -3,7 +3,6 @@
 // Abrir sessão(Para saber se existe alguma sessão login)
 session_start();
 
-
 // Login validação(Vê se existe a sessão login)
 if (!isset($_SESSION['login']) || $_SESSION['login'] === false) {
 
