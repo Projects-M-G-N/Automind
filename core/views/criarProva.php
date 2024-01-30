@@ -75,41 +75,48 @@
 
             <!-- ===================================================================================================================== -->
 
-            <h3>Turma</h3>
-            <label for="edif"><input type="radio" name="turma" id="edif" value="edif" checked>Edificações</label>
-            <label for="eletro"><input type="radio" name="turma" id="eletro" value="elet">Eletrotécnica</label>
-            <label for="info"><input type="radio" name="turma" id="info" value="info">Informática</label>
-            <label for="tst"><input type="radio" name="turma" id="tst" value="segt">Segurança do Trabalho</label>
+            <h3>Turmas</h3>
 
-            <!-- ===================================================================================================================== -->
+            <select name="turma" id="turma">
+                <?php
+                $gestor = new PDO("mysql:host=" . MYSQL_SERVER . ";dbname=" . MYSQL_DATABASE . ";charset=utf8", MYSQL_USER, MYSQL_PASS);
 
-            <h3>Período*</h3>
+                $email = $_SESSION["professor"];
+                $prof = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()["id"];
 
-            <select name="serie" id="serie" required>
-                <option value="1">1° Ano</option>
-                <option value="2">2° Ano</option>
-                <option value="3">3° Ano</option>
+                $turmas = $gestor->query("SELECT turma.* FROM turma, professor WHERE professor.id_turma = turma.id AND professor.id_usuario = $prof");
+                while ($turma = $turmas->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+                    <option value="<?= $turma['id'] ?>"><?= $turma['curso'] ?> <?= $turma['anoletivo'] ?>º ano</option>
+                <?php
+                }
+                ?>
+
             </select>
 
-            <select name="bimestre" id="bimestre" required>
-                <option value="1">1° Bimestre</option>
-                <option value="2">2° Bimestre</option>
-                <option value="3">3° Bimestre</option>
-                <option value="4">4° Bimestre</option>
-            </select>
+        <!-- ===================================================================================================================== -->
 
-            <!-- ===================================================================================================================== -->
+        <h3>Período*</h3>
 
-            <h3>Quantidade de questões*</h3>
+        <select name="bimestre" id="bimestre" required>
+            <option value="1">1° Bimestre</option>
+            <option value="2">2° Bimestre</option>
+            <option value="3">3° Bimestre</option>
+            <option value="4">4° Bimestre</option>
+        </select>
 
-            <input type="number" name="quantQuest" id="quantQuest" min="3" max="30" required value="3">
+        <!-- ===================================================================================================================== -->
 
-            <!-- ===================================================================================================================== -->
+        <h3>Quantidade de questões*</h3>
 
-            <input type="submit" value="Criar provas" name="criarprovas">
+        <input type="number" name="quantQuest" id="quantQuest" min="3" max="90" required value="3">
+
+        <!-- ===================================================================================================================== -->
+
+        <input type="submit" value="Criar provas" name="criarprovas">
 
         </form>
     </div>
 </body>
 
-</html> 
+</html>

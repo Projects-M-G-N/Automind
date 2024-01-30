@@ -8,15 +8,14 @@ $id = $gestor->query("SELECT COUNT(id) count FROM questao ")->fetch()["count"]+1
 $email = $_SESSION["professor"];
 $prof = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()["id"];
 $turma = $_POST['turma'];
-$ano = $_POST['serie'];
-$let = $gestor->query("SELECT id FROM turma WHERE nome='$turma' AND anoletivo=$ano")->fetch()["id"];
 $bimestre = $_POST['bimestre'];
-$sql_quest = $gestor->query("INSERT INTO questao VALUES ($id, $prof, $let, $bimestre);");
+$data = date('Y-m-d H:m:s');
+$sql_quest = $gestor->query("INSERT INTO questao VALUES ($id, $prof, $turma, $bimestre, '$data');");
 
 $textquest = $_POST['questao'];
 $sql_text = $gestor->query("INSERT INTO textoquestao VALUES ($id, '$textquest');");
 
-if (isset($_FILES['imagem'])) {
+if (!empty($_FILES['imagem'])) {
     $img = uniqid();
     $extensao = strtolower(pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION));
     $imagem = $img . "." . $extensao;

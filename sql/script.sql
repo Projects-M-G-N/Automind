@@ -18,11 +18,39 @@ CREATE TABLE turma (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE administrador (
+    id_usuario INT NOT NULL,
+    PRIMARY KEY (id_usuario),
+    FOREIGN KEY (id_usuario)
+        REFERENCES usuarios (id)
+);
+
+CREATE TABLE professor (
+    id_usuario INT NOT NULL,
+    id_turma INT NOT NULL,
+    PRIMARY KEY (id_usuario , id_turma),
+    FOREIGN KEY (id_usuario)
+        REFERENCES usuarios (id),
+    FOREIGN KEY (id_turma)
+        REFERENCES turma (id)
+);
+
+CREATE TABLE alunos (
+    id INT NOT NULL AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    curso INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (curso)
+        REFERENCES turma (id)
+);
+
 CREATE TABLE questao (
     id INT NOT NULL UNIQUE,
     idprofessor INT NOT NULL,
     turmaquestao INT NOT NULL,
     bimestrequestao INT NOT NULL,
+    data_cad DATETIME NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (idprofessor)
         REFERENCES usuarios (id),
@@ -59,7 +87,12 @@ CREATE TABLE alternativas (
     PRIMARY KEY (id)
 );
 
-INSERT INTO usuarios VALUES (NULL, 'teste', 'teste@gmail.com', '1234567890');
+INSERT INTO usuarios VALUES (NULL, 'teste', 'teste@gmail.com', '1234567890'),
+							(NULL, 'adm', 'adm@adm.com', 'adm12345'),
+                            (NULL, 'professor', 'prof@prof.com', 'prof12345'),
+                            (NULL, 'teste', 'teste@teste.com', NULL);
+
+INSERT INTO administrador VALUES (2);
 
 INSERT INTO turma VALUES (NULL, 'edif', 'Edificações',  1),
 						 (NULL, 'edif', 'Edificações', 2),
@@ -73,3 +106,19 @@ INSERT INTO turma VALUES (NULL, 'edif', 'Edificações',  1),
                          (NULL, 'tst', 'Segurança do Trabalho', 1),
                          (NULL, 'tst', 'Segurança do Trabalho', 2),
                          (NULL, 'tst', 'Segurança do Trabalho', 3);
+                         
+INSERT INTO professor VALUES (1, 7),
+							 (1, 8),
+                             (1, 9),
+                             (3, 1),
+                             (3, 2),
+                             (3, 3),
+                             (3, 4),
+                             (3, 5),
+                             (3, 6),
+                             (3, 7),
+                             (3, 8),
+                             (3, 9),
+                             (3, 10),
+                             (3, 11),
+                             (3, 12);
