@@ -71,9 +71,7 @@
 <body>
     <div class="entrada">
         <h1>Criação de prova</h1>
-        <form action="?a=gerarProvas" method="post">
-
-            <!-- ===================================================================================================================== -->
+        <form action="?a=gerarProvas" method="post" id="formulario">
 
             <h3>Turmas</h3>
 
@@ -94,29 +92,28 @@
 
             </select>
 
-        <!-- ===================================================================================================================== -->
+            <h3>Período*</h3>
 
-        <h3>Período*</h3>
+            <select name="bimestre" id="bimestre" required>
+                <option value="1">1° Bimestre</option>
+                <option value="2">2° Bimestre</option>
+                <option value="3">3° Bimestre</option>
+                <option value="4">4° Bimestre</option>
+            </select>
 
-        <select name="bimestre" id="bimestre" required>
-            <option value="1">1° Bimestre</option>
-            <option value="2">2° Bimestre</option>
-            <option value="3">3° Bimestre</option>
-            <option value="4">4° Bimestre</option>
-        </select>
+            <?php echo $gestor->query("SELECT COUNT(questao.id) AS num FROM questao, usuarios WHERE questao.idprofessor = usuarios.id AND usuarios.id = $prof")->fetch()['num']?>
+            <input type="hidden" name="professor" id="professor" value="<?= $prof?>">
 
-        <!-- ===================================================================================================================== -->
+            <h3>Quantidade de questões*</h3>
 
-        <h3>Quantidade de questões*</h3>
-
-        <input type="number" name="quantQuest" id="quantQuest" min="3" max="90" required value="3">
-
-        <!-- ===================================================================================================================== -->
-
-        <input type="submit" value="Criar provas" name="criarprovas">
+            <input type="number" name="quantQuest" id="quantQuest" min="3" max="45" required value="3">
+            <input type="submit" value="Criar provas" name="criarprovas" id="criarprovas">
 
         </form>
     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/js/criarProva.js"></script>
 </body>
 
 </html>
