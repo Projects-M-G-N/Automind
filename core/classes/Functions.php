@@ -33,7 +33,7 @@ class Functions
     }
 
 
-    public function sorteioGabarito($listaQuestoes ,$totalProvas, $quantQuestoes)
+    public function sorteioGabarito($listaQuestoes, $totalProvas, $quantQuestoes)
     {
         $listaProvas = [];
         $quantProvas = 1;
@@ -53,7 +53,7 @@ class Functions
             $listaTemp = [];
             $i = 0;
             while ($i < $quantQuestoes) {
-                $quest = $listaQuestoes[rand(0, sizeof($listaQuestoes) - 1)];
+                $quest = $listaQuestoes[rand(0, sizeof($listaQuestoes) - 1)]['id'];
                 if (!in_array($quest, $listaTemp)) {
                     array_push($listaTemp, $quest);
                     $i++;
@@ -67,5 +67,30 @@ class Functions
         }
         
         return $listaProvas;
+    }
+
+    public function gerarGabaritos($listaQuestoes, $listaAlunos, $totalProvas, $quantQuestoes) {
+        $gabaritos = $this->sorteioGabarito($listaQuestoes, $totalProvas, $quantQuestoes);
+
+        if($totalProvas > sizeof($gabaritos)) {
+            $alunosPorProva = intval($totalProvas / sizeof($gabaritos)) + 1;
+        } else {
+            $alunosPorProva = 1;
+        }
+
+        $listaGabaritos = [];
+        $cont = 0;
+        foreach ($gabaritos as $gabarito) {
+            for ($i = ($alunosPorProva * $cont); $i < ($alunosPorProva * ($cont + 1)); $i++) { 
+                if($i >= $totalProvas) {
+                    break;
+                }
+                $prova = [$listaAlunos[$i]['id'], $gabarito];
+                array_push($listaGabaritos, $prova);
+            }
+            $cont ++;
+        }
+
+        return $listaGabaritos;
     }
 }

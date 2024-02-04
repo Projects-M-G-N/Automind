@@ -100,8 +100,7 @@
                 <option value="3">3° Bimestre</option>
                 <option value="4">4° Bimestre</option>
             </select>
-
-            <?php echo $gestor->query("SELECT COUNT(questao.id) AS num FROM questao, usuarios WHERE questao.idprofessor = usuarios.id AND usuarios.id = $prof")->fetch()['num']?>
+            
             <input type="hidden" name="professor" id="professor" value="<?= $prof?>">
 
             <h3>Quantidade de questões*</h3>

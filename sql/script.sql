@@ -87,6 +87,18 @@ CREATE TABLE alternativas (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE provas (
+    id INT NOT NULL AUTO_INCREMENT,
+    id_aluno INT NOT NULL,
+    id_professor INT NOT NULL,
+    questoes TEXT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_aluno)
+        REFERENCES alunos (id),
+    FOREIGN KEY (id_professor)
+        REFERENCES professor (id_usuario)
+);
+
 INSERT INTO usuarios VALUES (NULL, 'teste', 'teste@gmail.com', '1234567890'),
 							(NULL, 'adm', 'adm@adm.com', 'adm12345'),
                             (NULL, 'professor', 'prof@prof.com', 'prof12345'),
