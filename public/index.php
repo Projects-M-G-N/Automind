@@ -3,11 +3,11 @@
 // Abrir sessão(Para saber se existe alguma sessão login)
 session_start();
 
-// Login validação(Vê se existe a sessão login)
-if (!isset($_SESSION['login']) || $_SESSION['login'] === false) {
+// Carregando todas as classesdo projeto
+require_once('../vendor/autoload.php');
 
-    // Configurações(Carrega as configurações de base do site)
-    require_once('../config.php');
+// Login validação(Vê se existe a sessão login)
+if (!isset($_SESSION['login'])) {
 
     // Verifica se o formulario foi enviado
     if (isset($_POST['acao'])) {
@@ -39,15 +39,10 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] === false) {
         }
     }
 
-    // Ficar repetindo a tela de login até o usuario entrar
-    include('../core/views/login.php');
 }
 // Verifica se a sessão esta criada e se ela é verdadeira
-elseif (isset($_SESSION['login']) && $_SESSION['login'] === true) {
-
-    // Auto load(Conectar as rotas)
-    require_once('../vendor/autoload.php');
-
-    // Rotas(Gerir as rotas)
+if(isset($_SESSION['login'])) {
     require_once('../core/rotas.php');
+} else {
+    require_once('../core/login.php');
 }
