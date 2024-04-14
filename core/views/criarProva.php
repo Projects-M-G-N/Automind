@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= APP_NAME ?> | Criação de prova</title>
-    <style>
-        /* Estilizando o corpo do documento */
+    <link rel="stylesheet" href="./public/assets/css/criarProvas.css">
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #ededed;
@@ -14,7 +14,6 @@
             padding: 0;
         }
 
-        /* Estilizando a entrada */
         .entrada {
             max-width: 400px;
             margin: 0 auto;
@@ -64,52 +63,21 @@
         h1 {
             color: #ff6f00;
         }
-    </style>
+    </style> -->
 
 </head>
 
 <body>
-    <div class="entrada">
-        <h1>Criação de prova</h1>
-        <form action="?a=gerarProvas" method="post" id="formulario">
+    <?php 
+    $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
+    $email = $_SESSION['usuario'];
 
-            <h3>Turmas</h3>
-
-            <select name="turma" id="turma">
-                <?php
-                $gestor = new PDO("mysql:host=" . MYSQL_SERVER . ";dbname=" . MYSQL_DATABASE . ";charset=utf8", MYSQL_USER, MYSQL_PASS);
-
-                $email = $_SESSION["professor"];
-                $prof = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()["id"];
-
-                $turmas = $gestor->query("SELECT turma.* FROM turma, professor WHERE professor.id_turma = turma.id AND professor.id_usuario = $prof");
-                while ($turma = $turmas->fetch(PDO::FETCH_ASSOC)) {
-                ?>
-                    <option value="<?= $turma['id'] ?>"><?= $turma['curso'] ?> <?= $turma['anoletivo'] ?>º ano</option>
-                <?php
-                }
-                ?>
-
-            </select>
-
-            <h3>Período*</h3>
-
-            <select name="bimestre" id="bimestre" required>
-                <option value="1">1° Bimestre</option>
-                <option value="2">2° Bimestre</option>
-                <option value="3">3° Bimestre</option>
-                <option value="4">4° Bimestre</option>
-            </select>
-            
-            <input type="hidden" name="professor" id="professor" value="<?= $prof?>">
-
-            <h3>Quantidade de questões*</h3>
-
-            <input type="number" name="quantQuest" id="quantQuest" min="3" max="45" required value="3">
-            <input type="submit" value="Criar provas" name="criarprovas" id="criarprovas">
-
-        </form>
-    </div>
+    $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
+    $questoes = $gestor->query("SELECT id FROM questao WHERE visu='Publico' OR idprofessor='$usuario'")->fetchAll();
+    foreach ($questoes as $questao) {
+        echo $questao['id'] . '<br>';
+    }
+    ?>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./assets/js/criarProva.js"></script>

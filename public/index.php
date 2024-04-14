@@ -27,7 +27,7 @@ if (!isset($_SESSION['login'])) {
             ]
 
         );
-        $_SESSION['professor'] = $_POST['email'];
+        $_SESSION['usuario'] = $_POST['email'];
 
         // Checagem para ver se o usuario existe
         if ($comando->rowCount() == 1) {
@@ -35,7 +35,7 @@ if (!isset($_SESSION['login'])) {
             $_SESSION['login'] = true;
 
             // Redirecionamento para a página inicial
-            header('Location: /Avaliacao-TRI/public/');
+            header('Location: /Avaliacao-TRI/');
         }
     }
 

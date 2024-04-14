@@ -5,12 +5,13 @@ if (!isset($_POST['cadastrar'])) {
 
 $gestor = new PDO("mysql:host=" . MYSQL_SERVER . ";dbname=" . MYSQL_DATABASE . ";charset=utf8", MYSQL_USER, MYSQL_PASS);
 $id = $gestor->query("SELECT COUNT(id) count FROM questao ")->fetch()["count"]+1;
-$email = $_SESSION["professor"];
+$email = $_SESSION["usuario"];
 $prof = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()["id"];
-$turma = $_POST['turma'];
-$bimestre = $_POST['bimestre'];
+$assunto = $_POST['assunto'];
+$visu = $_POST['visu'];
+$dificuldade = $_POST['dif'];
 $data = date('Y-m-d H:m:s');
-$sql_quest = $gestor->query("INSERT INTO questao VALUES ($id, $prof, $turma, $bimestre, '$data');");
+$sql_quest = $gestor->query("INSERT INTO questao VALUES ($id, $prof, $assunto, '$visu', '$dificuldade', '$data');");
 
 $textquest = $_POST['questao'];
 $sql_text = $gestor->query("INSERT INTO textoquestao VALUES ($id, '$textquest');");

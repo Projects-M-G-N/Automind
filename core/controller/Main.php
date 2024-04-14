@@ -16,6 +16,15 @@
 
         }
 
+        public function cadQuestao()
+        {
+
+            Functions::Layout([
+                'cadQuest'
+            ]);
+
+        }
+
         public function cadProva()
         {
 

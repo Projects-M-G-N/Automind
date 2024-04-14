@@ -3,6 +3,7 @@
     // Coleção de rotas
     $rotas = [
         'inicio' => 'main@inicio',
+        'cadQuestao' => 'main@cadQuestao',
         'cadProva' => 'main@cadProva',
         'criarprova' => 'main@criarprova',
         'gerarProvas' => 'main@gerarProvas'
