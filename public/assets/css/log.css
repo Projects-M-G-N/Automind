@@ -1,6 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ededed;
+    background-color: rgb(34,34,34);
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-/* alteraçao*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+h1{
+    font-weight: 200;
+    font-size: 40px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 52px;
+    line-height: 10px;
+}
+
+span{
+    color: #229a00;
+}
+
+a{
+    color: white;
+    font-size: 30px;
+}
+
+#conta{
+    border: 2px solid #229a00;
+    padding: 10px;
+    border-radius: 20px;
+}
+#conta:hover{
+    background-color: #229a00;
+    color: white;
+}
+a:hover{
+    color: #229a00;
+    transition: o.3s all;
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
