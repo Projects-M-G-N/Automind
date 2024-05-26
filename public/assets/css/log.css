@@ -102,6 +102,15 @@ main .caixa #about .slider {
     margin-left: -72px;
 }
 
+main .caixa #about .slider .fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #25252556;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
 main .caixa #about .slider .img-slider {
     opacity: 0;
     position: absolute;

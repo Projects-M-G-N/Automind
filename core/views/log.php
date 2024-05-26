@@ -16,8 +16,8 @@
                 <!-- <img src="./public/assets/images/logo.png" alt="logozinha"> -->
             </div>
             <div class="botoes">
-                <button onclick="window.location.href='./?s=cadastro'">Cadastro</button>
-                <button onclick="window.location.href='./?s=login'">Login</button>
+                <button onclick="window.location.href='./?a=login'">Cadastro</button>
+                <button onclick="window.location.href='./?a=login'">Login</button>
             </div>
         </div>
     </header>
@@ -25,9 +25,10 @@
         <div class="caixa">
             <div id="about">
                 <div class="slider">
-                    <img src="./public/assets/img/slides/verde.jpg" alt="" class="img-slider selected">
-                    <img src="./public/assets/img/slides/azul.jpg" alt="" class="img-slider">
-                    <img src="./public/assets/img/slides/vermelho.jpg" alt="" class="img-slider">
+                    <div class="fill"></div>
+                    <img src="./public/assets/img/slides/pessoaNoCeular.jpg" alt="" class="img-slider selected">
+                    <img src="./public/assets/img/slides/alunos.jpg" alt="" class="img-slider">
+                    <img src="./public/assets/img/slides/pessoaNoNotebook.jpg" alt="" class="img-slider">
                 </div>
                 <h1><span>Entre para </span></h1>
                 <h1>nossa comunidade</h1>
@@ -35,7 +36,7 @@
                     <p>A plataforma Automind utiliza a Teoria de resposta ao item TRI para gerar provas e corrigi-las com o mesmo método aplicado pelo Exame Nacional do Ensino Médio ENEM. Esse sistema é utilizado para evitar pontuações altas através de acertos casuais (onde o aluno não sabia a resposta da questão).</p>
                 </div>
                 <div class="entrar">
-                    <button onclick="window.location.href='./?s=cadastro'">Junte-se a nós</button>
+                    <button onclick="window.location.href='./?a=login'">Junte-se a nós</button>
                 </div>
                 <div class="imagens-slide">
                     <label for="" onclick="proxImage(0, true)" class="select"></label>
@@ -90,7 +91,7 @@
                 <div class="propa">
                     <h1>Ainda não tem um conta?</h1>
                     <h3>Faça seu cadastro no melhor site de gerenciamento financeiro do mercado!</h3>
-                    <button onclick="window.location.href='./?s=cadastro'">Cadastre-se</button>
+                    <button onclick="window.location.href='./?a=login'">Cadastre-se</button>
                 </div>
             </div>
         </div>
