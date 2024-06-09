@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <form class="form" action="?a=cadProva" method="post" enctype="multipart/form-data">
+    <form class="form" action="?a=cadProva" method="post" enctype="multipart/form-data" autocomplete="off">
       <!-- ===================================================================================================================== -->
 
       <div class="form-left">

@@ -3,23 +3,23 @@ CREATE SCHEMA automind;
 USE automind;
 
 CREATE TABLE plano (
-    id INT NOT NULL auto_increment,
-    valor DECIMAL(10 , 2) NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
+    valor DECIMAL(10 , 2 ) NOT NULL,
     tipo VARCHAR(10) NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE tags (
-	id int not null auto_increment,
-    nome text not null unique,
-    primary key (id)
+    id INT NOT NULL AUTO_INCREMENT,
+    nome TEXT NOT NULL UNIQUE,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE usuarios (
     id INT NOT NULL AUTO_INCREMENT UNIQUE,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    senha VARCHAR(50) not null,
+    senha VARCHAR(50) NOT NULL,
     plano INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (plano)
@@ -29,14 +29,17 @@ CREATE TABLE usuarios (
 CREATE TABLE questao (
     id INT NOT NULL UNIQUE,
     idprofessor INT NOT NULL,
-    assunto int not null,
-    visu varchar(10) not null,
-    dificuldade varchar(10) not null,
+    assunto INT NOT NULL,
+    texto_questao TEXT NOT NULL,
+    img TEXT,
+    pergunta TEXT,
+    visu VARCHAR(10) NOT NULL,
+    dificuldade VARCHAR(10) NOT NULL,
     data_cad DATETIME NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (idprofessor)
         REFERENCES usuarios (id),
-	FOREIGN KEY (assunto)
+    FOREIGN KEY (assunto)
         REFERENCES tags (id)
 );
 
@@ -73,24 +76,6 @@ CREATE TABLE alunos (
     PRIMARY KEY (id),
     FOREIGN KEY (curso)
         REFERENCES turma (id)
-);
-
-CREATE TABLE textoquestao (
-    id INT NOT NULL UNIQUE,
-    textoquestao TEXT NOT NULL,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE imgquestao (
-    id INT NOT NULL UNIQUE,
-    img TEXT,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE perguntaquestao (
-    id INT NOT NULL UNIQUE,
-    textoquestao TEXT,
-    PRIMARY KEY (id)
 );
 
 CREATE TABLE alternativas (
