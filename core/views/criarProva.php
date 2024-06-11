@@ -20,11 +20,12 @@
 
     <main>
         <div class="questoes">
+            <input type="hidden" name="" id="idUsu" value="<?= $usuario?>">
             <?php
             while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
                 $id_quest = $questao['id'];
                 $texto = $questao['texto_questao'];
-                $img = is_null($questao['img']) ? null : "./public/assets/img/" . $questao['img'];
+                $img = $questao['img'];
                 $pergunta = is_null($questao['pergunta']) ? null : $questao['pergunta'];
                 $dificuldade = $questao['dificuldade'];
                 $alternativas = $gestor->query("SELECT * FROM alternativas WHERE id='$id_quest'");
@@ -44,7 +45,7 @@
                                 <li class="<?php echo ($alt['alternativacorreta'] == 'e') ? "altCorreta alternativa" : "alternativa"?>">E - <?= $alt['alternativae']?></li>
                             </ul>
                         </div>
-                        <button class="add" onclick="addQuest(<?= $id_quest?>)">
+                        <button class="add" onclick="addQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= $id_quest?>" value="<?= $id_quest?>">
                             Adicionar Questão
                         </button>
                     </div>
@@ -52,7 +53,14 @@
             } ?>
         </div>
         <div class="prova">
-
+            <div class="graficoDifQuestoes">
+                
+            </div>
+            <div class="listaQuestoes">
+                <ul>
+                    
+                </ul>
+            </div>
         </div>
     </main>
 

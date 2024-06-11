@@ -91,14 +91,13 @@ CREATE TABLE alternativas (
 
 CREATE TABLE provas (
     id INT NOT NULL AUTO_INCREMENT,
-    id_aluno INT NOT NULL,
-    id_professor INT NOT NULL,
-    questoes TEXT NOT NULL,
+    usuario INT NOT NULL,
+    questoes INT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (id_aluno)
-        REFERENCES alunos (id),
-    FOREIGN KEY (id_professor)
-        REFERENCES professor (id_usuario)
+    FOREIGN KEY (usuario)
+        REFERENCES usuarios (id),
+	FOREIGN KEY (questoes)
+        REFERENCES questao (id)
 );
 
 INSERT INTO plano VALUES (NULL, 0, "Gratuito");
