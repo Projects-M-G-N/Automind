@@ -1,68 +1,140 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ededed;
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.33rem;
 }
 
-.entrada {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-top: 100px;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
-} 
-
-.entrada h2 {
-    text-align: center;
-    color: #333;
+:root {
+    --bg-color: #201b2c;
+    --card-bg-color: #2f2841;
+    --primary-color: #00ff88;
+    --secondary-color: #77ffc0;
+    --input-bg-color: #514869;
+    --input-text-color: #f0ffffde;
+    --placeholder-color: #f0ffff94;
+    --btn-bg-color: #00ff88;
+    --btn-text-color: black;
+    --shadow-color: #00000056;
 }
 
-.entrada label { 
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
-.entrada input[type="email"],
-.entrada input[type="password"]{
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    margin-bottom: 10px;
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    padding: 0 6.65vw;
     box-sizing: border-box;
 }
 
-.entrada input[type="submit"]{
+.laft-login, .right-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 100%;
+    padding: 0 3.325vw;
+    box-sizing: border-box;
+}
+
+.titulo {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 2rem;
+}
+
+.card-login {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 46.65px;
+    background-color: var(--card-bg-color);
+    border-radius: 26px;
+    box-shadow: 0px 13px 53px var(--shadow-color);
+}
+
+.card-login > h1 {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 13px 0;
     width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #ff6f00;
-    color: #fff;
+}
+
+.textfield > label {
+    color: white;
+    margin-bottom: 13px;
+    font-size: 1.33rem;
+}
+
+.textfield > input {
+    width: 100%;
+    padding: 13px;
     border: none;
-    border-radius: 5px;
+    border-radius: 13px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    font-size: 1.33rem;
+    box-shadow: 0px 13px 53px var(--shadow-color);
+    box-sizing: border-box;
+}
+
+.textfield > input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 21px 0;
+    margin: 33px 0;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 1.33rem;
+    color: var(--btn-text-color);
+    background-color: var(--btn-bg-color);
     cursor: pointer;
-    font-size: 20px;
-    
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 13px 53px var(--shadow-color);
 }
 
-.entrada .links {
-    text-align: center;
-    margin-top: 20px;
+.btn-login:hover {
+    background-color: var(--primary-color);
 }
 
-.entrada .links a {
-    margin-right: 10px;
-    color: #ff6f00;
-    text-decoration: none;
-    transition: .3s;
-    font-size: .8em;
-}
+@media (max-width: 768px) {
+    .main-login {
+        flex-direction: column;
+        padding: 0 2.67vw;
+    }
 
-.entrada .links a:hover {
-    color: #000;
-    text-decoration: underline;
-}
+    .laft-login, .right-login {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
 
+    .card-login {
+        width: 80%;
+    }
+}

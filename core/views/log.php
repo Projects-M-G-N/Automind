@@ -24,12 +24,12 @@
     <main>
         <div class="caixa">
             <div id="about">
-                <div class="slider">
+                <!-- <div class="slider">
                     <div class="fill"></div>
                     <img src="./public/assets/img/slides/pessoaNoCeular.jpg" alt="" class="img-slider selected">
                     <img src="./public/assets/img/slides/alunos.jpg" alt="" class="img-slider">
                     <img src="./public/assets/img/slides/pessoaNoNotebook.jpg" alt="" class="img-slider">
-                </div>
+                </div> -->
                 <h1><span>Entre para </span></h1>
                 <h1>nossa comunidade</h1>
                 <div class="about-text">
