@@ -81,7 +81,7 @@ body main .questoes .questao button.cad {
     height: 40px;
     background-color: #008000;
     color: #fff;
-    border: 1px solid rgb(114, 114, 114);
+    border: 1px solid #727272;
     border-radius: 12px;
     margin-left: auto;
     outline: none;
@@ -91,7 +91,30 @@ body main .questoes .questao button.cad {
 body main .prova {
     width: 50%;
     position: fixed;
-    padding: 20px;
+    padding: 20px 0 20px 20px;
     top: 0;
     right: 0;
+}
+
+body main .prova .popUp {
+    width: 100%;
+    height: fit-content;
+    min-height: 200px;
+    max-height: 300px;
+    margin-left: auto;
+    display: flex;
+    background-color: #e9e9e9;
+    border: 1px solid #727272;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+}
+
+body main .prova .popUp .graficoDifQuestoes {
+    width: 50%;
+    /* background-color: red; */
+}
+
+body main .prova .popUp .listaQuestoes {
+    width: 50%;
+    /* background-color: #008000; */
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= APP_NAME ?> | Criação de prova</title>
     <link rel="stylesheet" href="./public/assets/css/criarProvas.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -53,13 +54,15 @@
             } ?>
         </div>
         <div class="prova">
-            <div class="graficoDifQuestoes">
+            <div class="popUp">
+                <div class="graficoDifQuestoes">
+                    <canvas id="graficoDif"></canvas>
+                </div>
+                <div class="listaQuestoes">
+                    <ul>
                 
-            </div>
-            <div class="listaQuestoes">
-                <ul>
-                    
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
