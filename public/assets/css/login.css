@@ -11,16 +11,18 @@ body, html {
 }
 
 :root {
-    --bg-color: #201b2c;
-    --card-bg-color: #2f2841;
-    --primary-color: #00ff88;
-    --secondary-color: #77ffc0;
-    --input-bg-color: #514869;
-    --input-text-color: #f0ffffde;
-    --placeholder-color: #f0ffff94;
-    --btn-bg-color: #00ff88;
-    --btn-text-color: black;
-    --shadow-color: #00000056;
+    --bg-color: #f1f1f1;
+    --card-bg-color: #ffffff;
+    --primary-color: #4CAF50; 
+    --secondary-color: #81C784; 
+    --input-bg-color: #FFFFFF; 
+    --input-text-color: #555555; 
+    --placeholder-color: #888888; 
+    --btn-bg-color: #4CAF50; 
+    --btn-text-color: #FFFFFF; 
+    --btn-hover-bg-color: #388E3C; 
+    --btn-hover-text-color: #fffefe; 
+    --shadow-color: rgba(0, 0, 0, 0.1); 
 }
 
 .main-login {
@@ -34,7 +36,7 @@ body, html {
     box-sizing: border-box;
 }
 
-.laft-login, .right-login {
+.left-login, .right-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +46,7 @@ body, html {
     box-sizing: border-box;
 }
 
-.titulo {
+.title {
     color: var(--secondary-color);
     margin: 0;
     font-size: 2rem;
@@ -52,6 +54,7 @@ body, html {
 
 .card-login {
     width: 80%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +82,7 @@ body, html {
 }
 
 .textfield > label {
-    color: white;
+    color: var(--input-text-color);
     margin-bottom: 13px;
     font-size: 1.33rem;
 }
@@ -119,7 +122,8 @@ body, html {
 }
 
 .btn-login:hover {
-    background-color: var(--primary-color);
+    background-color: var(--btn-text-color) ;
+    color: var(--btn-bg-color) ;
 }
 
 @media (max-width: 768px) {
@@ -128,7 +132,7 @@ body, html {
         padding: 0 2.67vw;
     }
 
-    .laft-login, .right-login {
+    .left-login, .right-login {
         width: 100%;
         height: auto;
         padding: 0;

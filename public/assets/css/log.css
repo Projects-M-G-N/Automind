@@ -11,17 +11,17 @@
 }
 
 :root {
-    --bg-color: #201b2c;
-    --card-bg-color: #2f2841;
-    --primary-color: #00ff88;
-    --secondary-color: #77ffc0;
-    --input-bg-color: #514869;
-    --input-text-color: #f0ffffde;
-    --placeholder-color: #f0ffff94;
-    --btn-bg-color: #00ff88;
-    --btn-text-color: black;
-    --shadow-color: #00000056;
-    --header-bg-color: #302f2f;
+    --bg-color: #f1f1f1;
+    --card-bg-color: #FFFFFF;
+    --primary-color: #4CAF50; 
+    --secondary-color: #81C784;
+    --input-bg-color: #FFFFFF; 
+    --input-text-color: #555555;
+    --placeholder-color: #888888;
+    --btn-bg-color: #4CAF50;
+    --btn-text-color: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-bg-color: #FFFFFF; 
 }
 
 html {
@@ -30,6 +30,7 @@ html {
 
 body {
     background-color: var(--bg-color);
+    color: var(--input-text-color);
 }
 
 header {
@@ -40,6 +41,7 @@ header {
     justify-content: space-between;
     background-color: var(--header-bg-color);
     padding: 0 20px;
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 header .logo {
@@ -71,9 +73,8 @@ header .botoes button {
 }
 
 header .botoes button:hover {
-    outline: 1px solid var(--primary-color);
-    color: var(--primary-color);
     background-color: var(--header-bg-color);
+    color: var(--primary-color);
 }
 
 main .caixa {
@@ -262,12 +263,7 @@ footer {
     background-color: var(--header-bg-color);
     color: var(--input-text-color);
     text-align: center;
-}
-
-footer .rodape {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    box-shadow: 0 -4px 8px var(--shadow-color);
 }
 
 footer .rodape .boxs {
@@ -301,9 +297,4 @@ footer .rodape .boxs .redes-sociais ul li a i {
 
 footer .rodape .boxs .redes-sociais ul li a i:hover {
     color: var(--primary-color);
-}
-
-footer .copy {
-    margin-top: 20px;
-    font-size: 1rem;
 }
