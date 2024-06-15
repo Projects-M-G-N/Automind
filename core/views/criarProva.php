@@ -32,7 +32,7 @@
                 $alternativas = $gestor->query("SELECT * FROM alternativas WHERE id='$id_quest'");
                 while ($alt = $alternativas->fetch(PDO::FETCH_ASSOC)) {
             ?>
-                    <div class="questao">
+                    <div class="questao" id="quest<?= $id_quest?>">
                         <h4>Dificuldade: <?= $dificuldade?></h4>
                         <p class="texto-questao"><?= $texto ?></p class="texto-questao">
                         <img src="<?= $img ?>" alt="">
@@ -59,8 +59,9 @@
                     <canvas id="graficoDif"></canvas>
                 </div>
                 <div class="listaQuestoes">
+                    <h4>Questões:</h4>
                     <ul>
-                
+                        
                     </ul>
                 </div>
             </div>

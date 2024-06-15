@@ -111,10 +111,39 @@ body main .prova .popUp {
 
 body main .prova .popUp .graficoDifQuestoes {
     width: 50%;
-    /* background-color: red; */
+    display: flex;
+    align-items: center;
 }
 
 body main .prova .popUp .listaQuestoes {
     width: 50%;
-    /* background-color: #008000; */
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px 12px;
+}
+
+body main .prova .popUp .listaQuestoes ul {
+    width: 100%;
+}
+
+body main .prova .popUp .listaQuestoes ul a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+body main .prova .popUp .listaQuestoes ul a li {
+    flex: auto;
+    text-align: center;
+    list-style: none;
+    border: 1px solid #727272;
+    padding: 4px 0;
+    color: #000;
+    transition: .4s;
+}
+
+body main .prova .popUp .listaQuestoes ul a li:hover {
+    background-color: #9b9b9b;
 }

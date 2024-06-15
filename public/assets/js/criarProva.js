@@ -4,7 +4,6 @@ async function addQuest(id, idProf) {
     var btn = document.getElementById(id);
     const dados = await fetch('./public/api/cadQuestao.php?idQuest=' + id + '&idProf=' + idProf);
     const resposta = await dados.json();
-    console.log(resposta)
     btn.innerHTML = "<i class='bi bi-check2'></i> Questão cadastrada";
     btn.classList.add('cad');
     btn.classList.remove('add');
@@ -28,6 +27,7 @@ async function check(id) {
         }
     }
     grafico(lista);
+    listarQuestoes(lista);
 }
 
 
@@ -66,6 +66,18 @@ async function grafico(lista) {
         }
     }
     graficoDif.update();
+    valores[0] = 0;
+    valores[1] = 0;
+    valores[2] = 0;
+}
+
+function listarQuestoes(ids) {
+    let lista = document.querySelector('.listaQuestoes ul');
+    lista.innerHTML = ''
+    for (let index = 0; index < ids.length; index++) {
+        const element = ids[index];
+        lista.innerHTML += "<a href='#quest" + element + "'><li>Questão " + (index + 1) +"</li></a>";
+    }
 }
 
 check(usuario);
