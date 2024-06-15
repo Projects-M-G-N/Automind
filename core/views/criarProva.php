@@ -65,6 +65,9 @@
                     </ul>
                 </div>
             </div>
+            <div class="botao">
+                <a href="./?a=inicio"> voltar ao inicio</a>
+            </div>
         </div>
     </main>
 

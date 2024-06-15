@@ -102,7 +102,14 @@ CREATE TABLE provas (
 
 INSERT INTO plano VALUES (NULL, 0, "Gratuito");
 
-INSERT INTO tags VALUES (NULL, 'nhwebfherb');
+INSERT INTO tags VALUES (NULL, 'Movimento Uniforme'),
+                        (NULL, 'Movimentos Uniformementes Variados'),
+                        (NULL, 'Eletrodinâmica'),
+                        (NULL, 'Eletromagnetismo'),
+                        (NULL, 'Eletroestática');
+
+
+
 
 INSERT INTO usuarios VALUES (NULL, 'teste', 'teste@gmail.com', '1234567890', 1),
 							(NULL, 'adm', 'adm@adm.com', 'adm12345', 1),
