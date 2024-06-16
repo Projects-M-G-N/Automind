@@ -66,4 +66,4 @@ $sql_alt->execute(
     ]
 );
 
-header('Location: ./');
+header('Location: ./?a=cadQuestao');
