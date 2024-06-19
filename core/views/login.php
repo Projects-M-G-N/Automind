@@ -23,10 +23,12 @@
                 <div class="textfield">
                     <label for="senha">SENHA</label>
                     <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-
-
                 </div>
-                <button class="btn-login" name="acao">Entrar</button>
+
+                <button class="btn-login" name="acao">Acessar</button>
+                <div class="link">
+                    <a href="#">Esqueceu ou deseja alterar sua senha?</a>
+                </div>
             </form>
         </div>
 
