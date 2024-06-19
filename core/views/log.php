@@ -15,7 +15,7 @@
                 <!-- <img src="./public/assets/images/logo.png" alt="logozinha"> -->
             </div>
             <div class="botoes">
-                <button onclick="window.location.href='./?a=login'">Cadastro</button>
+                <button onclick="window.location.href='./?a=cadastro'">Cadastro</button>
                 <button onclick="window.location.href='./?a=login'">Login</button>
             </div>
         </div>
@@ -27,7 +27,7 @@
                 <p>A plataforma Automind utiliza a Teoria de resposta ao item TRI para gerar provas e corrigi-las com o mesmo método aplicado pelo Exame Nacional do Ensino Médio ENEM. Esse sistema é utilizado para evitar pontuações altas através de acertos casuais (onde o aluno não sabia a resposta da questão).</p>
             </div>
             <div class="entrar">
-                <button onclick="window.location.href='./?a=login'">Junte-se a nós</button>
+                <button onclick="window.location.href='./?a=cadastro'">Junte-se a nós</button>
             </div>
         </div>
 
@@ -74,7 +74,7 @@
             <div class="propa">
                 <h1>Ainda não tem um conta?</h1>
                 <h3>Faça seu cadastro no melhor site de gerenciamento financeiro do mercado!</h3>
-                <button onclick="window.location.href='./?a=login'">Cadastre-se</button>
+                <button onclick="window.location.href='./?a=cadastro'">Cadastre-se</button>
             </div>
         </div>
     </main>

@@ -11,10 +11,12 @@
 <body>
     <header>
         <nav>
+            <h3><?= APP_NAME?></h3>
             <ul>
                 <li><a href="./?a=cadQuestao">Cadastrar Questão</a></li>
                 <li><a href="./?a=criarprova">Gerar Provas</a></li>
             </ul>
+            <a href="./?a=logout">Sair</a>
         </nav>
     </header>
     <main>

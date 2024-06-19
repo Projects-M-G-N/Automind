@@ -4,57 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= APP_NAME ?> | Criar Senha</title>
-    <link rel="stylesheet" href="./public/assets/css/senha_nova.css">
-    <script>
-        window.onload = function() {
-            const emailInput = document.getElementById('email');
-            const codigoInput = document.getElementById('codigo');
-            const enviarButton = document.querySelector('.Teubotao button');
-
-            emailInput.addEventListener('input', function() {
-                const email = emailInput.value.trim();
-                enviarButton.disabled = email === '';
-                codigoInput.disabled = true;
-                codigoInput.classList.add('blocked');
-                codigoInput.classList.remove('enabled');
-                enviarButton.classList.toggle('enabled', email !== '');
-            });
-
-            enviarButton.addEventListener('click', function(event) {
-                event.preventDefault();
-                codigoInput.disabled = false;
-                codigoInput.classList.remove('blocked');
-                codigoInput.classList.add('enabled');
-                enviarButton.disabled = true;
-            });
-        };
-    </script>
+    <title><?= APP_NAME ?> | cadastro</title>
+    <link rel="stylesheet" href="./public/assets/css/cadastro.css">
 </head>
 
 <body>
-    <div class="entrada">
-        <h2>CRIAÇÃO DE SENHA</h2>
-        <br>
-        <form action="" method="post" class="GEANZINHODOGRAU190">
-            <div class="GabrielVankleber">
-                <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+    <div class="main-cadastro">
+        <div class="card-cadastro">
+            <h1>CADASTRO NO SISTEMA</h1>
 
-            </div>
-            <br>
-            <div class="GabrielVankleber">
-                <label for="codigo">CODIGO</label>
-                <input type="text" id="codigo" required disabled class="blocked" placeholder="Digite sua senha" required>
-            </div><br>
-            <div class="Teubotao">
-                <button type="submit" name="acao" disabled class="blocked">ENVIAR</button>
-            </div>
+            <form action="" method="post">
+                <div class="textfield">
+                    <label for="nome">NOME</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" maxlength="100" required>
+                </div>
+
+                <div class="textfield">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email" maxlength="50" required>
+                </div>
+
+                <div class="textfield">
+                    <label for="senha">SENHA</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" maxlength="50" required>
+                </div>
+
+                <button class="btn-cadastro" name="cadastrar">Acessar</button>
+                <div class="link">
+                    <a href="./?a=login">Já tem conta? Então faça login!</a>
+                </div>
+            </form>
+        </div>
+
     </div>
-
-    </form>
-    </div>
-
 </body>
 
 </html>

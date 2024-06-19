@@ -1,4 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --bg-color: #bad1e9;
+    --card-bg-color: #ffffff;
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --text-color: #1f2937;
+    --placeholder-color: #6b7280;
+    --btn-bg-color: #2563eb;
+    --btn-text-color: #ffffff;
+    --shadow-color: #0000000d;
+    --header-bg-color: #ffffff;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ededed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+header {
+    max-width: 100%;
+    width: auto;
+    height: fit-content;
+    min-height: 60px;
+    padding: 0 0 0 20px;
+    background-color: var(--header-bg-color);
+    box-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+header nav {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: .4s;
+}
+
+header nav ul li a:hover {
+    font-size: 1.05rem;
+    color: var(--btn-bg-color);
+    text-decoration: underline;
+}
+
+header nav > a {
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    background-color: var(--btn-bg-color);
+    transition: .4s;
+}
+
+header nav > a:hover {
+    background-color: #f00;
 }

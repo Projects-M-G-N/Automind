@@ -25,6 +25,15 @@
 
         }
 
+        public function cadastro()
+        {
+
+            Functions::Layout([
+                'cadastro'
+            ]);
+
+        }
+
     }
 
 ?>

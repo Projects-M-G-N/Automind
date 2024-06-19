@@ -10,7 +10,6 @@
 
 <body>
     <div class="main-login">
-        <div class="right-login"></div>
         <div class="card-login">
             <h1>ACESSO AO SISTEMA</h1>
 
@@ -25,9 +24,9 @@
                     <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
                 </div>
 
-                <button class="btn-login" name="acao">Acessar</button>
+                <button class="btn-login" name="logar">Acessar</button>
                 <div class="link">
-                    <a href="#">Esqueceu ou deseja alterar sua senha?</a>
+                    <a href="./?a=cadastro">É novo por aqui? Faça seu cadastro!</a>
                 </div>
             </form>
         </div>

@@ -52,6 +52,15 @@
 
         }
 
+        public function logout()
+        {
+
+            Functions::Layout([
+                'logout'
+            ]);
+
+        }
+
     }
 
 ?>

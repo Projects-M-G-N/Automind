@@ -6,7 +6,8 @@
         'cadQuestao' => 'main@cadQuestao',
         'cadProva' => 'main@cadProva',
         'criarprova' => 'main@criarprova',
-        'gerarProvas' => 'main@gerarProvas'
+        'gerarProvas' => 'main@gerarProvas',
+        'logout' => 'main@logout',
     ];
 
     // Ação por defeito

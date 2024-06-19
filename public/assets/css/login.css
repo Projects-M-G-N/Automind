@@ -41,17 +41,6 @@ body, html {
     flex-direction: column;
 }
 
-.right-login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-    padding: 0 3.325vw;
-    box-sizing: border-box;
-}
-
 .title {
     color: var(--secondary-color);
     margin: 0;
@@ -146,11 +135,6 @@ a {
 @media (max-width: 768px) {
     .main-login {
         padding: 0 2.67vw;
-    }
-
-    .right-login {
-        width: 100%;
-        padding: 0;
     }
 
     .card-login {
