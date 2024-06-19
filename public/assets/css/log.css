@@ -25,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 body {
@@ -32,6 +33,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     font-size: 1rem;
+    zoom: 1.1;    
 }
 
 header {
@@ -118,7 +120,7 @@ main {
 #about h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-top: 10px;
     text-transform: uppercase;
 }
 
