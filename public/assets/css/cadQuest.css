@@ -1,9 +1,30 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --bg-color: #f8fafc;
+    --card-bg-color: #ffffff;
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --text-color: #1f2937;
+    --placeholder-color: #6b7280;
+    --btn-bg-color: #2563eb;
+    --btn-text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --header-bg-color: #ffffff;
+    --heading-font-size: 2.5rem;
+    --body-font-size: 1rem;
+    --input-font-size: 1rem;
+    --button-font-size: 1rem;
+    --transition-duration: 0.3s;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
-    color: #555555;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -19,13 +40,13 @@ body {
     width: 100%;
     max-width: 1000px;
     padding: 40px;
-    background-color: #FFFFFF;
+    background-color: var(--card-bg-color);
     border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px var(--shadow-color);
     display: flex;
     flex-direction: row;
-    gap: 60px; 
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    gap: 60px;
+    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
 }
 
 .form:hover {
@@ -44,13 +65,13 @@ body {
 h3 {
     margin-top: 0;
     font-weight: bold;
-    color: #4CAF50;
-    font-size: 1.8em;
+    color: var(--primary-color);
+    font-size: 2rem;
 }
 
 h4 {
-    color: #388E3C;
-    font-size: 1.4em;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
@@ -58,8 +79,8 @@ label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #555555;
-    font-size: 1em;
+    color: var(--text-color);
+    font-size: 1rem;
 }
 
 input[type="text"],
@@ -69,52 +90,52 @@ select {
     padding: 14px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 2px solid #4CAF50;
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
-    font-size: 1em;
-    color: #555555;
-    background-color: #f1f1f1;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: border-color var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
 }
 
 input[type="text"]:focus,
 input[type="file"]:focus,
 select:focus {
-    border-color: #388E3C;
-    box-shadow: 0 0 8px rgba(56, 142, 60, 0.3);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
     outline: none;
 }
 
 input[type="submit"] {
     display: inline-block;
     padding: 14px 28px;
-    background-color: #4CAF50;
-    color: #FFFFFF;
+    background-color: var(--primary-color);
+    color: var(--btn-text-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bold;
-    transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background-color var(--transition-duration) ease-in-out, transform 0.1s ease-in-out, box-shadow var(--transition-duration) ease-in-out;
 }
 
 input[type="submit"]:hover {
-    background-color: #388E3C;
+    background-color: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 a.gerar-prova {
     text-decoration: none;
-    color: #4CAF50;
-    transition: color 0.3s, font-size 0.3s, font-weight 0.3s;
+    color: var(--primary-color);
+    transition: color var(--transition-duration), font-size var(--transition-duration), font-weight var(--transition-duration);
     display: inline-block;
     margin-top: 10px;
 }
 
 a.gerar-prova:hover {
     text-decoration: underline;
-    color: #388E3C;
+    color: var(--secondary-color);
     font-size: 1.1em;
     font-weight: bold;
 }

@@ -11,17 +11,16 @@
 }
 
 :root {
-    --bg-color: #f1f1f1;
-    --card-bg-color: #FFFFFF;
-    --primary-color: #4CAF50; 
-    --secondary-color: #81C784;
-    --input-bg-color: #FFFFFF; 
-    --input-text-color: #555555;
-    --placeholder-color: #888888;
-    --btn-bg-color: #4CAF50;
-    --btn-text-color: #FFFFFF;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --header-bg-color: #FFFFFF; 
+    --bg-color: #f8fafc;
+    --card-bg-color: #ffffff;
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --text-color: #1f2937;
+    --placeholder-color: #6b7280;
+    --btn-bg-color: #2563eb;
+    --btn-text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --header-bg-color: #ffffff;
 }
 
 html {
@@ -30,7 +29,9 @@ html {
 
 body {
     background-color: var(--bg-color);
-    color: var(--input-text-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 header {
@@ -40,13 +41,24 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--header-bg-color);
-    padding: 0 20px;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 0 40px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .menu-log {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 header .logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 header .logo img {
@@ -56,75 +68,77 @@ header .logo img {
 
 header .botoes {
     display: flex;
-    align-items: center;
+    gap: 15px;
 }
 
 header .botoes button {
-    margin-right: 15px;
-    background-color: var(--primary-color);
+    background-color: var(--btn-bg-color);
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    color: var(--header-bg-color);
+    color: var(--btn-text-color);
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
 }
 
 header .botoes button:hover {
-    background-color: var(--header-bg-color);
-    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--btn-text-color);
+    transform: scale(1.05);
 }
 
-main .caixa {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-main .caixa #about {
+main {
     width: 100%;
     max-width: 1200px;
-    padding: 5rem 30px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.caixa {
+    width: 100%;
+    background-color: var(--card-bg-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px var(--shadow-color);
+    border: 1px solid #e5e7eb;
+}
+
+#about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--card-bg-color);
-    border-radius: 8px;
-    box-shadow: 0px 13px 53px var(--shadow-color);
-    margin-bottom: 50px;
+    text-align: center;
 }
 
-main .caixa #about h1 {
-    font-size: 3rem;
+#about h1 {
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-main .caixa #about .about-text {
-    width: 100%;
+#about .about-text {
     max-width: 800px;
     margin-top: 20px;
-}
-
-main .caixa #about .about-text p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: var(--input-text-color);
     text-align: justify;
 }
 
-main .caixa #about .entrar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+#about .about-text p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
 }
 
-main .caixa #about .entrar button {
+#about .entrar {
+    margin-top: 30px;
+}
+
+#about .entrar button {
     padding: 10px 20px;
     background-color: var(--btn-bg-color);
     font-weight: bold;
@@ -133,113 +147,130 @@ main .caixa #about .entrar button {
     border-radius: 8px;
     color: var(--btn-text-color);
     font-size: 1rem;
-    margin: 0 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
 }
 
-main .caixa #about .entrar button:hover {
-    background-color: var(--primary-color);
+#about .entrar button:hover {
+    background-color: var(--secondary-color);
     color: var(--btn-text-color);
+    transform: scale(1.05);
 }
 
-main .caixa #servicos {
-    width: 100%;
-    margin: 50px 0;
+#about .imagens-slide {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#about .imagens-slide label {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#about .imagens-slide label:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+#servicos {
     text-align: center;
 }
 
-main .caixa #servicos h1 {
-    font-size: 3rem;
+#servicos h1 {
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-main .caixa #servicos h2 {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    margin-bottom: 40px;
-}
-
-main .caixa #servicos .quadrados {
+#servicos .quadrados {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
 }
 
-main .caixa #servicos .quadrados .servico {
+#servicos .servico {
     width: 300px;
     height: 200px;
     border-radius: 8px;
     background-color: var(--card-bg-color);
-    box-shadow: 0px 13px 53px var(--shadow-color);
+    box-shadow: 0 8px 24px var(--shadow-color);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s ease;
 }
 
-main .caixa #empresa {
-    width: 100%;
+#servicos .servico:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 36px var(--shadow-color);
+}
+
+#servicos h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-top: 40px;
+}
+
+#empresa {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0;
-}
-
-main .caixa #empresa .data {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    background-color: var(--card-bg-color);
-    border-radius: 8px;
-    box-shadow: 0px 13px 53px var(--shadow-color);
     text-align: center;
 }
 
-main .caixa #empresa .data h3 {
+#empresa .sob-data {
+    margin-bottom: 20px;
+}
+
+#empresa .data {
+    max-width: 800px;
+    padding: 20px;
+    text-align: justify;
+}
+
+#empresa .data h3 {
     font-size: 2rem;
     color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
-main .caixa #empresa .data p {
+#empresa .data p {
     font-size: 1rem;
-    color: var(--input-text-color);
+    color: var(--text-color);
     margin-bottom: 20px;
-    text-align: justify;
 }
 
-.caixa #cadastro {
-    width: 100%;
-    max-width: 800px;
+#cadastro .propa {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 40px;
-    background-color: var(--card-bg-color);
-    border-radius: 10px;
-    box-shadow: 0px 13px 53px var(--shadow-color);
-}
-
-.caixa #cadastro .propa {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     padding: 20px;
 }
 
-.caixa #cadastro .propa h1 {
+#cadastro .propa h1 {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
 
-.caixa #cadastro .propa h3 {
+#cadastro .propa h3 {
     font-size: 1.5rem;
     color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
-.caixa #cadastro .propa button {
+#cadastro .propa button {
     padding: 10px 20px;
     background-color: var(--btn-bg-color);
     border: none;
@@ -248,53 +279,69 @@ main .caixa #empresa .data p {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+    margin-top: 10px;
 }
 
-.caixa #cadastro .propa button:hover {
-    background-color: var(--primary-color);
+#cadastro .propa button:hover {
+    background-color: var(--secondary-color);
     color: var(--btn-text-color);
+    transform: scale(1.05);
 }
 
 footer {
     width: 100%;
-    padding: 30px 20px;
+    padding: 40px 20px;
     background-color: var(--header-bg-color);
-    color: var(--input-text-color);
+    color: var(--text-color);
     text-align: center;
-    box-shadow: 0 -4px 8px var(--shadow-color);
+    box-shadow: 0 -2px 4px var(--shadow-color);
+    border-top: 1px solid #e5e7eb;
 }
 
-footer .rodape .boxs {
-    width: 45%;
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
-footer .rodape .boxs ul {
+footer .footer-content .column {
+    flex: 1 1 200px;
+    max-width: 200px;
+}
+
+footer .footer-content .column ul {
     list-style: none;
     padding: 0;
 }
 
-footer .rodape .boxs ul li {
+footer .footer-content .column ul li {
     margin-bottom: 10px;
 }
 
-footer .rodape .boxs ul li a {
-    color: var(--input-text-color);
+footer .footer-content .column ul li a {
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-footer .rodape .boxs ul li a:hover {
+footer .footer-content .column ul li a:hover {
     color: var(--primary-color);
 }
 
-footer .rodape .boxs .redes-sociais ul li a i {
+footer .footer-content .column .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+footer .footer-content .column .social-icons a {
+    color: var(--text-color);
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
-footer .rodape .boxs .redes-sociais ul li a i:hover {
+footer .footer-content .column .social-icons a:hover {
     color: var(--primary-color);
 }

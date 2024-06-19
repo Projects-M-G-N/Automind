@@ -10,11 +10,6 @@
 
 <body>
     <div class="main-login">
-        <div class="left-login">
-            <div class="titulo">
-                <h2>Entre agora <br> para nossa comunidade</h2>
-            </div>
-        </div>
         <div class="right-login"></div>
         <div class="card-login">
             <h1>ACESSO AO SISTEMA</h1>
@@ -31,7 +26,7 @@
 
 
                 </div>
-                <button class="btn-login" name="acao">Acessar</button>
+                <button class="btn-login" name="acao">Entrar</button>
             </form>
         </div>
 
