@@ -14,9 +14,10 @@
         <nav>
             <h3>Automind</h3>
             <ul>
-                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
-                <li><a href="./?a=provas" class="gerar-prova" id="provasFeitasBtn">Ver Provas Já Feitas</a></li>
-                <li><a href="./?a=bancodequestoes" class="gerar-prova" id="bancoQuestoesBtn">Banco de Questões</a></li>
+                <li><a href="./?a=cadQuestao" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
+                <li><a href="./?a=criarprova" class="gerar-prova" id="criarProvaBtn">Gerar Provas</a></li>
+                <li><a href="#" class="gerar-prova" id="provasFeitasBtn">Ver Provas Já Feitas</a></li>
+                <li><a href="./?a=criarprova" class="gerar-prova" id="bancoQuestoesBtn">Banco de Questões</a></li>
             </ul>
             <a href="./?a=logout">Sair</a>
         </nav>
@@ -32,7 +33,7 @@
                 <p>
                     Além de gerar e corrigir provas automaticamente, a Automind oferece recursos avançados como análise estatística de desempenho dos alunos, personalização de questões por dificuldade e tema, e integração com sistemas educacionais para facilitar o processo de avaliação e aprendizagem.
                 </p>
-                <button class="btn" id="start-btn">Comece Agora</button>
+                <a href="#" class="btn" id="start-btn">Comece Agora</a>
             </div>
             <div class="intro-image">
                 <img src="./public/assets/img/foto2.jpg" alt="Educação Automind">
@@ -51,7 +52,7 @@
             <p>Escolha uma das opções abaixo para começar:</p>
             <a href="./?a=cadQuestao" class="modal-btn">Cadastrar Nova Questão</a>
             <a href="./?a=criarprova" class="modal-btn">Gerar Nova Prova</a>
-            <a href="./?a=provas" class="modal-btn" id="provasFeitasBtnModal">Ver Provas Já Feitas</a>
+            <a href="#" class="modal-btn" id="provasFeitasBtnModal">Ver Provas Já Feitas</a>
             <a href="./?a=criarprova" class="modal-btn" id="bancoQuestoesBtnModal">Banco de Questões</a>
         </div>
     </div>

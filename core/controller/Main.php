@@ -16,7 +16,7 @@
 
         }
 
-        public function cadQuest()
+        public function cadQuestao()
         {
 
             Functions::Layout([
@@ -25,20 +25,20 @@
 
         }
 
-        public function cadQuestao()
+        public function cadProva()
         {
 
             Functions::Layout([
-                'cadQuestao'
+                'cadProva'
             ]);
 
         }
 
-        public function bancodequestoes()
+        public function criarprova()
         {
 
             Functions::Layout([
-                'bancodequestoes'
+                'criarProva'
             ]);
 
         }
@@ -48,15 +48,6 @@
 
             Functions::Layout([
                 'gerarProvas'
-            ]);
-
-        }
-
-        public function provas()
-        {
-
-            Functions::Layout([
-                'provas'
             ]);
 
         }

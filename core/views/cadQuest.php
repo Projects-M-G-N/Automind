@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <form class="form" action="?a=cadQuestao" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form class="form" action="?a=cadProva" method="post" enctype="multipart/form-data" autocomplete="off">
       <!-- ===================================================================================================================== -->
 
       <div class="form-left">
@@ -135,7 +135,7 @@
         <div class="form-section" style="text-align: center;">
           <input type="submit" value="Cadastrar Questão" name="cadastrar">
         </div>
-        <a href="./?a=bancodequestoes" class="gerar-prova">Gerar prova</a> <br>
+        <a href="./?a=criarprova" class="gerar-prova">Gerar prova</a> <br>
         <a href="./?a=inicio" class="gerar-prova"> voltar ao inicio</a>
       </div>
       

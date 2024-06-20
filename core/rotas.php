@@ -3,10 +3,9 @@
     // Coleção de rotas
     $rotas = [
         'inicio' => 'main@inicio',
-        'cadQuest' => 'main@cadQuest',
         'cadQuestao' => 'main@cadQuestao',
-        'bancodequestoes' => 'main@bancodequestoes',
-        'provas' => 'main@provas',
+        'cadProva' => 'main@cadProva',
+        'criarprova' => 'main@criarprova',
         'gerarProvas' => 'main@gerarProvas',
         'logout' => 'main@logout',
     ];
