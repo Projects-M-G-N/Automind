@@ -26,10 +26,22 @@ CREATE TABLE usuarios (
         REFERENCES plano (id)
 );
 
+CREATE TABLE prova (
+	id INT NOT NULL AUTO_INCREMENT,
+    id_prof INT NOT NULL,
+    criacao DATETIME NOT NULL,
+    emitido BOOLEAN NOT NULL,
+    emissao DATE,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_prof)
+        REFERENCES usuarios (id)
+);
+
 CREATE TABLE questao (
     id INT NOT NULL UNIQUE,
     idprofessor INT NOT NULL,
     assunto INT NOT NULL,
+    idprova INT NOT NULL,
     texto_questao TEXT NOT NULL,
     img TEXT,
     pergunta TEXT,
@@ -40,7 +52,9 @@ CREATE TABLE questao (
     FOREIGN KEY (idprofessor)
         REFERENCES usuarios (id),
     FOREIGN KEY (assunto)
-        REFERENCES tags (id)
+        REFERENCES tags (id),
+	FOREIGN KEY (idprova)
+        REFERENCES prova (id)
 );
 
 CREATE TABLE turma (

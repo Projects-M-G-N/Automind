@@ -16,13 +16,7 @@ closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
 });
 
-provasFeitasBtn.addEventListener('click', function() {
-    alert('Implemente a visualização de provas já feitas aqui Gabriel kleber');
-    modal.style.display = 'none';
-});
-
 provasFeitasBtnModal.addEventListener('click', function() {
-    alert('Implemente a visualização de provas já feitas aqui Kleber Gabriel');
     modal.style.display = 'none';
 });
 
