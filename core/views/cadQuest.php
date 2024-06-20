@@ -135,7 +135,7 @@
         <div class="form-section" style="text-align: center;">
           <input type="submit" value="Cadastrar Questão" name="cadastrar">
         </div>
-        <a href="./?a=bancodequestoes" class="gerar-prova">Gerar prova</a> <br>
+        <a href="./?a=bancodequestoes" class="gerar-prova">Ver banco de Questões</a> <br>
         <a href="./?a=inicio" class="gerar-prova"> voltar ao inicio</a>
       </div>
       

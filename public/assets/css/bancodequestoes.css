@@ -19,44 +19,46 @@
     --body-font-size: 0.875rem;
     --input-font-size: 0.875rem;
     --button-font-size: 0.875rem;
-    --transition-duration: 0.3s;
 }
 
-body, html {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: auto;
+    max-width: 100vw;
+    height: 100vh;
     background-color: var(--fundo);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-main {
+body main {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    position: relative;
+}
+
+body main .questoes {
+    width: 100%;
+    height: auto;
     padding: 20px;
-    gap: 20px;
-}
-
-.questoes {
-    flex: 1;
     display: flex;
+    gap: 20px;
     flex-direction: column;
-    gap: 15px;
+    align-items: flex-start;
 }
 
-.questao {
+body main .questoes .questao {
+    width: 50%;
     background-color: var(--card-bg-color);
     border-radius: 12px;
-    box-shadow: 0 4px 8px var(--shadow-color);
     padding: 10px;
-    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
-}
-
-.questao:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .questao h4 {
@@ -89,7 +91,6 @@ main {
     border-radius: 8px;
     margin-bottom: 8px;
     font-size: 0.875rem;
-    transition: background-color var(--transition-duration) ease-in-out;
 }
 
 .altCorreta {
@@ -97,18 +98,19 @@ main {
     color: var(--btn-text-color);
 }
 
-.add {
+.add, .cad {
     padding: 8px 16px;
-    background-color: var(--primary-color);
-    color: var(--btn-text-color);
     border: none;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 0.875rem;
     font-weight: bold;
-    transition: background-color var(--transition-duration) ease-in-out, transform 0.1s ease-in-out, box-shadow var(--transition-duration) ease-in-out;
     display: block;
     margin-top: 10px;
+}
+
+.add {
+    background-color: var(--primary-color);
+    color: var(--btn-text-color);
 }
 
 .add:hover {
@@ -118,65 +120,78 @@ main {
 }
 
 .cad {
-    padding: 8px 16px;
     background-color: var(--fundo);
     color: var(--btn-text-color);
-    border: none;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    transition: background-color var(--transition-duration) ease-in-out, transform 0.1s ease-in-out, box-shadow var(--transition-duration) ease-in-out;
-    display: block;
-    margin-top: 10px;
 }
 
-.prova {
-    flex: 0.5;
+body main .prova {
+    width: 50%;
+    position: fixed;
+    padding: 20px 0 20px 20px;
+    top: 0;
+    right: 0;
+}
+
+body main .prova .popUp {
+    width: 100%;
+    height: fit-content;
+    min-height: 200px;
+    max-height: 300px;
+    margin-left: auto;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.popUp {
     background-color: var(--card-bg-color);
     border-radius: 12px;
     box-shadow: 0 4px 8px var(--shadow-color);
-    padding: 15px;
+}
+
+body main .prova .popUp .graficoDifQuestoes {
+    width: 60%;
     display: flex;
+    align-items: center;
+}
+
+body main .prova .popUp .listaQuestoes {
+    width: 50%;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 15px;
+    padding: 4px 12px;
 }
-
-.graficoDifQuestoes {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 15px;
-}
-
-.listaQuestoes h4 {
+body main .prova .popUp .listaQuestoes h4{
     font-size: 1.2rem;
     color: var(--primary-color);
-    margin-bottom: 10px;
 }
 
-.listaQuestoes ul {
-    list-style-type: none;
-    padding: 0;
+body main .prova .popUp .listaQuestoes ul {
+    width: 100%;
 }
 
-.listaQuestoes li {
+body main .prova .popUp .listaQuestoes ul a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+body main .prova .popUp .listaQuestoes ul a li {
     font-size: 0.875rem;
-    color: var(--text-color);
-    padding: 8px;
-    background-color: var(--bg-color);
+    flex: auto;
+    text-align: center;
+    list-style: none;
     border: 1px solid var(--primary-color);
     border-radius: 8px;
+    padding: 4px 0;
+    color: var(--text-color);
     margin-bottom: 8px;
 }
 
-.listaQuestoes li:hover {
+body main .prova .popUp .listaQuestoes ul a li:hover {
     background-color: var(--secondary-color);
-    color: var(--btn-text-color);
+}
+
+.botao {
+    text-align: center; /* Centraliza os botões */
+    margin-top: 20px; /* Espaço acima dos botões */
 }
 
 .botao a {
@@ -188,7 +203,7 @@ main {
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: bold;
-    transition: background-color var(--transition-duration) ease-in-out, transform 0.1s ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+    margin-bottom: 8px;
 }
 
 .botao a:hover {
@@ -203,6 +218,10 @@ main {
     }
 
     .questoes, .prova {
-        width: 100%;
+        max-width: 100%; /* Em telas menores, ocupam toda a largura disponível */
+    }
+
+    .graficoDifQuestoes {
+        width: 100%; /* O gráfico ocupa toda a largura disponível */
     }
 }
