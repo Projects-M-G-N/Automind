@@ -52,7 +52,7 @@
             <a href="./?a=cadQuestao" class="modal-btn">Cadastrar Nova Questão</a>
             <a href="./?a=criarprova" class="modal-btn">Gerar Nova Prova</a>
             <a href="./?a=provas" class="modal-btn" id="provasFeitasBtnModal">Ver Provas Já Feitas</a>
-            <a href="./?a=criarprova" class="modal-btn" id="bancoQuestoesBtnModal">Banco de Questões</a>
+            <a href="./?a=bancodequestoes" class="modal-btn" id="bancoQuestoesBtnModal">Banco de Questões</a>
         </div>
     </div>
 
