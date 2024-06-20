@@ -10,6 +10,7 @@
 
 <body>
     <header>
+        <h3>Automind</h3>
         <div class="menu-log">
             <div class="logo">
                 <!-- <img src="./public/assets/images/logo.png" alt="logozinha"> -->
