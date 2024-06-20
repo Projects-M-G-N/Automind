@@ -14,7 +14,6 @@
     <?php
     $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
     $email = $_SESSION['usuario'];
-
     $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
     $questoes = $gestor->query("SELECT * FROM questao WHERE visu='Publico' OR idprofessor='$usuario'");
     ?>

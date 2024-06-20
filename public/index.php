@@ -73,7 +73,7 @@ if (!isset($_SESSION['login'])) {
         );
 
         $_SESSION['login'] = true;
-        $_SESSION['email'] = $email;
+        $_SESSION['usuario'] = $email;
 
         echo "<script>window.location.href='./'</script>";
     }
