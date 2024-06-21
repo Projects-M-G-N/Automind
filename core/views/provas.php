@@ -14,6 +14,7 @@ $cont = 0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= APP_NAME ?> | Provas</title>
     <link rel="stylesheet" href="./public/assets/css/provas.css">
+    <link rel="shortcut icon" href="./public/assets/img/A.ico" type="image/x-icon">
 </head>
 
 <body>

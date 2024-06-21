@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acesse para poder ver nossos produtos</title>
     <link rel="stylesheet" href="./public/assets/css/log.css">
+    <link rel="shortcut icon" href="./public/assets/img/A.ico" type="image/x-icon">
 </head>
 
 <body>
