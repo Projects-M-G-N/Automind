@@ -190,8 +190,8 @@ body main .prova .popUp .listaQuestoes ul a li:hover {
 }
 
 .botao {
-    text-align: center; /* Centraliza os botões */
-    margin-top: 20px; /* Espaço acima dos botões */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .botao a {
@@ -218,10 +218,10 @@ body main .prova .popUp .listaQuestoes ul a li:hover {
     }
 
     .questoes, .prova {
-        max-width: 100%; /* Em telas menores, ocupam toda a largura disponível */
+        max-width: 100%;
     }
 
     .graficoDifQuestoes {
-        width: 100%; /* O gráfico ocupa toda a largura disponível */
+        width: 100%;
     }
 }

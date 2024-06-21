@@ -132,6 +132,7 @@ main {
     transition: background-color 0.3s;
     display: inline-block;
     margin-right: 30px;
+    border: none;
 }
 
 .intro-text .btn:hover {
