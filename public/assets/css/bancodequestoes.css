@@ -15,6 +15,9 @@
     --btn-text-color: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.05);
     --header-bg-color: #ffffff;
+    --border-radius: 12px;
+    --transition-duration: 0.4s;
+    --max-width: 1200px;
     --heading-font-size: 1.5rem;
     --body-font-size: 0.875rem;
     --input-font-size: 0.875rem;
@@ -29,12 +32,75 @@
 }
 
 body {
-    width: auto;
-    max-width: 100vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--fundo);
     color: var(--text-color);
     line-height: 1.6;
+    padding-top: 30px;
+}
+
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--btn-bg-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition-duration);
+}
+
+header nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition: .4s;
+}
+
+header nav > a {
+    padding: 0.5rem 1rem;
+    color: var(--btn-text-color);
+    background-color: red;
+    border-radius: var(--border-radius);
+    transition: var(--transition-duration);
+    text-decoration: none;
+    transition: .4s;
+}
+
+header nav > a:hover {
+    background-color: var(--secondary-color);
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body main {
@@ -128,7 +194,7 @@ body main .prova {
     width: 50%;
     position: fixed;
     padding: 20px 0 20px 20px;
-    top: 0;
+    top: 100px;
     right: 0;
 }
 
@@ -158,7 +224,8 @@ body main .prova .popUp .listaQuestoes {
     flex-direction: column;
     padding: 4px 12px;
 }
-body main .prova .popUp .listaQuestoes h4{
+
+body main .prova .popUp .listaQuestoes h4 {
     font-size: 1.2rem;
     color: var(--primary-color);
 }
@@ -187,29 +254,6 @@ body main .prova .popUp .listaQuestoes ul a li {
 
 body main .prova .popUp .listaQuestoes ul a li:hover {
     background-color: var(--secondary-color);
-}
-
-.botao {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.botao a {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--primary-color);
-    color: var(--btn-text-color);
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.botao a:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 800px) {

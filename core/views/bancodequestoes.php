@@ -17,6 +17,17 @@
     $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
     $questoes = $gestor->query("SELECT * FROM questao WHERE visu='Publico' OR idprofessor='$usuario'");
     ?>
+    <header>
+        <nav>
+            <h3>Automind</h3>
+            <ul>
+                <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
+                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
+                <li><a href="./?a=provas" class="gerar-prova" id="provasFeitasBtn">Ver Provas Já Feitas</a></li>
+            </ul>
+            <a href="./?a=logout">Sair</a>
+        </nav>
+    </header>
 
     <main>
         <div class="questoes">
@@ -63,9 +74,6 @@
                         
                     </ul>
                 </div>
-            </div>
-            <div class="botao">
-                <a href="./?a=inicio"> voltar para tela inicial</a>
             </div>
         </div>
     </main>
