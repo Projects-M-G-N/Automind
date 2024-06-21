@@ -21,6 +21,7 @@
     --btn-text-color: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.05);
     --header-bg-color: #ffffff;
+    --caixa:#1c3d70;
 }
 
 html {
@@ -30,7 +31,7 @@ html {
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--btn-text-color);
     line-height: 1.6;
     font-size: 1rem;
     zoom: 1.1;    
@@ -42,10 +43,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--header-bg-color);
+    background-color: var(--caixa);
     padding: 0 40px;
     box-shadow: 0 2px 4px var(--shadow-color);
-    border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -103,7 +103,7 @@ main {
 
 .caixa {
     width: 100%;
-    background-color: #1c3d70;
+    background-color: var(--caixa);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 24px var(--shadow-color);
