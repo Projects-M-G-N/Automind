@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automind | Inicio</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="./public/assets/css/inicio.css">
     <script defer src="./public/assets/js/inicio.js"></script>
+    <link rel="shortcut icon" href="./public/assets/img/A.ico" type="image/x-icon">
 </head>
 
 <body>
