@@ -7,7 +7,7 @@
     <title><?= APP_NAME ?> | Banco de Questões</title>
     <link rel="stylesheet" href="./public/assets/css/bancodequestoes.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="shortcut icon" href="./public/assets/img/A.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets/img/favicon3.ico" type="image/x-icon">
 
 </head>
 
@@ -20,7 +20,10 @@
     ?>
     <header>
         <nav>
-            <h3>Automind</h3>
+        <div class="logo">
+                <img src="./public/assets/img/logo1.jpg" altg="logozinha">
+        </div>
+            <h3 class="hp">Automind</h3>
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
                 <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>

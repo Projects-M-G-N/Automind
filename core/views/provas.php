@@ -14,14 +14,17 @@ $cont = 0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= APP_NAME ?> | Provas</title>
     <link rel="stylesheet" href="./public/assets/css/provas.css">
-    <link rel="shortcut icon" href="./public/assets/img/A.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets/img/favicon3.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <header>
         <nav>
-            <h3>Automind</h3>
+            <div class="logo">
+                <img src="./public/assets/img/logo1.jpg" altg="logozinha">
+            </div>
+            <h3 class="hp">Automind</h3>
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
                 <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
