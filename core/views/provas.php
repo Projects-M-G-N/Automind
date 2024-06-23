@@ -23,8 +23,8 @@ $cont = 0;
         <nav>
             <div class="logo">
                 <img src="./public/assets/img/logo1.jpg" altg="logozinha">
-            </div>
-            
+            </div>   
+                   
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
                 <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>

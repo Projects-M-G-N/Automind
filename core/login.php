@@ -5,6 +5,7 @@
         'inicio' => 'login@inicio',
         'login' => 'login@login',
         'cadastro' => 'login@cadastro',
+        'termos' => 'login@termos'
     ];
 
     // Ação por defeito

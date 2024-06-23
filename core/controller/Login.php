@@ -34,6 +34,15 @@
 
         }
 
+        public function termos()
+        {
+
+            Functions::Layout([
+                'termos'
+            ]);
+        }
+
+
     }
 
 ?>

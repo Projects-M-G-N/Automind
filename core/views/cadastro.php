@@ -40,7 +40,7 @@
             </form>
 
                 <div class="enter">
-                    <p>Ao acessar você concorda em ter lido e aceitado nossos <a href="#">termos de uso</a> e <a href="#">política de privacidade.</a></p>
+                    <p>Ao acessar você concorda em ter lido e aceitado nossos <a href="?a=termos">termos de uso</a> e <a href="?a=termos">política de privacidade.</a></p>
                 </div>
         </div>
 
