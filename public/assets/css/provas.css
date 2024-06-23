@@ -38,7 +38,7 @@ header {
     box-shadow: 0 2px 4px var(--shadow-color);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     color: var(--btn-text-color);
 }
 
@@ -123,4 +123,108 @@ main .provas .prova {
     box-shadow: 0px 4px 10px var(--shadow-color);
     border: 1px solid var(--secondary-color);
     border-radius: 20px;
+}
+
+.QuestProva {
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.QuestProva .folha {
+    width: 80%;
+    height: 100%;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--caixa);
+    border-radius: 20px;
+    position: relative;
+}
+
+.QuestProva .folha #fechar {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 1px solid var(--modal-bg-color);
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.QuestProva .folha .main-prova {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    overflow: auto;
+    padding: 12px;
+    gap: 40px;
+}
+
+.QuestProva .folha .main-prova .gabarito {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex: none;
+}
+
+.QuestProva .folha .main-prova .gabarito table{
+    height: min-content;
+    border-collapse: collapse;
+    flex: none;
+}
+
+.QuestProva .folha .main-prova .gabarito table th, .QuestProva .folha .main-prova .gabarito table td {
+    border: 1px solid black;
+    padding: 6px;
+    flex: none;
+}
+
+.QuestProva .folha .main-prova .gabarito table td .opc {
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.QuestProva .folha .main-prova .questoes .questao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.QuestProva .folha .opcoes {
+    width: 100%;
+    height: 10%;
+    border-top: 1px solid var(--caixa);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+    padding-right: 8px;
+}
+
+.QuestProva .folha .opcoes button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.QuestProva .folha .opcoes button.emitir {
+    border: 1px solid var(--modal-bg-color);
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
 }

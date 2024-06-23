@@ -48,7 +48,12 @@ $cont = 0;
         </div>
     </main>
 
-    <script defer src="./public/assets/js/provas.js"></script>
+
+
+    <div class="QuestProva">
+        <?php include('src/prova.php');?>
+    </div>
+    <script src="./public/assets/js/provas.js"></script>
 </body>
 
 </html>

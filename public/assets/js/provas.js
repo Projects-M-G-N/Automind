@@ -1,4 +1,14 @@
+let pdf = document.querySelector('.gerarPDF');
+let word = document.querySelector('.gerarWord');
+let QuestProva = document.querySelector('.QuestProva');
+
+pdf.disabled = true;
+word.disabled = true;
+
 function chamarQuestoes(id) {
-    alert('Termino isso depois');
-    alert('Ps: NÃO APAGUE A DESGRAÇA DOS CÓDIGOS ANTERIORES DE NOVO NAFAN! VOCÊ NÃO VAI LEMBRAR DE POR ELES DE VOLTA!');
+    QuestProva.style.display = 'flex';
+}
+
+function fecharProva() {
+    QuestProva.style.display = 'none';
 }

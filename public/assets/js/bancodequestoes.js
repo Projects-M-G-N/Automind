@@ -3,7 +3,6 @@ let valores = [0, 0, 0];
 async function addQuest(id, idProf) {
     var btn = document.getElementById(id);
     const dados = await fetch('./public/api/cadQuestao.php?idQuest=' + id + '&idProf=' + idProf);
-    const resposta = await dados.json();
     btn.innerHTML = "<i class='bi bi-check2'></i> Questão cadastrada";
     btn.classList.add('cad');
     btn.classList.remove('add');
