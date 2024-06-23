@@ -23,7 +23,6 @@
         <div class="logo">
                 <img src="./public/assets/img/logo1.jpg" altg="logozinha">
         </div>
-            <h3 class="hp">Automind</h3>
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
                 <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>

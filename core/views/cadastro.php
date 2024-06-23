@@ -29,12 +29,19 @@
                     <label for="senha">SENHA</label>
                     <input type="password" name="senha" id="senha" placeholder="Digite sua senha" maxlength="50" required>
                 </div>
-
-                <button class="btn-cadastro" name="cadastrar">Acessar</button>
                 <div class="link">
                     <a href="./?a=login">Já tem conta? Então faça login!</a>
                 </div>
+
+                <button class="btn-cadastro" name="cadastrar">Acessar</button>
+                
+                
+
             </form>
+
+                <div class="enter">
+                    <p>Ao acessar você concorda em ter lido e aceitado nossos <a href="#">termos de uso</a> e <a href="#">política de privacidade.</a></p>
+                </div>
         </div>
 
     </div>

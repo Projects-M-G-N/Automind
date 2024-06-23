@@ -15,7 +15,6 @@
             <div class="logo">
                 <img src="./public/assets/img/logo1.jpg" altg="logozinha">
             </div>
-            <h3 class="hp">Automind</h3>
             <div class="botoes">
                 <button onclick="window.location.href='./?a=cadastro'">Cadastro</button>
                 <button onclick="window.location.href='./?a=login'">Login</button>
