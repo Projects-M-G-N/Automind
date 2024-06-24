@@ -2,41 +2,7 @@
     <button id="fechar" onclick="fecharProva()">X</button>
     <div class="main-prova">
         <div class="gabarito">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="6">
-                            Código: 1234567
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Questão</th>
-                        <th>A</th>
-                        <th>B</th>
-                        <th>C</th>
-                        <th>D</th>
-                        <th>E</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <div class="opc"></div>
-                    </td>
-                    <td>
-                        <div class="opc"></div>
-                    </td>
-                    <td>
-                        <div class="opc"></div>
-                    </td>
-                    <td>
-                        <div class="opc"></div>
-                    </td>
-                    <td>
-                        <div class="opc"></div>
-                    </td>
-                </tr>
-            </table>
+            
         </div>
         <div class="questoes">
             <div class="questao">
