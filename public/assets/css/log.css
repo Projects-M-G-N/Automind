@@ -21,12 +21,11 @@
     --btn-text-color: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.05);
     --header-bg-color: #ffffff;
-    --caixa:#1c3d70;
+    --caixa: #1c3d70;
 }
 
 html {
     scroll-behavior: smooth;
-    
 }
 
 body {
@@ -34,7 +33,6 @@ body {
     color: var(--btn-text-color);
     line-height: 1.6;
     font-size: 1rem;
-    zoom: 1.1;    
 }
 
 header {
@@ -44,15 +42,12 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--caixa);
-    padding: 0 40px;
+    padding: 0 20px;
     box-shadow: 0 2px 4px var(--shadow-color);
     position: sticky;
     top: 0;
     z-index: 10;
-}
-
-.hp {
-    margin-left: -800px;
+    flex-wrap: wrap;
 }
 
 header .menu-log {
@@ -63,8 +58,8 @@ header .menu-log {
 }
 
 header .logo {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 header .logo img {
@@ -74,19 +69,23 @@ header .logo img {
 
 header .botoes {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 header .botoes button {
     background-color: var(--btn-bg-color);
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 8px;
     color: var(--btn-text-color);
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+    text-align: center;
+    flex: 0 1 auto;
+    min-width: 100px;
+    max-width: 200px;
 }
 
 header .botoes button:hover {
@@ -102,13 +101,13 @@ main {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
 }
 
 .caixa {
     width: 100%;
     background-color: var(--caixa);
-    padding: 40px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 8px 24px var(--shadow-color);
 }
@@ -121,7 +120,7 @@ main {
 }
 
 #about h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--card-bg-color);
     margin-top: 10px;
     text-transform: uppercase;
@@ -140,11 +139,11 @@ main {
 }
 
 #about .entrar {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #about .entrar button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: var(--btn-bg-color);
     font-weight: bold;
     cursor: pointer;
@@ -186,7 +185,7 @@ main {
 }
 
 #servicos h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--btn-text-color);
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -200,7 +199,8 @@ main {
 }
 
 #servicos .servico {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 200px;
     border-radius: 8px;
     background-color: var(--card-bg-color);
@@ -221,7 +221,7 @@ main {
 }
 
 #servicos h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--btn-text-color);
     margin-top: 40px;
 }
@@ -244,7 +244,7 @@ main {
 }
 
 #empresa .data h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--btn-text-color);
     margin-bottom: 15px;
 }
@@ -264,19 +264,19 @@ main {
 }
 
 #cadastro .propa h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--card-bg-color);
     margin-bottom: 20px;
 }
 
 #cadastro .propa h3 {
     font-size: 1.5rem;
-    color: var(--card-bg-color);
+    color: var (--card-bg-color);
     margin-bottom: 20px;
 }
 
 #cadastro .propa button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: var(--btn-bg-color);
     border: none;
     border-radius: 8px;
@@ -296,7 +296,7 @@ main {
 
 footer {
     width: 100%;
-    padding: 40px 20px;
+    padding: 20px 10px;
     background-color: var(--header-bg-color);
     color: var(--text-color);
     text-align: center;
@@ -306,9 +306,9 @@ footer {
 
 footer .footer-content {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -350,3 +350,38 @@ footer .footer-content .column .social-icons a {
 footer .footer-content .column .social-icons a:hover {
     color: var(--primary-color);
 }
+
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px;
+    }
+
+    #about h1, #servicos h1, #empresa .data h3 {
+        font-size: 1.5rem;
+    }
+
+    #about .about-text p {
+        font-size: 1rem;
+    }
+
+    #servicos .servico {
+        height: 180px;
+        font-size: 1rem;
+    }
+
+    #empresa .data p, #cadastro .propa h1, #cadastro .propa h3 {
+        font-size: 0.9rem;
+    }
+
+    #empresa .data h3 {
+        font-size: 1.3rem;
+    }
+
+    #cadastro .propa button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
