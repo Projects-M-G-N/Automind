@@ -168,7 +168,7 @@ main {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--modal-bg-color);
+    background-color: var(--caixa);
     box-shadow: 0px 0px 10px var(--shadow-color);
     width: 100%;
 }

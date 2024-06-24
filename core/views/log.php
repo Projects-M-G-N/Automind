@@ -80,6 +80,9 @@
         </div>
     </main>
     <script src="./public/assets/js/slider_log.js"></script>
+    <footer>
+    <p>&copy; 2024 Automind. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>

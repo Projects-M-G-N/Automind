@@ -51,15 +51,15 @@ body, html {
 
 .card-login {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+   
     align-items: center;
-    padding: 40px 46.65px;
+    padding: 40px 30.65px;
     background-color: var(--card-bg-color);
     border-radius: 26px;
-    box-shadow: 0px 13px 53px var(--shadow-color);
+    box-shadow: 0px 13px 33px var(--shadow-color);
     margin-top: 20px;
 }
 
@@ -83,7 +83,7 @@ body, html {
     color: var(--text-color);
     margin-bottom: 13px;
     font-size: var(--input-font-size);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .textfield > input {
@@ -94,7 +94,7 @@ body, html {
     background-color: var(--card-bg-color);
     color: var(--text-color);
     font-size: var(--input-font-size);
-    box-shadow: 0px 13px 53px var(--shadow-color);
+    box-shadow: 0px 13px 23px var(--shadow-color);
     box-sizing: border-box;
 }
 
@@ -103,7 +103,7 @@ body, html {
 }
 
 .btn-login {
-    width: 500px;
+    width: 400px;
     padding: 21px 0;
     margin: 33px 0;
     border: none;
@@ -113,8 +113,6 @@ body, html {
     color: var(--btn-text-color);
     background-color: var(--btn-bg-color);
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    
 }
 .btn-login:hover {
     background-color: var(--secondary-color);
@@ -128,7 +126,7 @@ a {
     display: inline-block;
     margin-top: 3px;
     position: absolute;
-    transform: translate(30%, -50%);
+    transform: translate(20%, -50%);
 }
 
 
