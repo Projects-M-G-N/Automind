@@ -54,7 +54,6 @@ body, html {
     max-width: 400px;
     display: flex;
     flex-direction: column;
-   
     align-items: center;
     padding: 40px 30.65px;
     background-color: var(--card-bg-color);
@@ -77,10 +76,11 @@ body, html {
     justify-content: center;
     margin: 13px 0;
     width: 100%;
-    
 }
 
 .textfield > label {
+    display: flex;
+    justify-content: flex-end;
     color: var(--text-color);
     margin-bottom: 13px;
     font-size: var(--input-font-size);
@@ -89,6 +89,8 @@ body, html {
 }
 
 .textfield > input {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
     padding: 13px;
     border: 1px solid var(--primary-color);
@@ -116,6 +118,7 @@ body, html {
     background-color: var(--btn-bg-color);
     cursor: pointer;
 }
+
 .btn-login:hover {
     background-color: var(--secondary-color);
     color: var(--btn-text-color);
@@ -125,35 +128,72 @@ body, html {
 a {
     text-decoration: none;
     color: var(--primary-color);
-    display:block;
+    display: block;
     margin-top: 3px;
     position: absolute;
     transform: translate(20%, -50%);
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1100px) {
     .card-login {
         width: 100%;
-        padding: 15px 12.30px;
+        padding: 50px 10px;
         border-radius: 20px;
+        margin-top: -50px;
     }
+
     .card-login > h1 {
-        font-size: 1.25rem; 
-        margin: 10px 0; 
+        font-size: 1.75rem; 
+       
     }    
 
+    .btn-login {
+        width: 100%;
+        padding: 15px 0;
+        margin: 20px 0;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
     a{
-        transform: translate(20%, -50%);
+        transform: translate(7%, -15%);
+        font-size: 11px;
     }
 }
 
 @media (max-width: 480px) {
+    
+    .title {
+        font-size: 2rem;
+    }
+
     .card-login {
-        padding: 15px 10.16px;
+        padding: 15px 10px;
         border-radius: 15px;
     }
+
     .card-login > h1 {
-        font-size: 1.25rem; 
+        font-size: 1.5rem; 
         margin: 10px 0; 
-    }    
+    }
+
+    .textfield {
+        margin: 10px 0;
+    }
+
+    .textfield > label {
+        font-size: 0.9rem;
+    }
+
+    .textfield > input {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 15px 0;
+        margin: 15px 0;
+        font-size: 1rem;
+    }
 }

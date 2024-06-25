@@ -77,14 +77,12 @@ body, html {
     justify-content: center;
     margin: 13px 0;
     width: 100%;
-    
 }
 
 .textfield > label {
     color: var(--text-color);
     margin-bottom: 13px;
     font-size: var(--input-font-size);
-    font-weight: 400;
     font-weight: bold; 
 }
 
@@ -118,7 +116,7 @@ body, html {
 }
 .btn-cadastro:hover {
     background-color: var(--secondary-color);
-    color: var (--btn-text-color);
+    color: var(--btn-text-color);
     transform: scale(1.05);
 }
 
@@ -141,20 +139,126 @@ a {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .main-cadastro {
         padding: 0 4vw;
-        height: auto;
     }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
     .card-cadastro {
-        width: 100%;
-        padding: 5px;
-        border-radius: 10px;
+        padding: 20px 24px;
+        border-radius: 15px;
     }
 
     .card-cadastro > h1 {
-        font-size: 1.25rem; 
-        margin: 10px 0; 
-    }    
+        font-size: 1.8rem;
+    }
+
+    .textfield {
+        margin: 10px 0;
+    }
+
+    .textfield > input {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-cadastro {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 0.9rem;
+    }
 }
 
+@media (max-width: 768px) {
+    .main-cadastro {
+        padding: 0 5vw;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .card-cadastro {
+        padding: 30px 36px;
+        border-radius: 20px;
+    }
+
+    .card-cadastro > h1 {
+        font-size: 2rem;
+    }
+
+    .textfield > input {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .btn-cadastro {
+        width: 90%;
+        padding: 16px 0;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .main-cadastro {
+        padding: 0 6vw;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .card-cadastro {
+        padding: 35px 42px;
+        border-radius: 22px;
+    }
+
+    .card-cadastro > h1 {
+        font-size: 2.2rem;
+    }
+
+    .textfield > input {
+        padding: 13px;
+        font-size: 1rem;
+    }
+
+    .btn-cadastro {
+        width: 85%;
+        padding: 18px 0;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 1200px) {
+    .main-cadastro {
+        padding: 0 7vw;
+    }
+
+    .title {
+        font-size: 2.4rem;
+    }
+
+    .card-cadastro {
+        padding: 38px 44px;
+        border-radius: 24px;
+    }
+
+    .card-cadastro > h1 {
+        font-size: 2.4rem;
+    }
+
+    .textfield > input {
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    .btn-cadastro {
+        width: 80%;
+        padding: 20px 0;
+        font-size: 1rem;
+    }
+}

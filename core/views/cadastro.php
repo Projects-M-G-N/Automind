@@ -12,7 +12,7 @@
 <body>
     <div class="main-cadastro">
         <div class="card-cadastro">
-            <h1>CADASTRO NO SISTEMA</h1>
+            <h1>CADASTRO</h1>
 
             <form action="" method="post">
                 <div class="textfield">
