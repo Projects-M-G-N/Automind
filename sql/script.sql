@@ -9,7 +9,7 @@ CREATE TABLE plano (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE tags (
+CREATE TABLE materias (
     id INT NOT NULL AUTO_INCREMENT,
     nome TEXT NOT NULL UNIQUE,
     PRIMARY KEY (id)
@@ -40,7 +40,7 @@ CREATE TABLE prova (
 CREATE TABLE questao (
     id INT NOT NULL UNIQUE,
     idprofessor INT NOT NULL,
-    assunto INT NOT NULL,
+    materia INT NOT NULL,
     idprova INT NOT NULL,
     texto_questao TEXT NOT NULL,
     img TEXT,
@@ -51,8 +51,8 @@ CREATE TABLE questao (
     PRIMARY KEY (id),
     FOREIGN KEY (idprofessor)
         REFERENCES usuarios (id),
-    FOREIGN KEY (assunto)
-        REFERENCES tags (id),
+    FOREIGN KEY (materia)
+        REFERENCES materias (id),
 	FOREIGN KEY (idprova)
         REFERENCES prova (id)
 );
@@ -116,13 +116,20 @@ CREATE TABLE provas (
 
 INSERT INTO plano VALUES (NULL, 0, "Gratuito");
 
-INSERT INTO tags VALUES (NULL, 'Movimento Uniforme'),
-                        (NULL, 'Movimentos Uniformementes Variados'),
-                        (NULL, 'Eletrodinâmica'),
-                        (NULL, 'Eletromagnetismo'),
-                        (NULL, 'Eletroestática');
-
-
+INSERT INTO materias VALUES (NULL, 'Artes'),
+                        (NULL, 'Biologia'),
+                        (NULL, 'Educação Física'),
+                        (NULL, 'Espanhol'),
+                        (NULL, 'Filosofia'),
+                        (NULL, 'Física'),
+                        (NULL, 'Geografia'),
+                        (NULL, 'História'),
+                        (NULL, 'Inglês'),
+                        (NULL, 'Literatura'),
+                        (NULL, 'Matemática'),
+                        (NULL, 'Português'),
+                        (NULL, 'Química'),
+                        (NULL, 'Sociologia');
 
 
 INSERT INTO usuarios VALUES (NULL, 'teste', 'teste@gmail.com', '1234567890', 1),

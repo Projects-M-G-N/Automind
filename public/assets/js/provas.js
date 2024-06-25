@@ -3,6 +3,7 @@ let word = document.querySelector('.gerarWord');
 let QuestProva = document.querySelector('.QuestProva');
 let mainProva = document.querySelector(".main-prova");
 let gabarito = document.querySelector(".gabarito");
+let questoes = document.querySelector(".questoes");
 
 pdf.disabled = true;
 word.disabled = true;
@@ -247,9 +248,81 @@ async function chamarQuestoes(id) {
     gabarito.appendChild(tabela1);
     gabarito.appendChild(tabela2);
     gabarito.appendChild(tabela3);
+
+    for (let index = 0; index < resposta[0]; index++) {
+        let questao = document.createElement('div');
+        questao.classList.add("questao");
+
+        let enunciado = document.createElement('div');
+        enunciado.classList.add("enunciado");
+
+        let paragrafo = document.createElement('p');
+        let textEnunciado = document.createTextNode((index+1) + ") " + resposta[1][index]['texto_questao']);
+        paragrafo.appendChild(textEnunciado);
+
+        enunciado.appendChild(paragrafo);
+
+        let imgDiv = document.createElement('div');
+        imgDiv.classList.add('img');
+
+        let img = document.createElement('img');
+        img.src = "./public/assets/img/" + resposta[1][index]['img'];
+
+        img.alt = '';
+        
+        imgDiv.appendChild(img);
+        let pergunta = document.createElement('div');
+        pergunta.classList.add('pergunta');
+
+        let paragrafoPergunta = document.createElement('p');
+        if(resposta[1][index]['pergunta'] != null) {
+            let textoPergunta = document.createTextNode(resposta[1][index]['pergunta']);
+            paragrafoPergunta.appendChild(textoPergunta);
+        }
+
+        pergunta.appendChild(paragrafoPergunta);
+
+        let alt = document.createElement('div');
+        alt.classList.add('alt');
+
+        let pa = document.createElement('p');
+        let text_a = document.createTextNode('a) ' + resposta[2][index]['alternativaa']);
+        pa.appendChild(text_a);
+
+        let pb = document.createElement('p');
+        let text_b = document.createTextNode('b) ' + resposta[2][index]['alternativab']);
+        pb.appendChild(text_b);
+
+        let pc = document.createElement('p');
+        let text_c = document.createTextNode('c) ' + resposta[2][index]['alternativac']);
+        pc.appendChild(text_c);
+
+        let pd = document.createElement('p');
+        let text_d = document.createTextNode('d) ' + resposta[2][index]['alternativad']);
+        pd.appendChild(text_d);
+
+        let pe = document.createElement('p');
+        let text_e = document.createTextNode('e) ' + resposta[2][index]['alternativae']);
+        pe.appendChild(text_e);
+
+        alt.appendChild(pa);
+        alt.appendChild(pb);
+        alt.appendChild(pc);
+        alt.appendChild(pd);
+        alt.appendChild(pe);
+
+        questao.appendChild(enunciado);
+        questao.appendChild(imgDiv);
+        questao.appendChild(pergunta);
+        questao.appendChild(alt);
+
+        questoes.appendChild(questao);
+    }
     QuestProva.style.display = 'flex';
 }
 
 function fecharProva() {
     QuestProva.style.display = 'none';
+    gabarito.innerHTML = '';
+    questoes.innerHTML = '';
 }

@@ -169,7 +169,7 @@ main .provas .prova {
     align-items: center;
     /* justify-content: center; */
     overflow: auto;
-    padding: 12px;
+    padding: 12px 32px;
     gap: 40px;
 }
 
@@ -199,10 +199,28 @@ main .provas .prova {
     border-radius: 50%;
 }
 
+.QuestProva .folha .main-prova .questoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+}
+
 .QuestProva .folha .main-prova .questoes .questao {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
+}
+
+.QuestProva .folha .main-prova .questoes .questao .img {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.QuestProva .folha .main-prova .questoes .questao .img img {
+    max-width: 50%;
 }
 
 .QuestProva .folha .opcoes {

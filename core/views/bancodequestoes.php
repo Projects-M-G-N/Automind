@@ -48,7 +48,7 @@
                     <div class="questao" id="quest<?= $id_quest?>">
                         <h4>Dificuldade: <?= $dificuldade?></h4>
                         <p class="texto-questao"><?= $texto ?></p class="texto-questao">
-                        <img src="<?= $img ?>" alt="">
+                        <img src="./public/assets/img/<?= $img ?>" alt="">
                         <p class="pergunta-questao"><?= $pergunta ?></p class="pergunta-questao">
                         <div class="alternativas">
                             <ul>

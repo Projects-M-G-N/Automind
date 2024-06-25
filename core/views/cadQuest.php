@@ -17,7 +17,7 @@
         <div class="form-section">
           <h3>Cadastro de Questão</h3>
 
-          <label for="questao">Texto da Questão*</label>
+          <label for="questao">Enunciado da Questão*</label>
           <input type="text" name="questao" id="questao" placeholder="Texto da Questão" required>
 
           <label for="imagem">Imagem da Questão</label>
@@ -84,7 +84,7 @@
         <div class="form-section">
           <!-- ===================================================================================================================== -->
 
-          <h3>Assuntos</h3>
+          <h3>Matéria</h3>
 
           <select name="assunto" id="assunto">
             <?php
@@ -93,10 +93,10 @@
             $email = $_SESSION["usuario"];
             $prof = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()["id"];
 
-            $tags = $gestor->query("SELECT * FROM tags");
-            while ($tag = $tags->fetch(PDO::FETCH_ASSOC)) {
+            $materias = $gestor->query("SELECT * FROM materias");
+            while ($materia = $materias->fetch(PDO::FETCH_ASSOC)) {
             ?>
-              <option value="<?= $tag['id'] ?>"><?= $tag['nome'] ?></option>
+              <option value="<?= $materia['id'] ?>"><?= $materia['nome'] ?></option>
             <?php
             }
             ?>
