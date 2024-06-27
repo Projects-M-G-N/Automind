@@ -7,7 +7,7 @@
     <title><?= APP_NAME ?> | Banco de Questões</title>
     <link rel="stylesheet" href="./public/assets/css/bancodequestoes.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="shortcut icon" href="./public/assets/img/favicon3.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
 
 </head>
 

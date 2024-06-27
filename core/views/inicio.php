@@ -7,7 +7,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="./public/assets/css/inicio.css">
     <script defer src="./public/assets/js/inicio.js"></script>
-    <link rel="shortcut icon" href="./public/assets/img/favicon3.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
 </head>
 
 <body>
