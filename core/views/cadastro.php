@@ -37,8 +37,13 @@
                             <input type="email" name="email" id="email" placeholder="Digite seu email" maxlength="50" required>
                         </div>
                         <div class="caixa">
-                            <label for="inst">Instituição de ensino</label>
-                            <input type="text" name="inst" id="inst" placeholder="Digite sua instituição" required>
+                            <label for="inst">Tipo de Instituição</label>
+                            <select name="inst" id="inst">
+                                <option value="d">selecione seu tipo de Instituição.</option>
+                                <option value="a">Instituição Pública(estadual,municipal)</option>
+                                <option value="b">Instituição Pública Federal</option>
+                                <option value="c">Instituição Privada</option>
+                            </select>
                         </div>
                         <div class="caixa">
                             <label for="senha">Senha</label>
@@ -50,8 +55,8 @@
                             </div>
                         </div>
                         <div class="caixa">
-                            <label for="csenha">Confirme sua senha</label>
-                            <input type="password" name="csenha" id="csenha" placeholder="Digite sua senha outra vez" required minlength="8">
+                            <label for="inst1">Nome da instituição</label>
+                            <input type="text" name="inst1" id="inst1" placeholder="Digite o nome de sua instituição" required minlength="8">
                             <div id="erro_senha" style="color: red; font-size: 10px;"></div>
                         </div>
                 </div>
@@ -102,32 +107,14 @@
         }
 
 
-        function validarSenha() {
-            var senha = document.getElementById('senha').value;
-            var confirmarSenha = document.getElementById('csenha').value;
-            var mensagemErro = document.getElementById('erro_senha');
-            var inputSenha = document.getElementById('senha');
-            var inputConfirmarSenha = document.getElementById('csenha');
-
-            if (senha !== confirmarSenha) {
-                mensagemErro.innerHTML = 'As senhas não correspondem.';
-                inputSenha.style.border = '1px solid red';
-                inputConfirmarSenha.style.border = '1px solid red';
-                return false; 
-            } else {
-                mensagemErro.innerHTML = ''; 
-                inputSenha.style.border = ''; 
-                inputConfirmarSenha.style.border = ''; 
-                return true;
-            }
+        document.querySelector('form').addEventListener('submit', function(event) {
+        var instituicao = document.getElementById('inst');
+        if (instituicao.value === 'd') {
+            alert('Por favor, selecione um tipo de instituição válido.');
+            instituicao.focus();
+            event.preventDefault();
         }
-
-    
-        document.querySelector('form').addEventListener('submit', function (event) {
-            if (!validarSenha()) {
-                event.preventDefault(); 
-            }
-        });
+    });
     </script>
 
 

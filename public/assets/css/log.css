@@ -88,15 +88,12 @@ header .botoes button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
-
-
-
 }
 
 header .botoes button:hover {
-    background-color: var(--secondary-color);
-    color: var(--btn-text-color);
-    transform: scale(1.05);
+    color: var(--secondary-color);
+    background-color: #fff;
+    border: 1px solid var(--secondary-color);
 }
 
 main {
@@ -160,9 +157,9 @@ main {
 }
 
 #about .entrar button:hover {
-    background-color: var(--secondary-color);
-    color: var(--btn-text-color);
-    transform: scale(1.05);
+    color: var(--secondary-color);
+    background-color: #fff;
+    border: 1px solid var(--secondary-color);
 }
 
 #about .imagens-slide {
@@ -205,7 +202,6 @@ main {
 
 #servicos .servico {
     width: 300px;
-
     height: 200px;
     border-radius: 8px;
     background-color: var(--card-bg-color);
@@ -294,9 +290,9 @@ main {
 }
 
 #cadastro .propa button:hover {
-    background-color: var(--secondary-color);
-    color: var(--btn-text-color);
-    transform: scale(1.05);
+    color: var(--secondary-color);
+    background-color: #fff;
+    border: 1px solid var(--secondary-color);
 }
 
 footer {
@@ -356,8 +352,58 @@ footer .footer-content .column .social-icons a:hover {
     color: var(--primary-color);
 }
 
+@media (max-width: 1064px) {
+    main {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
 
+    .caixa {
+        padding: 5px;
+    }
 
+    #about h1, #servicos h1, #empresa .data h3, #cadastro .propa h1, #cadastro .propa h3 {
+        font-size: 2rem;
+    }
+
+    #about .about-text, #empresa .data, #cadastro .propa {
+        padding: 10px;
+    }
+
+    #about .about-text p, #empresa .data p, footer .footer-content .column ul li a {
+        font-size: 1rem;
+    }
+
+    #about .imagens-slide {
+        gap: 5px;
+    }
+
+    #servicos .quadrados {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #servicos .servico {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    footer .footer-content .column {
+        max-width: 100%;
+        text-align: center;
+    }
+}
 
 
 

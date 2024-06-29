@@ -37,8 +37,9 @@ body {
 
 .container {
     width: 50%;
-    height: 85vh;
+    height: 90%;
     display: flex;
+    align-items: center;
     box-shadow: 5px 5px 10px var(--shadow-color);
 }
 
@@ -52,11 +53,12 @@ body {
     padding: 3rem;
     border-radius: 20px;
 }
-
+ 
 .cabeca {
     margin-bottom: 3em;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .login {
@@ -65,7 +67,6 @@ body {
 }
 
 .login button {
-    margin-top: 20px;
     border: none;
     background-color: var(--caixa);
     padding: 0.6rem 3rem;
@@ -79,8 +80,8 @@ body {
 
 .login button:hover {
     color: var(--caixa);
+    background-color: #fff;
     border: 1px solid var(--caixa);
-    background-color: var(--btn-text-color);
 }
 
 .cabeca h1 {
@@ -104,41 +105,47 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0.3rem 0;
+    gap: 0.7rem;
+    width: 100%;
 }
 
 .caixa {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem;
+    width: calc(50% - 0.5rem);
 }
 
-.caixa input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px var(--shadow-color);
-    font-size: var(--input-font-size);
-}
-
-.caixa input:hover {
-    background-color: #eeeeee75;
-}
-
-.caixa input:focus-visible {
-    outline: 1px solid var(--secondary-color);
-}
-
-.caixa label,
-.genero-titulo h5 {
+.caixa label, h5 {
+    margin-bottom: 0.5rem;
     font-size: var(--body-font-size);
     font-weight: bolder;
     color: var(--text-color);
 }
 
+.caixa input,
+.caixa select {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    font-size: var(--input-font-size);
+    box-shadow: 1px 1px 6px var(--shadow-color);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; 
+}
+
+.caixa input:focus-visible,
+.caixa select:focus-visible {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
 .caixa input::placeholder {
     color: var(--placeholder-color);
 }
+
 
 .genero-input input[type="radio"] {
     margin-right: 0.35rem;
@@ -198,7 +205,7 @@ body {
 
 .continuar button {
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     border: none;
     background-color: var(--caixa);
     padding: 0.62rem;
@@ -219,9 +226,22 @@ body {
 
 .continuar button:hover {
     color: var(--caixa);
-    background-color: var(--btn-text-color);
+    background-color: #fff;
     border: 1px solid var(--caixa);
     padding: 0.56rem;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-img {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+        border-radius: 7px;
+    }
 }
 
 @media screen and (max-width: 1064px) {
