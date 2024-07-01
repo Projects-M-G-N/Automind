@@ -53,7 +53,6 @@
             <h2>O que você deseja fazer?</h2>
             <p>Escolha uma das opções abaixo para começar:</p>
             <a href="./?a=cadQuest" class="modal-btn" id="cadQuestaoBtn">Cadastrar Questão</a>
-            <a href="./?a=criarprova" class="modal-btn">Gerar Nova Prova</a>
             <a href="./?a=provas" class="modal-btn" id="provasFeitasBtnModal">Ver Provas Já Feitas</a>
             <a href="./?a=bancodequestoes" class="modal-btn" id="bancoQuestoesBtn">Banco de Questões</a>
         </div>

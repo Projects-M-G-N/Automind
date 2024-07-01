@@ -81,8 +81,8 @@ header .botoes {
 header .botoes button {
     background-color: var(--btn-bg-color);
     border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
     color: var(--btn-text-color);
     font-size: 1rem;
     font-weight: bold;
@@ -145,12 +145,12 @@ main {
 }
 
 #about .entrar button {
-    padding: 10px 20px;
     background-color: var(--btn-bg-color);
     font-weight: bold;
     cursor: pointer;
     border: none;
-    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
     color: var(--btn-text-color);
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
@@ -277,10 +277,10 @@ main {
 }
 
 #cadastro .propa button {
-    padding: 10px 20px;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
     background-color: var(--btn-bg-color);
     border: none;
-    border-radius: 8px;
     color: var(--btn-text-color);
     font-size: 1rem;
     font-weight: bold;
@@ -296,60 +296,79 @@ main {
 }
 
 footer {
+    background-color: var(--caixa);
+    color: #fff;
+    padding: 30px 30px 10px 30px;
+    margin-top: 50px;
+}
+
+.rodape {
     width: 100%;
-    padding: 40px 20px;
-    background-color: var(--header-bg-color);
-    color: var(--text-color);
-    text-align: center;
-    box-shadow: 0 -2px 4px var(--shadow-color);
-    border-top: 1px solid #e5e7eb;
-}
-
-footer .footer-content {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
-footer .footer-content .column {
-    flex: 1 1 200px;
-    max-width: 200px;
+.rodape .boxs:not(:first-child) {
+    width: calc(100% / 2);
+    min-height: 150px;
+    padding: 20px;
 }
 
-footer .footer-content .column ul {
+.rodape .boxs:first-child {
+    margin-right: 20px;
+}
+
+.boxs ul {
     list-style: none;
-    padding: 0;
 }
 
-footer .footer-content .column ul li {
-    margin-bottom: 10px;
+.boxs .redes-sociais ul li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-footer .footer-content .column ul li a {
-    color: var(--text-color);
+.boxs .redes-sociais ul li a i {
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: #fff;
+    transition: .25s;
+    font-size: 28px;
 }
 
-footer .footer-content .column ul li a:hover {
-    color: var(--primary-color);
+.boxs .redes-sociais ul li a i:hover {
+    font-weight: bold;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 36px;
 }
 
-footer .footer-content .column .social-icons {
-    display: flex;
-    gap: 10px;
+.boxs .contatos ul li a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24px;
+    transition: .25s;
+    color: var(--btn-text-color);
 }
 
-footer .footer-content .column .social-icons a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+.boxs .contatos ul li:hover  {
+    color: green;
+    cursor: pointer;
+
+    & a{
+        color: green;
+    }
+
+    & a i {
+        transition: .25s;
+        color: green;
+    }
+
+   
 }
 
-footer .footer-content .column .social-icons a:hover {
-    color: var(--primary-color);
+footer>.copy {
+    bottom: 0;
+    margin-top: 40px;
+    text-align: center;
 }
 
 @media (max-width: 1064px) {

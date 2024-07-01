@@ -81,7 +81,33 @@
     </main>
     <script src="./public/assets/js/slider_log.js"></script>
     <footer>
-    <p>&copy; 2024 Automind. Todos os direitos reservados.</p>
+        <div class="rodape">
+                <div class="boxs">
+                    <img src="./public/assets/img/logooriginal.png" alt="" width="70px">
+                </div>
+                <div class="boxs">
+                    <h2>Redes Sociais</h2> <br>
+                    <div class="redes-sociais">
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="bi bi-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxs">
+                    <h2>Contatos</h2> <br>
+                    <div class="contatos">
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="bi bi-envelope"></i> E-mail</a></li>
+                            <li><a href="https://wa.me/558381958797" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; 2024 Automind. Todos os direitos reservados. </p>
+            </div>
     </footer>
 </body>
 
