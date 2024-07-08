@@ -70,6 +70,15 @@
 
         }
 
+        public function pdf()
+        {
+
+            Functions::Layout([
+                'pdf'
+            ]);
+
+        }
+
     }
 
 ?>
