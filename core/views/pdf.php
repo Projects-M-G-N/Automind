@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prova em pdf</title>
     <link rel="stylesheet" href="./public/assets/css/pdf.css">
+    <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
 
         <div class="nome">
-            <p>Aplicador: fulano de tal da silva</p>
+            <p>Aplicador: Geam Carlos Filguera da Silva</p>
             <p>Discente: _________________________________</p>
         </div>
         <div class="data">
@@ -27,8 +28,6 @@
             <h3>Código: 123456</h3>
 
             <div class="gabarito">
-
-                
                 <table>
                     <thead>
                         <tr>
