@@ -15,5 +15,7 @@
             "email": "gabriel.kleber@academico.ifpb.edu.br"
         }
     ],
-    "require": {}
+    "require": {
+        "dompdf/dompdf": "^3.0"
+    }
 }

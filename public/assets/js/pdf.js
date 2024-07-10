@@ -3,7 +3,7 @@ let gabarito = document.querySelector(".gabarito");
 let questoes = document.querySelector(".questoes");
 
 async function chamarQuestoes(id) {
-    const dados = await fetch('./public/api/buscarProva.php?idProva=' + id);
+    const dados = await fetch('http://localhost/Avaliacao-TRI/public/api/buscarProva.php?idProva=' + id);
     const resposta = await dados.json();
     const tabela1 = document.createElement('table');
     const tabela2 = document.createElement('table');
@@ -259,7 +259,7 @@ async function chamarQuestoes(id) {
         imgDiv.classList.add('img');
 
         let img = document.createElement('img');
-        img.src = "./public/assets/img/" + resposta[1][index]['img'];
+        img.src = "http://localhost/Avaliacao-TRI/public/assets/img/" + resposta[1][index]['img'];
 
         img.alt = '';
         

@@ -57,6 +57,7 @@ main {
     flex: 1 1 30%;
     border-collapse: collapse;
     min-width: 150px;
+    max-height: 20px;
     margin: 0;
 }
 
