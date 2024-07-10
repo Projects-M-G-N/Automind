@@ -41,7 +41,6 @@ CREATE TABLE questao (
     id INT NOT NULL UNIQUE,
     idprofessor INT NOT NULL,
     materia INT NOT NULL,
-    idprova INT NOT NULL,
     texto_questao TEXT NOT NULL,
     img TEXT,
     pergunta TEXT,
@@ -52,9 +51,7 @@ CREATE TABLE questao (
     FOREIGN KEY (idprofessor)
         REFERENCES usuarios (id),
     FOREIGN KEY (materia)
-        REFERENCES materias (id),
-	FOREIGN KEY (idprova)
-        REFERENCES prova (id)
+        REFERENCES materias (id)
 );
 
 CREATE TABLE turma (
@@ -107,11 +104,14 @@ CREATE TABLE provas (
     id INT NOT NULL AUTO_INCREMENT,
     usuario INT NOT NULL,
     questoes INT NOT NULL,
+    idprova INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (usuario)
         REFERENCES usuarios (id),
 	FOREIGN KEY (questoes)
-        REFERENCES questao (id)
+        REFERENCES questao (id),
+	FOREIGN KEY (idprova)
+        REFERENCES prova (id)
 );
 
 INSERT INTO plano VALUES (NULL, 0, "Gratuito");

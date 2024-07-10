@@ -8,15 +8,6 @@ $email = $_SESSION["usuario"];
 $prof = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()["id"];
 $data = date('Y-m-d H:m:s');
 
-$prova = $gestor->query("SELECT * FROM prova WHERE emitido='false' AND id_prof='$prof' LIMIT 1");
-
-if ($prova->rowCount() == 1) {
-    $id_prova = $gestor->query("SELECT id FROM prova WHERE emitido='false' AND id_prof='$prof'")->fetch()['id'];
-} else {
-    $gestor->query("INSERT INTO prova VALUES (NULL, '$prof', '$data', 'false', NULL)");
-    $id_prova = $gestor->query("SELECT id FROM prova WHERE emitido='false' AND id_prof='$prof'")->fetch()['id'];
-}
-
 $id = $gestor->query("SELECT COUNT(id) count FROM questao ")->fetch()["count"] + 1;
 $assunto = $_POST['assunto'];
 $visu = $_POST['visu'];
@@ -40,13 +31,12 @@ if (!empty($_POST['sub-questao'])) {
     $pergquest = null;
 }
 
-$sql_quest = $gestor->prepare("INSERT INTO questao VALUES (:id, :prof, :assunto, :idprova, :texto, :img, :pergunta, :visu, :dificuldade, :data_cad)");
+$sql_quest = $gestor->prepare("INSERT INTO questao VALUES (:id, :prof, :assunto, :texto, :img, :pergunta, :visu, :dificuldade, :data_cad)");
 $sql_quest->execute(
     [
         ":id" => $id,
         ":prof" => $prof,
         ":assunto" => $assunto,
-        ":idprova" => $id_prova,
         ":texto" => $textquest,
         ":img" => $imagem,
         ":pergunta" => $pergquest,

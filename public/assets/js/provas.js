@@ -5,13 +5,15 @@ let mainProva = document.querySelector(".main-prova");
 let gabarito = document.querySelector(".gabarito");
 let questoes = document.querySelector(".questoes");
 
-pdf.disabled = true;
+// pdf.disabled = true;
 word.disabled = true;
 
 async function chamarQuestoes(id) {
+    pdf.addEventListener('click', (e) => {
+        window.location.href = './?a=pdf&idProva=' + id;
+    })
     const dados = await fetch('./public/api/buscarProva.php?idProva=' + id);
     const resposta = await dados.json();
-    console.log(resposta);
     const tabela1 = document.createElement('table');
     const tabela2 = document.createElement('table');
     const tabela3 = document.createElement('table');

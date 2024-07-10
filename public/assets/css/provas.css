@@ -248,3 +248,9 @@ main .provas .prova {
     color: var(--btn-text-color);
     cursor: pointer;
 }
+
+.QuestProva .folha .opcoes button.gerarPDF {
+    cursor: pointer;
+    background-color: red;
+    color: var(--btn-text-color);
+}
