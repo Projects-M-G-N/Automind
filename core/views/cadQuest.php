@@ -16,64 +16,20 @@
       <div class="form-left">
         <div class="form-section">
           <h3>Cadastro de Questão</h3>
-
-          <label for="questao">Enunciado da Questão*</label>
-          <input type="text" name="questao" id="questao" placeholder="Texto da Questão" required>
+          
+          <label for="sub-questao">Pergunta da Questão</label>
+          <input type="text" name="sub-questao" id="sub-questao" placeholder="Pergunta da Questão">
 
           <label for="imagem">Imagem da Questão</label>
           <input type="file" name="imagem" id="imagem" accept="image/*">
 
-          <label for="sub-questao">Pergunta da Questão</label>
-          <input type="text" name="sub-questao" id="sub-questao" placeholder="Pergunta da Questão">
+          
           <!-- ===================================================================================================================== -->
-
-          <h3>Alternativas</h3>
-          <div class="form-section">
-            <h4>alternativa correta</h4>
-
-            <select name="alteCor" id="alteCor">
-              <option value="a">A</option>
-              <option value="b">B</option>
-              <option value="c">C</option>
-              <option value="d">D</option>
-              <option value="e">E</option>
-            </select>
-          </div>
-
           <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
 
           <div style="display: block;">
-            <div>
-              <label for="alternativa_a">Letra A*</label>
-              <input type="text" name="alternativa_a" id="alternativa_a" class="alternativa" required>
-            </div>
+            
             <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
-
-            <div>
-              <label for="alternativa_b">Letra B*</label>
-              <input type="text" name="alternativa_b" id="alternativa_b" class="alternativa" required>
-            </div>
-            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
-          </div>
-          <div style="display: block;">
-            <div>
-              <label for="alternativa_c">Letra C*</label>
-              <input type="text" name="alternativa_c" id="alternativa_c" class="alternativa" required>
-            </div>
-            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
-
-            <div>
-              <label for="alternativa_d">Letra D*</label>
-              <input type="text" name="alternativa_d" id="alternativa_d" class="alternativa" required>
-            </div>
-            <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
-
-          </div>
-          <div style="display: block;">
-            <div>
-              <label for="alternativa_e">Letra E*</label>
-              <input type="text" name="alternativa_e" id="alternativa_e" class="alternativa" required>
-            </div>
             <!-- --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==- -->
 
           </div>
@@ -129,9 +85,8 @@
             <input type="radio" name="visu" id="priva" value="privado">
             <label for="priva">Privado</label>
           </div>
-
-          
         </div>
+
         <!-- Botão "Cadastrar Questão" -->
         <div class="form-section" style="text-align: center;">
           <input type="submit" value="Cadastrar Questão" name="cadastrar">
