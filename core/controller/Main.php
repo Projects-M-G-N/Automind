@@ -25,15 +25,6 @@
 
         }
 
-        public function cadQuestao()
-        {
-
-            Functions::Layout([
-                'cadQuestao'
-            ]);
-
-        }
-
         public function bancodequestoes()
         {
 

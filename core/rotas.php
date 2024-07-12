@@ -4,7 +4,6 @@
     $rotas = [
         'inicio' => 'main@inicio',
         'cadQuest' => 'main@cadQuest',
-        'cadQuestao' => 'main@cadQuestao',
         'bancodequestoes' => 'main@bancodequestoes',
         'provas' => 'main@provas',
         'gerarProvas' => 'main@gerarProvas',

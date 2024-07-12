@@ -39,20 +39,16 @@
             while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
                 $id_quest = $questao['id'];
                 $texto = $questao['texto_questao'];
-                $img = $questao['img'];
-                $pergunta = is_null($questao['pergunta']) ? null : $questao['pergunta'];
                 $dificuldade = $questao['dificuldade'];
                 $alternativas = $gestor->query("SELECT * FROM alternativas WHERE id='$id_quest'");
                 while ($alt = $alternativas->fetch(PDO::FETCH_ASSOC)) {
             ?>
                     <div class="questao" id="quest<?= $id_quest?>">
                         <h4>Dificuldade: <?= $dificuldade?></h4>
-                        <p class="texto-questao"><?= $texto ?></p class="texto-questao">
-                        <img src="./public/assets/img/<?= $img ?>" alt="">
-                        <p class="pergunta-questao"><?= $pergunta ?></p class="pergunta-questao">
+                        <?= $texto ?>
                         <div class="alternativas">
                             <ul>
-                                <li class="<?php echo ($alt['alternativacorreta'] == 'a') ? "altCorreta alternativa" : "alternativa"?>">A - <?= $alt['alternativaa']?></li>
+                                <li class="<?php echo ($alt['opccorreta'] == 'a') ? "altCorreta alternativa" : "alternativa"?>">A - <?= $alt['alternativaa']?></li>
                                 <li class="<?php echo ($alt['alternativacorreta'] == 'b') ? "altCorreta alternativa" : "alternativa"?>">B - <?= $alt['alternativab']?></li>
                                 <li class="<?php echo ($alt['alternativacorreta'] == 'c') ? "altCorreta alternativa" : "alternativa"?>">C - <?= $alt['alternativac']?></li>
                                 <li class="<?php echo ($alt['alternativacorreta'] == 'd') ? "altCorreta alternativa" : "alternativa"?>">D - <?= $alt['alternativad']?></li>

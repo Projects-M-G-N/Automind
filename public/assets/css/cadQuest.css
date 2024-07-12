@@ -43,18 +43,21 @@ body {
 
 .form {
     width: 100%;
-    max-width: 1000px;
-    padding: 40px;
+    max-width: 1520px;
+    padding: 20px;
     background-color: var(--card-bg-color);
     border-radius: 16px;
     box-shadow: 0 8px 16px var(--shadow-color);
     display: flex;
     flex-direction: row;
-    gap: 60px;
-    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+    gap: 20px;
 }
 
-.form-left, .form-right {
+.form-left {
+    flex: 2;
+}
+
+.form-right {
     flex: 1;
 }
 
@@ -148,10 +151,6 @@ a.gerar-prova:hover {
 a.gerar-prova:focus {
     outline: none;
     box-shadow: var(--focus-shadow);
-}
-
-.alternativa {
-    margin-right: 10px;
 }
 
 .radi {
