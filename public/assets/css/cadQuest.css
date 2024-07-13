@@ -7,20 +7,12 @@
     --primary-color: #2563eb;
     --secondary-color: #3b82f6;
     --text-color: #1f2937;
-    --placeholder-color: #6b7280;
     --btn-bg-color: #2563eb;
-    --btn-bg-gradient: linear-gradient(135deg, #2563eb, #3b82f6);
     --btn-text-color: #ffffff;
-    --btn-hover-bg-gradient: linear-gradient(135deg, #3b82f6, #2563eb);
+    --btn-hover-bg-color: #3b82f6;
     --btn-hover-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
     --shadow-color: rgba(0, 0, 0, 0.05);
     --header-bg-color: #ffffff;
-    --heading-font-size: 2.5rem;
-    --body-font-size: 1rem;
-    --input-font-size: 1rem;
-    --button-font-size: 1rem;
-    --transition-duration: 0.3s;
-    --focus-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
 }
 
 body {
@@ -36,28 +28,24 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    align-items: center; 
     padding: 20px;
+    overflow: auto;
 }
 
 .form {
     width: 100%;
-    max-width: 1520px;
-    padding: 20px;
+    max-width: 1400px;
+    padding: 40px;
     background-color: var(--card-bg-color);
     border-radius: 16px;
     box-shadow: 0 8px 16px var(--shadow-color);
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 60px;
 }
 
-.form-left {
-    flex: 2;
-}
-
-.form-right {
+.form-left, .form-right {
     flex: 1;
 }
 
@@ -98,65 +86,59 @@ select {
     font-size: 1rem;
     color: var(--text-color);
     background-color: var(--bg-color);
-    transition: border-color var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
 }
 
 input[type="text"]:focus,
 input[type="file"]:focus,
 select:focus {
     border-color: var(--secondary-color);
-    box-shadow: var(--focus-shadow);
     outline: none;
 }
 
 input[type="submit"] {
     right: 20px;
     padding: 14px 28px;
-    background: var(--btn-bg-gradient);
+    background: linear-gradient(135deg, var(--btn-bg-color), var(--btn-hover-bg-color));
     color: var(--btn-text-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: var(--button-font-size);
+    font-size: 1rem;
     font-weight: bold;
 }
 
 input[type="submit"]:hover {
-    background: var(--btn-hover-bg-gradient);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--btn-hover-bg-color), var(--btn-bg-color));
     box-shadow: var(--btn-hover-shadow);
-}
-
-input[type="submit"]:focus {
-    outline: none;
-    box-shadow: var(--focus-shadow);
 }
 
 a.gerar-prova {
     text-decoration: none;
     color: var(--primary-color);
-    transition: color var(--transition-duration), font-size var(--transition-duration), font-weight var(--transition-duration);
     display: inline-block;
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 1rem; 
 }
 
 a.gerar-prova:hover {
     text-decoration: underline;
     color: var(--secondary-color);
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 a.gerar-prova:focus {
     outline: none;
-    box-shadow: var(--focus-shadow);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
 }
 
-.radi {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.alternativa {
+    margin-right: 10px;
+}
+
+.form-left .form-section {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
