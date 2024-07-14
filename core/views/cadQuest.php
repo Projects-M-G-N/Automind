@@ -20,52 +20,45 @@
   <div class="container">
     <form class="form" action="" method="post" enctype="multipart/form-data" autocomplete="off">
 
-      <div class="form-left">
+    <div class="quest">
+  <div class="quests">
+    <h3>Cadastro de Questão</h3>
 
-        <div class="form-section">
+    <label for="cadQuest">Enunciado da Questão:</label>
+    <textarea name="cadQuest" id="cadQuest" required></textarea>
 
-          <h3>Cadastro de Questão</h3>
+    <label for="opc1">Opção 1:</label>
+    <div class="input-group">
+      <input type="radio" name="opcCorreta" id="opcCorreta1" value="1" checked>
+      <textarea name="opc1" id="opc1" class="opcs" required></textarea>
+    </div>
 
-          <label for="cadQuest">Cadastrar questão</label>
-          <textarea name="cadQuest" id="cadQuest" required></textarea>
+    <label for="opc2">Opção 2:</label>
+    <div class="input-group">
+      <input type="radio" name="opcCorreta" id="opcCorret2" value="2">
+      <textarea name="opc2" id="opc2" class="opcs" required></textarea>
+    </div>
 
-          <label for="opc1">Opção 1:</label>
+    <label for="opc3">Opção 3:</label>
+    <div class="input-group">
+      <input type="radio" name="opcCorreta" id="opcCorreta3" value="3">
+      <textarea name="opc3" id="opc3" class="opcs" required></textarea>
+    </div>
 
-          <label for="opcCorreta1">Marcar como opção correta</label>
-          <input type="radio" name="opcCorreta" id="opcCorreta1" value="1" checked>
+    <label for="opc4">Opção 4:</label>
+    <div class="input-group">
+      <input type="radio" name="opcCorreta" id="opcCorreta4" value="4">
+      <textarea name="opc4" id="opc4" class="opcs" required></textarea>
+    </div>
 
-          <textarea name="opc1" id="opc1" class="opcs" required></textarea>
+    <label for="opc5">Opção 5:</label>
+    <div class="input-group">
+      <input type="radio" name="opcCorreta" id="opcCorreta5" value="5">
+      <textarea name="opc5" id="opc5" class="opcs" required></textarea>
+    </div>
+  </div>
+</div>
 
-          <label for="opc2">Opção 2:</label>
-
-          <label for="opcCorret2">Marcar como opção correta</label>
-          <input type="radio" name="opcCorreta" id="opcCorret2" value="2">
-
-          <textarea name="opc2" id="opc2" class="opcs" required></textarea>
-
-          <label for="opc3">Opção 3:</label>
-
-          <label for="opcCorreta3">Marcar como opção correta</label>
-          <input type="radio" name="opcCorreta" id="opcCorreta3" value="3">
-
-          <textarea name="opc3" id="opc3" class="opcs" required></textarea>
-
-          <label for="opc4">Opção 4:</label>
-
-          <label for="opcCorreta4">Marcar como opção correta</label>
-          <input type="radio" name="opcCorreta" id="opcCorreta4" value="4">
-
-          <textarea name="opc4" id="opc4" class="opcs" required></textarea>
-
-          <label for="opc5">Opção 5:</label>
-
-          <label for="opcCorreta5">Marcar como opção correta</label>
-          <input type="radio" name="opcCorreta" id="opcCorreta5" value="5">
-
-          <textarea name="opc5" id="opc5" class="opcs" required></textarea>
-
-        </div>
-      </div>
 
       <div class="form-right">
         <div class="form-section">

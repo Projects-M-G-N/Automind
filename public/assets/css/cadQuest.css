@@ -35,7 +35,7 @@ body {
 
 .form {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     padding: 40px;
     background-color: var(--card-bg-color);
     border-radius: 16px;
@@ -138,8 +138,78 @@ a.gerar-prova:focus {
 
 .form-left .form-section {
     max-width: 600px;
+    max-height: 300px;
     margin: 0 auto;
 }
+.quest {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .quests {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quests h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+  }
+  
+  .quests label {
+    margin-top: 7px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .quests textarea#cadQuest {
+    width: 100%;
+    padding: 4px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
+    resize: none;
+    line-height: 1.2em;
+  }
+  
+  .quests .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .quests .input-group textarea {
+    flex: 1; 
+    padding: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 20px;
+    resize: none; 
+    line-height: 1.2em;
+  }
+  
+  .quests .input-group input[type="radio"] {
+    margin-right: 10px;
+    height: 20px;
+  }
+  
 
 @media screen and (max-width: 800px) {
     .form {
