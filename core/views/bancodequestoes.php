@@ -40,27 +40,57 @@
                 $id_quest = $questao['id'];
                 $texto = $questao['texto_questao'];
                 $dificuldade = $questao['dificuldade'];
-                $alternativas = $gestor->query("SELECT * FROM alternativas WHERE id='$id_quest'");
-                while ($alt = $alternativas->fetch(PDO::FETCH_ASSOC)) {
+                $numOpcCor = $questao['numopccor'];
+                if ($numOpcCor == 1) {
+                    $opc1 = $questao['opccorreta'];
+                    $opc2 = $questao['opcalternativa1'];
+                    $opc3 = $questao['opcalternativa2'];
+                    $opc4 = $questao['opcalternativa3'];
+                    $opc5 = $questao['opcalternativa4'];
+                } else if ($numOpcCor == 2) {
+                    $opc1 = $questao['opcalternativa4'];
+                    $opc2 = $questao['opccorreta'];
+                    $opc3 = $questao['opcalternativa1'];
+                    $opc4 = $questao['opcalternativa2'];
+                    $opc5 = $questao['opcalternativa3'];
+                } else if ($numOpcCor == 3) {
+                    $opc1 = $questao['opcalternativa3'];
+                    $opc2 = $questao['opcalternativa4'];
+                    $opc3 = $questao['opccorreta'];
+                    $opc4 = $questao['opcalternativa1'];
+                    $opc5 = $questao['opcalternativa2'];
+                } else if ($numOpcCor == 4) {
+                    $opc1 = $questao['opcalternativa2'];
+                    $opc2 = $questao['opcalternativa3'];
+                    $opc3 = $questao['opcalternativa4'];
+                    $opc4 = $questao['opccorreta'];
+                    $opc5 = $questao['opcalternativa1'];
+                } else {
+                    $opc1 = $questao['opcalternativa1'];
+                    $opc2 = $questao['opcalternativa2'];
+                    $opc3 = $questao['opcalternativa3'];
+                    $opc4 = $questao['opcalternativa4'];
+                    $opc5 = $questao['opccorreta'];
+                }
+                
             ?>
                     <div class="questao" id="quest<?= $id_quest?>">
                         <h4>Dificuldade: <?= $dificuldade?></h4>
                         <?= $texto ?>
                         <div class="alternativas">
                             <ul>
-                                <li class="<?php echo ($alt['opccorreta'] == 'a') ? "altCorreta alternativa" : "alternativa"?>">A - <?= $alt['alternativaa']?></li>
-                                <li class="<?php echo ($alt['alternativacorreta'] == 'b') ? "altCorreta alternativa" : "alternativa"?>">B - <?= $alt['alternativab']?></li>
-                                <li class="<?php echo ($alt['alternativacorreta'] == 'c') ? "altCorreta alternativa" : "alternativa"?>">C - <?= $alt['alternativac']?></li>
-                                <li class="<?php echo ($alt['alternativacorreta'] == 'd') ? "altCorreta alternativa" : "alternativa"?>">D - <?= $alt['alternativad']?></li>
-                                <li class="<?php echo ($alt['alternativacorreta'] == 'e') ? "altCorreta alternativa" : "alternativa"?>">E - <?= $alt['alternativae']?></li>
+                                <li class="<?= $numOpcCor == 1 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc1?></li>
+                                <li class="<?= $numOpcCor == 2 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc2?></li>
+                                <li class="<?= $numOpcCor == 3 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc3?></li>
+                                <li class="<?= $numOpcCor == 4 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc4?></li>
+                                <li class="<?= $numOpcCor == 5 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc5?></li>
                             </ul>
                         </div>
                         <button class="add" onclick="addQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= $id_quest?>" value="<?= $id_quest?>">
                             Adicionar Questão
                         </button>
                     </div>
-            <?php  }
-            } ?>
+            <?php  }?>
         </div>
         <div class="prova">
             <div class="popUp">

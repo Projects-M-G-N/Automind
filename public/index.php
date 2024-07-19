@@ -129,7 +129,9 @@ if (isset($_POST['cadastrarQuest'])) {
         $opcAlt4 = $_POST['opc4'];
     }
 
-    $sql_quest = $gestor->prepare("INSERT INTO questao VALUES (NULL, :prof, :assunto, :texto, :opcCor, :alt1, :alt2, :alt3, :alt4, :visu, :dificuldade, :data_cad)");
+    $numOpcCor = $_POST['opcCorreta'];
+
+    $sql_quest = $gestor->prepare("INSERT INTO questao VALUES (NULL, :prof, :assunto, :texto, :opcCor, :alt1, :alt2, :alt3, :alt4, :numopc, :visu, :dificuldade, :data_cad)");
     $sql_quest->execute(
         [
             ":prof" => $prof,
@@ -140,6 +142,7 @@ if (isset($_POST['cadastrarQuest'])) {
             ":alt2" => $opcAlt2,
             ":alt3" => $opcAlt3,
             ":alt4" => $opcAlt4,
+            ":numopc" => $numOpcCor,
             ":visu" => $visu,
             ":dificuldade" => $dificuldade,
             ":data_cad" => $data,

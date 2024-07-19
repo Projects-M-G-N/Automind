@@ -47,6 +47,7 @@ CREATE TABLE questao (
     opcalternativa2 TEXT NOT NULL,
     opcalternativa3 TEXT NOT NULL,
     opcalternativa4 TEXT NOT NULL,
+    numopccor INT NOT NULL,
     visu VARCHAR(10) NOT NULL,
     dificuldade VARCHAR(10) NOT NULL,
     data_cad DATETIME NOT NULL,
