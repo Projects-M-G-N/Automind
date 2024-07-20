@@ -6,7 +6,7 @@
 }
 
 :root {
-    --bg-color: #bad1e9;
+    --bg-color: linear-gradient(135deg, #7ca2ca, #2563eb);
     --card-bg-color: #ffffff;
     --primary-color: #2563eb;
     --secondary-color: #3b82f6;
@@ -27,7 +27,7 @@ body {
     width: auto;
     max-width: 100vw;
     min-height: 100vh;
-    background-color: var(--bg-color);
+    background: var(--bg-color);
     color: var(--btn-text-colorr);
 }
 

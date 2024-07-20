@@ -3,7 +3,7 @@
 
 
 :root {
-    --bg-color: #bad1e9;
+    --bg-color: linear-gradient(135deg,#7ca2ca,#2563eb,#0c1be9);
     --card-bg-color: #ffffff;
     --primary-color: #2563eb;
     --secondary-color: #3b82f6;
@@ -34,7 +34,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   margin: 0;
 }
 

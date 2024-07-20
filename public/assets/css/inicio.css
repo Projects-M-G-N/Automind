@@ -6,7 +6,7 @@
 }
 
 :root {
-    --bg-color: #bad1e9;
+    --bg-color: linear-gradient(135deg, #7ca2ca, #2563eb);
     --card-bg-color: #ffffff;
     --primary-color: #2563eb;
     --secondary-color: #3b82f6;
@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--bg-color);
+    background:var(--bg-color);
     color: var(--btn-text-color);
     line-height: 1.3;
 }
@@ -101,7 +101,7 @@ main {
     flex: 1;
     padding: 2rem;
     max-width: var(--max-width);
-    margin: 2rem auto;
+    margin: 1rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;

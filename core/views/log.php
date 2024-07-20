@@ -32,29 +32,6 @@
             </div>
         </div>
 
-        <div class="caixa" id="servicos">
-            <h1>Serviços</h1>
-            <div class="quadrados">
-                <a href="">
-                    <div class="servico">Serviço 1</div>
-                </a>
-                <a href="">
-                    <div class="servico">Serviço 2</div>
-                </a>
-                <a href="">
-                    <div class="servico">Serviço 3</div>
-                </a>
-                <a href="">
-                    <div class="servico">Serviço 4</div>
-                </a>
-                <a href="">
-                    <div class="servico">Serviço 5</div>
-                </a>
-                <a href="">
-                    <div class="servico">Serviço 6</div>
-                </a>
-            </div>
-            <h2>E muito mais</h2>
         </div>
 
         <div class="caixa" id="empresa">

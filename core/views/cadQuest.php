@@ -94,7 +94,7 @@
 
         <div class="form-section">
           <h3>Visualização</h3>
-
+          <div class="op">
           <div class="radi">
             <input type="radio" name="visu" id="publi" value="publico" checked>
             <label for="publi">Público</label>
@@ -102,6 +102,7 @@
           <div class="radi">
             <input type="radio" name="visu" id="priva" value="privado">
             <label for="priva">Privado</label>
+          </div>
           </div>
         </div>
 

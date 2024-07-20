@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --bg-color: #f8fafc;
+    --bg-color: linear-gradient(135deg, #7ca2ca, #2563eb);
     --fundo: #bad1e9;
     --card-bg-color: #ffffff;
     --primary-color: #2563eb;
@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--fundo);
+    background: var(--bg-color);
     color: var(--btn-text-color);
     line-height: 1.6;
     padding-top: 30px;
