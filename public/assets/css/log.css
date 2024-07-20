@@ -97,14 +97,15 @@ header .botoes button:hover {
 }
 
 main {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
-    margin: 60px auto;
+    margin: 40px auto;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 80px;
 }
+
 
 .caixa {
     width: 100%;
@@ -122,7 +123,7 @@ main {
 }
 
 #about h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--card-bg-color);
     margin-top: 10px;
     text-transform: uppercase;
@@ -135,7 +136,8 @@ main {
 }
 
 #about .about-text p {
-    font-size: 1.2rem;
+    text-indent: 30px;
+    font-size: 1.4rem;
     color: var(--card-bg-color);
     margin-bottom: 20px;
 }
@@ -327,12 +329,7 @@ footer {
     margin-right: 10px;
 }
 
-.boxs .redes-sociais ul li a i {
-    text-decoration: none;
-    color: #fff;
-    transition: .25s;
-    font-size: 28px;
-}
+
 
 .boxs .redes-sociais ul li a i:hover {
     font-weight: bold;
