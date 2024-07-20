@@ -1,2 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos e Condições de Uso</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #7ca2ca, #2563eb); /* Gradiente de fundo */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #1a73e8;
+            margin-top: 0;
+        }
+        h1 {
+            font-size: 2rem;
+            border-bottom: 2px solid #1a73e8;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid #1a73e8;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 1rem;
+        }
+        li {
+            font-size: 1rem;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #ffffff;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #1a73e8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 20px 0;
+        }
+        button:hover {
+            background-color: #1558b0;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Termos e Condições de Uso</h1>
+        <p>Última atualização: 22/06/2024</p>
+        <p>Bem-vindo ao AutoMind! AutoMind é uma plataforma de criação de provas customizáveis utilizando a Teoria de Resposta ao Item TRI.</p>
+        <p>Por favor, leia estes termos e condições antes de usar nosso serviço.</p>
 
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">@import url(https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLTi9jKYd1gJzj5O2gWsEpXoyck2WCYPEMNySjZN0CHed_kmCvy597kDopqFAXvpeaA);.lst-kix_list_1-3>li:before{content:"  "}.lst-kix_list_1-4>li:before{content:"  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_1-7>li:before{content:"  "}.lst-kix_list_1-5>li:before{content:"  "}.lst-kix_list_1-6>li:before{content:"  "}li.li-bullet-0:before{margin-left:-18pt;white-space:nowrap;display:inline-block;min-width:18pt}ul.lst-kix_list_1-3{list-style-type:none}.lst-kix_list_1-0>li:before{content:"\0025cf   "}ul.lst-kix_list_1-4{list-style-type:none}.lst-kix_list_1-8>li:before{content:"  "}ul.lst-kix_list_1-1{list-style-type:none}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_1-1>li:before{content:"  "}.lst-kix_list_1-2>li:before{content:"  "}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ol{margin:0;padding:0}table td,table th{padding:0}.c4{color:#4f81bd;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:13pt;font-family:"Calibri";font-style:normal}.c5{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Cambria";font-style:normal}.c2{padding-top:10pt;padding-bottom:0pt;line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Cambria";font-style:normal}.c7{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:15pt;font-family:"Cambria";font-style:normal}.c6{color:#4f81bd;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:normal}.c0{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c9{background-color:#ffffff;max-width:432pt;padding:72pt 90pt 72pt 90pt}.c8{margin-left:18pt;padding-left:0pt}.c11{padding:0;margin:0}.c3{height:11pt}.c10{margin-left:36pt}.title{padding-top:0pt;color:#17365d;border-bottom-color:#4f81bd;border-bottom-width:1pt;font-size:26pt;padding-bottom:4pt;font-family:"Calibri";line-height:1.0;border-bottom-style:solid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#4f81bd;font-size:12pt;padding-bottom:10pt;font-family:"Calibri";line-height:1.1500000000000001;font-style:italic;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Cambria"}p{margin:0;color:#000000;font-size:11pt;font-family:"Cambria"}h1{padding-top:24pt;color:#366091;font-weight:700;font-size:14pt;padding-bottom:0pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:10pt;color:#4f81bd;font-weight:700;font-size:13pt;padding-bottom:0pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:10pt;color:#4f81bd;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:10pt;color:#4f81bd;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}h5{padding-top:10pt;color:#243f61;font-size:11pt;padding-bottom:0pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#243f61;font-size:11pt;padding-bottom:0pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c9 doc-content"><div><p class="c0 c3"><span class="c1"></span></p></div><p class="c0"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 153.03px; height: 145.61px;"><img alt="" src="images/image1.jpg" style="width: 153.03px; height: 145.61px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p><p class="c0"><span class="c7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Termos &nbsp;e Condi&ccedil;&otilde;es de Uso</span></p><p class="c0"><span class="c1">&Uacute;ltima atualiza&ccedil;&atilde;o: 22/06/2024</span></p><p class="c0"><span class="c1">Bem vindo ao AutoMind! AutoMind &eacute; uma plataforma de cria&ccedil;&atilde;o de provas customiz&aacute;veis utilizando a Teoria de Resposta ao Item TRI.</span></p><p class="c0"><span class="c5">Por favor, leia estes termos e condi&ccedil;&otilde;es antes de usar nosso servi&ccedil;o.</span></p><p class="c0 c3 c10"><span class="c1"></span></p><h2 class="c2"><span class="c4">Reconhecimento</span></h2><p class="c0 c3"><span class="c1"></span></p><p class="c0"><span class="c1">Estes s&atilde;o os Termos de Uso que regem o uso deste servi&ccedil;o e o acordo que funciona entre voc&ecirc; e este projeto. Estes Termos de Uso estabelecem os direitos e obriga&ccedil;&otilde;es de todos os usu&aacute;rios.</span></p><p class="c0"><span class="c1">Seu acesso e uso do site est&atilde;o dependem da sua aceita&ccedil;&atilde;o e cumprimento destes Termos e Condi&ccedil;&otilde;es. Estes Termos e Condi&ccedil;&otilde;es aplicam-se a todos os visitantes, utilizadores e outros que acedam</span></p><p class="c0"><span class="c1">Ao acessar ou usar o Servi&ccedil;o, voc&ecirc; concorda em ficar vinculado a estes Termos de Uso. Se voc&ecirc; discordar de qualquer parte destes Termos de Uso, voc&ecirc; n&atilde;o poder&aacute; acessar o site.</span></p><p class="c0 c3"><span class="c1"></span></p><h2 class="c2" id="h.gjdgxs"><span class="c4">Pol&iacute;tica de seguran&ccedil;a </span></h2><p class="c0 c3"><span class="c1"></span></p><p class="c0"><span class="c1">Nossa prioridade &eacute; garantir a seguran&ccedil;a e a privacidade dos seus dados. Esta pol&iacute;tica de seguran&ccedil;a descreve as medidas que tomamos para proteger suas informa&ccedil;&otilde;es e assegurar que seu uso do nosso site seja seguro.</span></p><h3 class="c2" id="h.30j0zll"><span class="c6">Coleta e Uso de Dados: </span></h3><p class="c0"><span class="c1">Coletamos apenas as informa&ccedil;&otilde;es necess&aacute;rias para fornecer nossos servi&ccedil;os, como nome, e-mail e detalhes da conta. Esses dados s&atilde;o utilizados exclusivamente para login, comunica&ccedil;&atilde;o e melhoria do servi&ccedil;o.</span></p><h2 class="c2" id="h.1fob9te"><span class="c4">Pagamento da Assinatura</span></h2><p class="c0 c3"><span class="c1"></span></p><p class="c0"><span class="c1">Para possuir &nbsp;uma experi&ecirc;ncia completa no AutoMind, &nbsp;nosso site opera sob um modelo de assinatura. Abaixo, detalhamos as informa&ccedil;&otilde;es essenciais sobre o pagamento da assinatura:</span></p><p class="c0 c3"><span class="c1"></span></p><h3 class="c2" id="h.3znysh7"><span class="c6">1. Planos de Assinatura:</span></h3><p class="c0"><span class="c1">Oferecemos um plano de assinatura que &nbsp;garante acesso a todas as funcionalidades do site, incluindo ferramentas avan&ccedil;adas de cria&ccedil;&atilde;o de provas e banco de quest&otilde;es.</span></p><h3 class="c2" id="h.2et92p0"><span class="c6">2. M&eacute;todos de Pagamento:</span></h3><p class="c0"><span class="c1">Aceitamos uma variedade de m&eacute;todos de pagamento para sua conveni&ecirc;ncia, incluindo:</span></p><p class="c0"><span class="c1">Cart&atilde;o de Cr&eacute;dito: As principais bandeiras de cart&otilde;es de cr&eacute;dito s&atilde;o aceitas, como Visa, MasterCard, American Express e outros.</span></p><p class="c0"><span class="c1">Pagamento Online: Plataformas de pagamento online, como PayPal, tamb&eacute;m s&atilde;o suportadas.</span></p><p class="c0 c3"><span class="c1"></span></p><p class="c0 c3"><span class="c1"></span></p><p class="c0 c3"><span class="c1"></span></p><h2 class="c2"><span class="c4">Suspen&ccedil;&atilde;o</span></h2><p class="c0"><span class="c1">Poderemos suspender seu acesso imediatamente, sem aviso pr&eacute;vio ou responsabilidade, por qualquer motivo e por tempo indetermidado, se voc&ecirc; violar estes Termos de Uso.</span></p><p class="c0 c3"><span class="c1"></span></p><h2 class="c2"><span class="c4">Resolu&ccedil;&atilde;o de Disputas</span></h2><p class="c0"><span class="c1">Se voc&ecirc; tiver alguma preocupa&ccedil;&atilde;o ou disc&oacute;rdia sobre o Servi&ccedil;o, concorda em primeiro tentar resolver a disputa informalmente entrando em contato conosco.</span></p><h2 class="c2"><span class="c4">Altera&ccedil;&atilde;o de Termos</span></h2><p class="c0"><span class="c1">Se qualquer t&oacute;pico destes Termos for considerado &nbsp;inv&aacute;lido, tal t&oacute;pico ser&aacute; alterado e interpretado para cumprir os objetivos na medida poss&iacute;vel sob a lei aplic&aacute;vel e as disposi&ccedil;&otilde;es restantes continuar&atilde;o em pleno vigor e efeito.</span></p><p class="c0 c3"><span class="c1"></span></p><h2 class="c2"><span class="c4">Entre em contato conosco</span></h2><p class="c0"><span class="c1">Se voc&ecirc; tiver alguma d&uacute;vida sobre estes Termos de Uso, entre em contato conosco:</span></p><ul class="c11 lst-kix_list_1-0 start"><li class="c0 c8 li-bullet-0"><span class="c1">Por email: </span><span class="c1">AutomindGNK@gmail.com</span></li></ul><div><p class="c0 c3"><span class="c1"></span></p></div></body></html>
+        <h2>Reconhecimento</h2>
+        <p>Estes são os Termos de Uso que regem o uso deste serviço e o acordo que funciona entre você e este projeto. Estes Termos de Uso estabelecem os direitos e obrigações de todos os usuários.</p>
+
+        <h2>Política de Segurança</h2>
+        <p>Nossa prioridade é garantir a segurança e a privacidade dos seus dados. Esta política de segurança descreve as medidas que tomamos para proteger suas informações e assegurar que seu uso do nosso site seja seguro.</p>
+
+        <h3>Coleta e Uso de Dados</h3>
+        <p>Coletamos apenas as informações necessárias para fornecer nossos serviços, como nome, e-mail e detalhes da conta. Esses dados são utilizados exclusivamente para login, comunicação e melhoria do serviço.</p>
+
+        <h2>Pagamento da Assinatura</h2>
+        <p>Para possuir uma experiência completa no AutoMind, nosso site opera sob um modelo de assinatura. Abaixo, detalhamos as informações essenciais sobre o pagamento da assinatura:</p>
+
+        <h3>1. Planos de Assinatura</h3>
+        <p>Oferecemos um plano de assinatura que garante acesso a todas as funcionalidades do site, incluindo ferramentas avançadas de criação de provas e banco de questões.</p>
+
+        <h3>2. Métodos de Pagamento</h3>
+        <p>Aceitamos uma variedade de métodos de pagamento para sua conveniência, incluindo:</p>
+        <ul>
+            <li>Cartão de Crédito: As principais bandeiras de cartões de crédito são aceitas, como Visa, MasterCard, American Express e outros.</li>
+            <li>Pagamento Online: Plataformas de pagamento online, como PayPal, também são suportadas.</li>
+        </ul>
+
+        <h2>Suspensão</h2>
+        <p>Poderemos suspender seu acesso imediatamente, sem aviso prévio ou responsabilidade, por qualquer motivo e por tempo indeterminado, se você violar estes Termos de Uso.</p>
+
+        <h2>Resolução de Disputas</h2>
+        <p>Se você tiver alguma preocupação ou discórdia sobre o Serviço, concorda em primeiro tentar resolver a disputa informalmente entrando em contato conosco.</p>
+
+        <h2>Alteração de Termos</h2>
+        <p>Se qualquer tópico destes Termos for considerado inválido, tal tópico será alterado e interpretado para cumprir os objetivos na medida possível sob a lei aplicável e as disposições restantes continuarão em pleno vigor e efeito.</p>
+
+        <h2>Entre em Contato Conosco</h2>
+        <p>Se você tiver alguma dúvida sobre estes Termos de Uso, entre em contato conosco:</p>
+        <ul>
+            <li>Por email: <a href="mailto:AutomindGNK@gmail.com">AutomindGNK@gmail.com</a></li>
+        </ul>
+
+        <button id="download-pdf">Baixar PDF</button>
+    </div>
+    <div class="footer">
+        &copy; 2024 AutoMind. Todos os direitos reservados.
+    </div>
+
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+        
+            doc.text('Termos e Condições de Uso', 10, 10);
+            doc.text('Última atualização: 22/06/2024', 10, 20);
+            doc.text('Bem-vindo ao AutoMind! AutoMind é uma plataforma de criação de provas customizáveis utilizando a Teoria de Resposta ao Item TRI.', 10, 30);
+           
+            doc.save('termos-e-condicoes.pdf');
+        });
+    </script>
+</body>
+</html>

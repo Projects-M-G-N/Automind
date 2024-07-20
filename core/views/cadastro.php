@@ -83,9 +83,11 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="continuar">
                     <button class="btn-cadastro" name="cadastrar">Acessar</button>
                 </div>
+                <a href="?a=termos">Ao acessar você garante que leu e concorda com nossos termos de uso e politica de privacidade</a>
             </form>
         </div>
     </div>
