@@ -40,20 +40,13 @@ $cont = 0;
             while ($prova = $provas->fetch(PDO::FETCH_ASSOC)) {
                 $cont += 1;
             ?>
-            <div class="prova" onclick="chamarQuestoes(<?= $prova['id']?>)">
+            <div class="prova" onclick="window.location.href='./?a=prova&id=<?= $prova['id']?>'">
                 <h3>Prova <?= $cont?></h3>
                 <p>Emissão: <?= ($prova['emitido'] == 0) ? "Não foi emitida" : $prova['emissao']?></p>
             </div>
             <?php }?>
         </div>
     </main>
-
-
-
-    <div class="QuestProva">
-        <?php include('src/prova.php');?>
-    </div>
-    <script src="./public/assets/js/provas.js"></script>
 </body>
 
 </html>

@@ -52,6 +52,15 @@
 
         }
 
+        public function prova()
+        {
+
+            Functions::Layout([
+                'prova'
+            ]);
+
+        }
+
         public function logout()
         {
 

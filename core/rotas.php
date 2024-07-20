@@ -6,6 +6,7 @@
         'cadQuest' => 'main@cadQuest',
         'bancodequestoes' => 'main@bancodequestoes',
         'provas' => 'main@provas',
+        'prova' => 'main@prova',
         'gerarProvas' => 'main@gerarProvas',
         'logout' => 'main@logout',
         'pdf' => 'main@pdf',

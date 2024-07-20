@@ -1,12 +1,13 @@
-let pdf = document.querySelector('.gerarPDF');
-let word = document.querySelector('.gerarWord');
+// let pdf = document.querySelector('.gerarPDF');
+// let word = document.querySelector('.gerarWord');
 let QuestProva = document.querySelector('.QuestProva');
 let mainProva = document.querySelector(".main-prova");
 let gabarito = document.querySelector(".gabarito");
 let questoes = document.querySelector(".questoes");
+let idProva = document.querySelector("#idprova").value;
 
 // pdf.disabled = true;
-word.disabled = true;
+// word.disabled = true;
 
 async function chamarQuestoes(id) {
     pdf.addEventListener('click', (e) => {

@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: linear-gradient(135deg, #7ca2ca, #2563eb);
+    --card-bg-color: #ffffff;
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --text-color: #1f2937;
+    --placeholder-color: #6b7280;
+    --btn-bg-color: #2563eb;
+    --btn-text-color: #ffffff;
+    --shadow-color: #0000001a;
+    --header-bg-color: #ffffff;
+    --modal-bg-color: #00000099;
+    --border-radius: 12px;
+    --transition-duration: 0.4s;
+    --max-width: 1200px;
+    --caixa:#1c3d70;
+}
+
+.opc {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
