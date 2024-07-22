@@ -7,8 +7,9 @@ if (!isset($idProva)) {
 $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
 $email = $_SESSION['usuario'];
 $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
-$questoes = $gestor->query("SELECT questao.* FROM provas, questao WHERE provas.id='$idProva' AND provas.questoes=questao.id");
-$gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE id='$idProva'")->fetch()['quant'];
+$nomeUsuario = $gestor->query("SELECT nome FROM usuarios WHERE id='$usuario'")->fetch()['nome'];
+$questoes = $gestor->query("SELECT questao.* FROM provas, questao WHERE provas.idprova='$idProva' AND provas.questoes=questao.id");
+$gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova='$idProva'")->fetch()['quant'];
 
 ?>
 
@@ -25,6 +26,15 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE id='$idP
 <body>
 
     <div class="folha">
+        <header>
+            <div class="nomes">
+                <p>Aplicador: <?= $nomeUsuario ?></p>
+                <p>Aluno: _______________________________</p>
+            </div>
+            <div class="data">
+                <p>__/__/____</p>
+            </div>
+        </header>
         <div class="main-prova">
             <div class="gabarito">
                 <?php
@@ -69,6 +79,7 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE id='$idP
                         <?php } ?>
             </div>
             <?php
+            $quest = 1;
             while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
                 $texto = $questao['texto_questao'];
                 $dificuldade = $questao['dificuldade'];
@@ -108,6 +119,7 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE id='$idP
             ?>
                 <div class="questoes">
                     <div class="enunciado">
+                        <p><?= $quest . ")"?></p>
                         <?= $texto ?>
                     </div>
                     <div class="alternativas">
@@ -120,7 +132,9 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE id='$idP
                         </ul>
                     </div>
                 </div>
-            <?php } ?>
+            <?php
+                $quest++;
+            } ?>
         </div>
         <!-- <div class="opcoes">
             <button class="emitir">Emitir prova</button>
