@@ -20,35 +20,31 @@
                         <h1>Acesso</h1>
                     </div>
                     <div class="cadastro">
-                            <button onclick="window.location.href='./?a=cadastro'">Cadastro</button>
+                        <button type="button" onclick="window.location.href='./?a=cadastro'">Cadastro</button>
                     </div>
                 </div>
+                
+                <div class="grupo_input">
+                    <div class="caixa">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
 
-            
-            <div class="grupo_input">
-                <div class="caixa">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
-                </div>
-
-                <div class="caixa">
-                    <label for="senha">Senha</label>
-                    <div class="input-wrapper">
-                        <div class="input-senha">
+                    <div class="caixa">
+                        <label for="senha">Senha</label>
+                        <div class="input-wrapper">
                             <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                            <div class="olho">
-                                    <button type="button" id="idmostrar-senha" onclick="mostrarSenha()">
-                                        <i class="bi bi-eye-fill eye"></i>
-                                    </button>
-                            </div>
+                            <button type="button" id="idmostrar-senha" class="eye" onclick="mostrarSenha()">
+                                <i class="bi bi-eye-fill"></i>
+                            </button>
                         </div>
-                        <p><a  class="suporte" href="">Esqueceu a senha?</a></p>
+                        <p><a class="suporte" href="">Esqueceu a senha?</a></p>
                     </div>
                 </div>
-            </div>
-            <div class="entrar">
-                <button class="btn-login" name="logar">Acessar</button>
-            </div>
+                
+                <div class="entrar">
+                    <button class="btn-login" name="logar">Acessar</button>
+                </div>
             </form>
         </div>
     </div>
@@ -59,15 +55,13 @@
 
             if (senhaInput.type === "password") {
                 senhaInput.type = "text";
-                mostrarSenhaBtn.innerHTML = '<i class="bi bi-eye-slash-fill eye"></i>';
+                mostrarSenhaBtn.innerHTML = '<i class="bi bi-eye-slash-fill"></i>';
             } else {
                 senhaInput.type = "password";
-                mostrarSenhaBtn.innerHTML = '<i class="bi bi-eye-fill eye"></i>';
+                mostrarSenhaBtn.innerHTML = '<i class="bi bi-eye-fill"></i>';
             }
         }
     </script>
-
-
 </body>
 
 </html>

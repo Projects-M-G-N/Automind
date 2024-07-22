@@ -78,19 +78,27 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transition: .4s;
+    background-color: var(--btn-bg-color);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    color: var(--btn-text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
 }
 
 header nav > a {
-    padding: 0.5rem 1rem;
-    color: var(--btn-text-color);
-    background-color:red ;
-    border-radius: var(--border-radius);
-    transition: var(--transition-duration);
+    background-color: red;
+    border: none;
     text-decoration: none;
-    transition: .4s;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    color: var(--btn-text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 header nav > a:hover {
@@ -115,11 +123,12 @@ main {
     align-items: center;
     padding: 20px;
     background-color: #1c3d70;
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 8px;
+    box-shadow: 8 8px 24px var(--shadow-color);
     max-width: 1200px;
     margin: 20px auto;
 }
+
 
 .intro-text {
     flex: 1 1 30%;
@@ -139,14 +148,14 @@ main {
 
 .intro-text .btn {
     background-color: var(--btn-bg-color);
-    color: var(--btn-text-color);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s;
-    display: inline-block;
-    margin-right: 30px;
     border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    color: var(--btn-text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
 }
 
 .intro-text .btn:hover {
