@@ -28,13 +28,16 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
     <div class="folha">
         <header>
             <div class="nomes">
-                <p>Aplicador: <?= $nomeUsuario ?></p>
-                <p>Aluno: _______________________________</p>
+                <h3>Aplicador: <?= $nomeUsuario ?></h3>
+                <h3>Discente: _______________________________</h>
             </div>
             <div class="data">
-                <p>__/__/____</p>
+                <h3>Data : __/__/____</h3>
             </div>
         </header>
+        <div class="codigo">
+            <h3>Codigo: 1552683</h3>
+        </div>
         <div class="main-prova">
             <div class="gabarito">
                 <?php
