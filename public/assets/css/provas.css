@@ -80,14 +80,8 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background-color: var(--primary-color);
-    border: none;
-    text-decoration: none;
-    padding: 0.6rem 1rem;
-    border-radius: 20px;
-    color: var(--btn-text-color);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
+    color: white;
+    transition: .4s;
 }
 
 header nav > a {

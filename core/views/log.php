@@ -37,13 +37,13 @@
         <div class="caixa" id="empresa">
             <div class="sob-data">
                 <div>
-                    <h4>Sobre a empresa</h4>
+                    
                     <h3>Quem somos</h3>
                 </div>
             </div>
             <div class="data">
-                <h3>A Automind</h3>
-                <p>A Automind é uma empresa de sistemas com um propósito claro: usar a tecnologia para o bem da comunidade. Nossas soluções são mais do que inovações técnicas, são ferramentas para promover o progresso coletivo.</p>
+                <h3>Automind</h3>
+                <p>Automind é uma empresa de sistemas com um propósito claro: usar a tecnologia para o bem da comunidade. Nossas soluções são mais do que inovações técnicas, são ferramentas para promover o progresso coletivo.</p>
                 <p>Somos uma equipe apaixonada pela educação e tecnologia, combinando o melhor dos dois mundos para criar soluções únicas que ajudam estudantes. Nosso propósito é oferecer novas perspectivas e conexões através das ferramentas educacionais, buscando sempre inovar e surpreender em cada transação.</p>
             </div>
         </div>

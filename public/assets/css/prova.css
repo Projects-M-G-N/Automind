@@ -20,7 +20,14 @@
     --border-radius: 12px;
     --transition-duration: 0.4s;
     --max-width: 1200px;
-    --caixa: #1c3d70;
+    --caixa:#1c3d70;
+}
+
+.opc {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
 }
 
 body {
@@ -46,6 +53,7 @@ body {
 
 header {
     margin-bottom: 20px;
+    
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -81,37 +89,24 @@ header {
 }
 
 .enunciado p {
-    margin-right: 3px;
+    margin-right: 10px;
     font-weight: bold;
     min-width: 2em;
 }
 
 .alternativas ul {
-    
     list-style-type: none;
     padding: 0;
 }
 
 .alternativas li {
-    
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .gabarito {
     margin-bottom: 30px;
-}
-
-.gabarito .opc {
-    width: 15px;
-    height: 15px;
-    border: 1px solid black;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 5px;
 }
 
 table {
