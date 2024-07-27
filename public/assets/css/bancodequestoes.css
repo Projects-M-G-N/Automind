@@ -182,7 +182,7 @@ body main .questoes .questao {
     color: var(--btn-text-color);
 }
 
-.add, .cad {
+.add, .cad, .notCad, .rem {
     padding: 8px 16px;
     border: none;
     border-radius: 8px;
@@ -190,11 +190,12 @@ body main .questoes .questao {
     font-weight: bold;
     display: block;
     margin-top: 10px;
+    color: var(--btn-text-color);
 }
 
 .add {
     background-color: var(--primary-color);
-    color: var(--btn-text-color);
+    cursor: pointer;
 }
 
 .add:hover {
@@ -205,7 +206,15 @@ body main .questoes .questao {
 
 .cad {
     background-color: var(--fundo);
-    color: var(--btn-text-color);
+}
+
+.notCad {
+    background-color: #ee7f7f;
+}
+
+.rem {
+    background-color: red;
+    cursor: pointer;
 }
 
 body main .prova {

@@ -1,28 +1,57 @@
 const ctx = document.getElementById('graficoDif');
 let valores = [0, 0, 0];
 async function addQuest(id, idProf) {
-    var btn = document.getElementById(id);
+    var btnCad = document.getElementById(id);
+    var btnRem = document.getElementById("rem" + id);
     const dados = await fetch('./public/api/cadQuestao.php?idQuest=' + id + '&idProf=' + idProf);
-    btn.innerHTML = "<i class='bi bi-check2'></i> Questão cadastrada";
-    btn.classList.add('cad');
-    btn.classList.remove('add');
-    btn.disabled = true;
+    btnCad.innerHTML = "<i class='bi bi-check2'></i> Questão cadastrada";
+    btnCad.classList.add('cad');
+    btnCad.classList.remove('add');
+    btnCad.disabled = true;
+    btnRem.classList.remove('notCad');
+    btnRem.classList.add('rem');
+    btnRem.disabled = false;
+    btnRem.innerHTML = "<i class='bi bi-trash'></i> Remover Questão";
     check(idProf);
+}
+
+async function remQuest(id, prof) {
+    var btnRem = document.getElementById("rem" + id);
+    var btnCad = document.getElementById(id);
+    const dados = await fetch('./public/api/remQuest.php?idQuest=' + id + '&idProf=' + prof);
+    btnRem.innerHTML = "Questão não cadastrada";
+    btnRem.classList.add('notCad');
+    btnRem.classList.remove('rem');
+    btnRem.disabled = true;
+    btnCad.classList.remove('cad');
+    btnCad.classList.add('add');
+    btnCad.disabled = false;
+    btnCad.innerHTML = "Adicionar Questão";
+    check(prof);
 }
 
 const usuario = document.getElementById('idUsu').value;
 
 async function check(id) {
+    const listRem = document.querySelectorAll('.notCad');
+    listRem.forEach(element => {
+        element.disabled = true;
+    });
     const dados = await fetch('./public/api/listaQuestoes.php?idProf=' + id);
     const lista = await dados.json();
     let questoes = document.querySelectorAll('.add');
     for (let index = 0; index < questoes.length; index++) {
         const element = questoes[index];
+        const remove = listRem[index];
         if (lista.indexOf(parseInt(element.value)) > -1) {
             element.innerHTML = "<i class='bi bi-check2'></i> Questão cadastrada";
             element.classList.add('cad');
             element.classList.remove('add');
             element.disabled = true;
+            remove.classList.add('rem');
+            remove.classList.remove('notCad');
+            remove.disabled = false;
+            remove.innerHTML = "<i class='bi bi-trash'></i> Remover Questão"
         }
     }
     grafico(lista);

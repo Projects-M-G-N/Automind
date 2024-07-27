@@ -4,6 +4,7 @@ header('Content-Type: application/json');
 $id_ques = filter_input(INPUT_GET, 'idQuest', FILTER_DEFAULT);
 $id_prof = filter_input(INPUT_GET, 'idProf', FILTER_DEFAULT);
 
+$data = date('Y-m-d H:m:i');
 
 $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
 

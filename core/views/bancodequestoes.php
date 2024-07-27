@@ -89,6 +89,9 @@
                         <button class="add" onclick="addQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= $id_quest?>" value="<?= $id_quest?>">
                             Adicionar Questão
                         </button>
+                        <button class="notCad" onclick="remQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= 'rem' . $id_quest?>">
+                            Questão não Cadastrada
+                        </button>
                     </div>
             <?php  }?>
         </div>

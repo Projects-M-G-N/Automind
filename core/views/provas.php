@@ -2,7 +2,7 @@
 $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
 $email = $_SESSION['usuario'];
 $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
-$provas = $gestor->query("SELECT * FROM prova WHERE id_prof='$usuario'");
+$provas = $gestor->query("SELECT prova.* FROM prova, provas WHERE prova.id_prof='$usuario' AND provas.idprova = prova.id");
 $cont = 0;
 ?>
 
