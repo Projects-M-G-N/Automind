@@ -20,14 +20,7 @@
     --border-radius: 12px;
     --transition-duration: 0.4s;
     --max-width: 1200px;
-    --caixa:#1c3d70;
-}
-
-.opc {
-    width: 15px;
-    height: 15px;
-    border: 1px solid black;
-    border-radius: 50%;
+    --caixa: #1c3d70;
 }
 
 body {
@@ -41,33 +34,30 @@ body {
 }
 
 .folha {
-    max-width: 700px;
-    margin: auto;
+    width: 21cm;
+    margin: 20px auto;
     padding: 30px;
     background: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     page-break-after: always;
+    overflow: hidden;
+    position: relative;
 }
 
 header {
     margin-bottom: 20px;
-    
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nomes h3 {
+.nomes h3, .data h3 {
     margin: 0;
     font-size: 14px;
-}
-
-.data h3 {
-    margin: 0;
-    font-size: 14px;
+    color: var(--text-color);
 }
 
 .codigo h3 {
@@ -76,6 +66,53 @@ header {
     font-size: 14px;
     border-top: 1px solid #ddd;
     padding-top: 10px;
+    color: var(--text-color);
+}
+
+.main-prova {
+    margin-top: 20px;
+}
+
+.gabarito {
+    margin-bottom: 30px;
+}
+
+.gabarito table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    table-layout: fixed;
+    border: 1px solid #ddd;
+}
+
+.gabarito thead {
+    background-color: gray;
+    color: var(--btn-text-color);
+}
+
+.gabarito th, .gabarito td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    width: 12.66%;
+}
+
+.gabarito tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.gabarito tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.gabarito .opc {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .questoes {
@@ -103,56 +140,17 @@ header {
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.gabarito {
-    margin-bottom: 30px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 8px;
-    text-align: center;
-}
-
-thead {
-    background-color: #f1f1f1;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
+.alternativas li::before {
+    content: attr(data-letter);
+    font-weight: bold;
     margin-right: 10px;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+.alternativas input[type="radio"] {
+    margin-left: 10px;
 }
 
-@media print {
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    .folha {
-        page-break-after: always;
-    }
-    .questoes {
-        page-break-before: always;
-    }
-}

@@ -28,8 +28,9 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
     <div class="folha">
         <header>
             <div class="nomes">
-                <h3>Aplicador: <?= $nomeUsuario ?></h3>
-                <h3>Discente: _______________________________</h>
+                <h3>Instituição: _____________________________________________________________</h3>
+                <h3>Professor: <?= $nomeUsuario ?></h3>
+                <h3>Nome: _______________________________</h#>
             </div>
             <div class="data">
                 <h3>Data : __/__/____</h3>
@@ -127,11 +128,11 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
                     </div>
                     <div class="alternativas">
                         <ul>
-                            <li>a) <?= $opc1 ?></li>
-                            <li>b) <?= $opc2 ?></li>
-                            <li>c) <?= $opc3 ?></li>
-                            <li>d) <?= $opc4 ?></li>
-                            <li>e) <?= $opc5 ?></li>
+                            <li data-letter="a)"> <?= $opc1 ?></li>
+                            <li data-letter="b)"> <?= $opc2 ?></li>
+                            <li data-letter="c)"> <?= $opc3 ?></li>
+                            <li data-letter="d)"> <?= $opc4 ?></li>
+                            <li data-letter="e)"> <?= $opc5 ?></li>
                         </ul>
                     </div>
                 </div>
