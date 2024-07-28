@@ -30,14 +30,14 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
             <div class="nomes">
                 <h3>Instituição: _____________________________________________________________</h3>
                 <h3>Professor: <?= $nomeUsuario ?></h3>
-                <h3>Nome: _______________________________</h#>
+                <h3>Nome: _______________________________________</h3>
             </div>
             <div class="data">
                 <h3>Data : __/__/____</h3>
             </div>
         </header>
         <div class="codigo">
-            <h3>Codigo: 1552683</h3>
+            <h3>Código: <?= $_GET['id'] ?></h3>
         </div>
         <div class="main-prova">
             <div class="gabarito">
@@ -123,7 +123,7 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
             ?>
                 <div class="questoes">
                     <div class="enunciado">
-                        <p><?= $quest . ")"?></p>
+                        <p><?= $quest . ")" ?></p>
                         <?= $texto ?>
                     </div>
                     <div class="alternativas">
@@ -140,14 +140,18 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
                 $quest++;
             } ?>
         </div>
-        <!-- <div class="opcoes">
-            <button class="emitir">Emitir prova</button>
-            <button class="gerarWord">Gerar em Word</button>
-            <button class="gerarPDF">Gerar em PDF</button>
-        </div> -->
+    </div>
+    <div class="opcoes">
+        <button class="emitir" onclick="emitirProva(<?= $_GET['id'] ?>)">Emitir prova</button>
+        <button class="gerarPDF" onclick="window.location.href='./?a=pdf&id=<?= $_GET['id'] ?>'">Gerar em PDF</button>
+        <button class="gerarWord">Gerar em Word</button>
+        <button class="voltar" onclick="window.location.href='./?a=provas'">Voltar</button>
     </div>
 
-    <!-- <script src="./public/assets/js/prova.js"></script> -->
+    <script src="./public/assets/js/prova.js"></script>
+    <script>
+        check(<?= $_GET['id'] ?>)
+    </script>
 </body>
 
 </html>

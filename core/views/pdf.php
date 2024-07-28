@@ -7,9 +7,9 @@ $gestor = new PDO("mysql:host=" . MYSQL_SERVER . ";dbname=" . MYSQL_DATABASE . "
 $email = $_SESSION['usuario'];
 
 $nome = $gestor->query("SELECT nome FROM usuarios WHERE email='$email'")->fetch()['nome'];
-$idProva = $_GET['idProva'];
+$idProva = $_GET['id'];
 $quantQuest = $gestor->query("SELECT COUNT(id) as quest FROM provas WHERE idprova='$idProva'")->fetch()['quest'];
-$questoes = $gestor->query("SELECT questao.* FROM provas, questao WHERE provas.questoes=questao.id AND provas.idprova='$idProva'");
+$questoes = $gestor->query("SELECT questao.* FROM provas, questao WHERE provas.idprova='$idProva' AND provas.questoes=questao.id");
 $dompdf = new Dompdf(['enable_remote' => true]);
 
 $dados = "<!DOCTYPE html>";
@@ -22,23 +22,26 @@ $dados .= "<link rel='stylesheet' href='http://localhost/Avaliacao-TRI/public/as
 $dados .= "<link rel='shortcut icon' href='http://localhost/Avaliacao-TRI/public/assets/img/logo.ico' type='image/x-icon'>";
 $dados .= "</head>";
 $dados .= "<body>";
+$dados .= "<div class='folha'>";
 $dados .= "<header>";
-$dados .= "<div class='nome'>";
-$dados .= "<p>Aplicador: $nome</p>";
-$dados .= "<p>Discente: _________________________________</p>";
+$dados .= "<div class='nomes'>";
+$dados .= "<h3>Instituição: _____________________________________________________________</h3>";
+$dados .= "<h3>Professor: $nome</h3>";
+$dados .= "<h3>Nome: _______________________________________</h3>";
 $dados .= "</div>";
 $dados .= "<div class='data'>";
-$dados .= "<p>Data: __/__/____</p>";
+$dados .= "<h3>Data : __/__/____</h3>";
 $dados .= "</div>";
 $dados .= "</header>";
-$dados .= "<main>";
-$dados .= "<div class='gabarito-cod'>";
+$dados .= "<div class='codigo'>";
 $dados .= "<h3>Código: $idProva</h3>";
+$dados .= "</div>";
+$dados .= "<div class='main-prova'>";
 $dados .= "<div class='gabarito'>";
 $cont = 0;
-for ($j = 0; $j < 3; $j++) {
-    for ($i = $cont; $i < $quantQuest; $i++) {
-        if ($i % 15 == 0) {
+for ($i = 0; $i < 3; $i++) {
+    for ($j = $cont; $j < $quantQuest; $j++) {
+        if ($j % 15 == 0) {
             $dados .= "<table>";
             $dados .= "<thead>";
             $dados .= "<tr>";
@@ -51,49 +54,73 @@ for ($j = 0; $j < 3; $j++) {
             $dados .= "</tr>";
             $dados .= "</thead>";
         }
-        $dados .= "<tr>";
-        $dados .= "<td>" . $i + 1 . "</td>";
+        $num = $j + 1;
+        $dados .= "<td>$num</td>";
         $dados .= "<td><div class='opc'></div></td>";
         $dados .= "<td><div class='opc'></div></td>";
         $dados .= "<td><div class='opc'></div></td>";
         $dados .= "<td><div class='opc'></div></td>";
         $dados .= "<td><div class='opc'></div></td>";
-        $dados .= "</tr>";
         $cont++;
     }
     $dados .= "</table>";
 }
 $dados .= "</div>";
-$dados .= "</div>";
-$dados .= "<div class='questoes'>";
-$num = 0;
+$quest = 1;
 while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
-    $num++;
-    $dados .= "<div class='questao'>";
+    $texto = $questao['texto_questao'];
+    $dificuldade = $questao['dificuldade'];
+    $numOpcCor = $questao['numopccor'];
+    if ($numOpcCor == 1) {
+        $opc1 = $questao['opccorreta'];
+        $opc2 = $questao['opcalternativa1'];
+        $opc3 = $questao['opcalternativa2'];
+        $opc4 = $questao['opcalternativa3'];
+        $opc5 = $questao['opcalternativa4'];
+    } else if ($numOpcCor == 2) {
+        $opc1 = $questao['opcalternativa4'];
+        $opc2 = $questao['opccorreta'];
+        $opc3 = $questao['opcalternativa1'];
+        $opc4 = $questao['opcalternativa2'];
+        $opc5 = $questao['opcalternativa3'];
+    } else if ($numOpcCor == 3) {
+        $opc1 = $questao['opcalternativa3'];
+        $opc2 = $questao['opcalternativa4'];
+        $opc3 = $questao['opccorreta'];
+        $opc4 = $questao['opcalternativa1'];
+        $opc5 = $questao['opcalternativa2'];
+    } else if ($numOpcCor == 4) {
+        $opc1 = $questao['opcalternativa2'];
+        $opc2 = $questao['opcalternativa3'];
+        $opc3 = $questao['opcalternativa4'];
+        $opc4 = $questao['opccorreta'];
+        $opc5 = $questao['opcalternativa1'];
+    } else {
+        $opc1 = $questao['opcalternativa1'];
+        $opc2 = $questao['opcalternativa2'];
+        $opc3 = $questao['opcalternativa3'];
+        $opc4 = $questao['opcalternativa4'];
+        $opc5 = $questao['opccorreta'];
+    }
+    $dados .= "<div class='questoes'>";
     $dados .= "<div class='enunciado'>";
-    $dados .= "<p>$num)" . $questao['texto_questao'] . "</p>";
+    $dados .= "<p>$ques)</p>";
+    $dados .= "$texto";
     $dados .= "</div>";
-    if (!empty($questao['img'])) {
-        // $dados .= "<div class='img'><img src='http://localhost/Avaliacao-TRI/public/assets/img/" . $questao['img'] . "' alt=''></div>";
-    }
-    if (!empty($questao['pergunta'])) {
-        $dados .= "<div class='pergunta'><p>" . $questao['pergunta'] . "</p></div>";
-    }
-    $dados .= "<div class='alt'>";
-    $idQuest = $questao['id'];
-    $alternativas = $gestor->query("SELECT * FROM alternativas WHERE id='$idQuest'");
-    while ($alternativa = $alternativas->fetch(PDO::FETCH_ASSOC)) {
-        $dados .= "<p>a)" . $alternativa['alternativaa'] . "</p>";
-        $dados .= "<p>b)" . $alternativa['alternativab'] . "</p>";
-        $dados .= "<p>c)" . $alternativa['alternativac'] . "</p>";
-        $dados .= "<p>d)" . $alternativa['alternativad'] . "</p>";
-        $dados .= "<p>e)" . $alternativa['alternativae'] . "</p>";
-    }
+    $dados .= "<div class='alternativas'>";
+    $dados .= "<ul>";
+    $dados .= "<li data-letter='a)'>$opc1</li>";
+    $dados .= "<li data-letter='b)'>$opc2</li>";
+    $dados .= "<li data-letter='c)'>$opc3</li>";
+    $dados .= "<li data-letter='d)'>$opc4</li>";
+    $dados .= "<li data-letter='e)'>$opc5</li>";
+    $dados .= "</ul>";
     $dados .= "</div>";
     $dados .= "</div>";
+    $quest++;
 }
 $dados .= "</div>";
-$dados .= "</main>";
+$dados .= "</div>";
 $dados .= "</body>";
 $dados .= "</html>";
 

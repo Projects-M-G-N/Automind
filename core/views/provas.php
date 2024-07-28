@@ -2,8 +2,8 @@
 $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
 $email = $_SESSION['usuario'];
 $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
-$provas = $gestor->query("SELECT prova.* FROM prova, provas WHERE prova.id_prof='$usuario' AND provas.idprova = prova.id");
-$cont = 0;
+$provas = $gestor->query("SELECT prova.* FROM prova, provas WHERE prova.id_prof='$usuario' AND provas.idprova = prova.id GROUP BY prova.id ORDER BY prova.id DESC");
+$cont = $gestor->query("SELECT COUNT(id) as num FROM prova")->fetch()['num'];
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +23,8 @@ $cont = 0;
         <nav>
             <div class="logo">
                 <img src="./public/assets/img/logo1.jpg" altg="logozinha">
-            </div>   
-                   
+            </div>
+
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
                 <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
@@ -36,15 +36,15 @@ $cont = 0;
 
     <main>
         <div class="provas">
-            <?php 
-            while ($prova = $provas->fetch(PDO::FETCH_ASSOC)) {
-                $cont += 1;
-            ?>
-            <div class="prova" onclick="window.location.href='./?a=prova&id=<?= $prova['id']?>'">
-                <h3>Prova <?= $cont?></h3>
-                <p>Emissão: <?= ($prova['emitido'] == 0) ? "Não foi emitida" : $prova['emissao']?></p>
-            </div>
-            <?php }?>
+            <?php
+            while ($prova = $provas->fetch(PDO::FETCH_ASSOC)) {            ?>
+                <div class="prova" onclick="window.location.href='./?a=prova&id=<?= $prova['id'] ?>'">
+                    <h3>Prova <?= $cont ?></h3>
+                    <p>Emissão: <?= ($prova['emitido'] == 0) ? "Não foi emitida" : date_format(date_create($prova['emissao']), 'd/m/Y') ?></p>
+                </div>
+            <?php
+                $cont--;
+            } ?>
         </div>
     </main>
 </body>
