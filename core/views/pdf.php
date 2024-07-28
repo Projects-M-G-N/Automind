@@ -2,7 +2,7 @@
 
 use Dompdf\Dompdf;
 
-$gestor = new PDO("mysql:host=" . MYSQL_SERVER . ";dbname=" . MYSQL_DATABASE . ";charset=utf8", MYSQL_USER, MYSQL_PASS);
+$gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
 
 $email = $_SESSION['usuario'];
 
@@ -69,7 +69,6 @@ $dados .= "</div>";
 $quest = 1;
 while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
     $texto = $questao['texto_questao'];
-    $dificuldade = $questao['dificuldade'];
     $numOpcCor = $questao['numopccor'];
     if ($numOpcCor == 1) {
         $opc1 = $questao['opccorreta'];
@@ -104,7 +103,7 @@ while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
     }
     $dados .= "<div class='questoes'>";
     $dados .= "<div class='enunciado'>";
-    $dados .= "<p>$ques)</p>";
+    $dados .= "<p>$quest)</p>";
     $dados .= "$texto";
     $dados .= "</div>";
     $dados .= "<div class='alternativas'>";
