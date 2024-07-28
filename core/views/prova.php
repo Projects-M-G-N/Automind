@@ -21,16 +21,23 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prova</title>
     <link rel="stylesheet" href="./public/assets/css/prova.css">
+    <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
 </head>
 
 <body>
+    <div class="opcoes">
+        <button class="emitir" onclick="emitirProva(<?= $_GET['id'] ?>)">Emitir prova</button>
+        <button class="gerarPDF" onclick="window.location.href='./?a=pdf&id=<?= $_GET['id'] ?>'">Gerar em PDF</button>
+        <button class="gerarWord">Gerar em Word</button>
+        <button class="voltar" onclick="window.location.href='./?a=provas'">Voltar</button>
+    </div>
 
     <div class="folha">
         <header>
             <div class="nomes">
-                <h3>Instituição: _____________________________________________________________</h3>
+                <h3>Nome: _________________________________________________________________</h3>
                 <h3>Professor: <?= $nomeUsuario ?></h3>
-                <h3>Nome: _______________________________________</h3>
+                <h3>Instituição: _____________________________________________________________</h3>
             </div>
             <div class="data">
                 <h3>Data : __/__/____</h3>
@@ -141,13 +148,6 @@ $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova=
             } ?>
         </div>
     </div>
-    <div class="opcoes">
-        <button class="emitir" onclick="emitirProva(<?= $_GET['id'] ?>)">Emitir prova</button>
-        <button class="gerarPDF" onclick="window.location.href='./?a=pdf&id=<?= $_GET['id'] ?>'">Gerar em PDF</button>
-        <button class="gerarWord">Gerar em Word</button>
-        <button class="voltar" onclick="window.location.href='./?a=provas'">Voltar</button>
-    </div>
-
     <script src="./public/assets/js/prova.js"></script>
     <script>
         check(<?= $_GET['id'] ?>)

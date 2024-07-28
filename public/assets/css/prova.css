@@ -33,6 +33,81 @@ body {
     margin: 0;
 }
 
+.opcoes {
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+    margin-top: 10px;
+    gap: 5px; 
+}
+
+.opcoes button {
+    background-color: var(--btn-bg-color);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    color: var(--btn-text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+}
+
+.opcoes button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.opcoes button.emitir {
+    background-color: var(--primary-color);
+}
+
+.opcoes button.emitir:disabled {
+    background-color: #a0aec0;
+}
+
+.opcoes button.emitir:hover:not(:disabled) {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.opcoes button.gerarPDF {
+    background-color: #dc3545;
+}
+
+.opcoes button.gerarPDF:disabled {
+    background-color: #f5c6cb;
+}
+
+.opcoes button.gerarPDF:hover:not(:disabled) {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.opcoes button.gerarWord {
+    background-color: var(--caixa);
+}
+
+.opcoes button.gerarWord:disabled {
+    background-color: #b3c2d1;
+}
+
+.opcoes button.gerarWord:hover:not(:disabled) {
+    background-color: #1a2d50;
+    transform: scale(1.05);
+}
+
+.opcoes button.voltar {
+    background-color: #6c757d;
+}
+
+.opcoes button.voltar:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+
+
 .folha {
     width: 21cm;
     margin: 20px auto;
