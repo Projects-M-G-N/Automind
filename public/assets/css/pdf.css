@@ -11,26 +11,46 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 11pt;
     color: #333;
-    background: #f4f4f9;
+    background: #fff;
     line-height: 1.6;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
 header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5cm;
-    border-bottom: 2px solid #000;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1cm;
+    border-bottom: 1px solid #000;
     padding-bottom: 0.5cm;
 }
 
-header .nome, header .data {
-    width: 45%;
+header .linha {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-header .nome p, header .data p {
+header .nomes {
+    margin-top: -15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+header .data {
+    margin-top: -45px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+header .nomes h3, header .data h3 {
     margin: 5px 0;
     font-weight: bold;
     font-size: 12pt;
@@ -47,6 +67,8 @@ main {
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    text-align: center;
+    width: 100%;
 }
 
 .gabarito-cod h3 {
@@ -58,8 +80,8 @@ main {
 }
 
 .gabarito {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-bottom: 1.5cm;
 }
@@ -71,11 +93,12 @@ main {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
 }
 
 .gabarito th, .gabarito td {
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
 }
 
@@ -83,6 +106,10 @@ main {
     background-color: gray;
     color: #ffffff;
     font-weight: bold;
+}
+
+.gabarito td {
+    background-color: #f9f9f9;
 }
 
 .opc {
@@ -93,23 +120,45 @@ main {
     margin: auto;
 }
 
-.questoes {
+.questoes-pagina {
     page-break-before: always;
+    margin-top: 0;
+}
+
+.questoes {
     margin-top: 2cm;
 }
 
-.questao {
+.enunciado {
     margin-bottom: 1.5cm;
+    margin-top: -50px;
 }
 
-.questao p {
-    margin: 10px 0;
-    text-align: justify;
-    line-height: 1.8;
+.enunciado p {
+    font-weight: bold;
+    font-size: 12pt;
+    margin-right: 5px;
 }
 
-.alt p {
-    margin-left: 20px;
-    text-indent: -20px;
+.enunciado div {
+    margin-left: 25px;
+}
+
+.alternativas {
+    margin-left: 30px;
+}
+
+.alternativas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.alternativas li {
     margin-bottom: 5px;
+}
+
+.codigo {
+    width: 50%;
+    margin: auto;
+    text-align: center;
 }
