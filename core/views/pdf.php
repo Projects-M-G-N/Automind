@@ -24,25 +24,18 @@ $dados .= "</head>";
 $dados .= "<body>";
 $dados .= "<div class='folha'>";
 $dados .= "<header>";
-$dados .= "<div class='linha'>";
-$dados .= "<div class='nomes'>";
-$dados .= "<h3>Professor: $nome</h3>";
-$dados .= "</div>";
-$dados .= "<div class='data'>";
-$dados .= "<h3>Data: __/__/____</h3>";
-$dados .= "</div>";
-$dados .= "</div>";
 $dados .= "<div class='nomes'>";
 $dados .= "<h3>Nome: _________________________________________________________________</h3>";
-$dados .= "</div>";
-$dados .= "<div class='nomes'>";
+$dados .= "<h3>Professor: $nome</h3>";
 $dados .= "<h3>Instituição: _____________________________________________________________</h3>";
 $dados .= "</div>";
+$dados .= "<div class='data'>";
+$dados .= "<h3>Data : __/__/____</h3>";
+$dados .= "</div>";
+$dados .= "</header>";
 $dados .= "<div class='codigo'>";
 $dados .= "<h3>Código: $idProva</h3>";
 $dados .= "</div>";
-$dados .= "</header>";
-$dados .= "<div class='pagina-em-branco'></div>";
 $dados .= "<div class='main-prova'>";
 $dados .= "<div class='gabarito'>";
 $cont = 0;
@@ -62,7 +55,6 @@ for ($i = 0; $i < 3; $i++) {
             $dados .= "</thead>";
         }
         $num = $j + 1;
-        $dados .= "<tr>";
         $dados .= "<td>$num</td>";
         $dados .= "<td><div class='opc'></div></td>";
         $dados .= "<td><div class='opc'></div></td>";
@@ -71,48 +63,56 @@ for ($i = 0; $i < 3; $i++) {
         $dados .= "<td><div class='opc'></div></td>";
         $cont++;
     }
-
-    $dados .= "</tbody>";
     $dados .= "</table>";
-
-    $cont += 15;
 }
-
 $dados .= "</div>";
 $quest = 1;
-$dados .= "<div class='questoes-pagina'>";
 while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
     $texto = $questao['texto_questao'];
     $numOpcCor = $questao['numopccor'];
-
-    $opcoes = [
-        $questao['opcalternativa1'],
-        $questao['opcalternativa2'],
-        $questao['opcalternativa3'],
-        $questao['opcalternativa4'],
-        $questao['opccorreta']
-    ];
-
-    $opcoesCorretas = [
-        1 => [$opcoes[4], $opcoes[0], $opcoes[1], $opcoes[2], $opcoes[3]],
-        2 => [$opcoes[1], $opcoes[4], $opcoes[0], $opcoes[2], $opcoes[3]],
-        3 => [$opcoes[2], $opcoes[3], $opcoes[4], $opcoes[0], $opcoes[1]],
-        4 => [$opcoes[3], $opcoes[4], $opcoes[1], $opcoes[2], $opcoes[0]],
-        5 => [$opcoes[4], $opcoes[0], $opcoes[1], $opcoes[2], $opcoes[3]]
-    ];
-
-    $opcoesCorretas = $opcoesCorretas[$numOpcCor];
-
+    if ($numOpcCor == 1) {
+        $opc1 = $questao['opccorreta'];
+        $opc2 = $questao['opcalternativa1'];
+        $opc3 = $questao['opcalternativa2'];
+        $opc4 = $questao['opcalternativa3'];
+        $opc5 = $questao['opcalternativa4'];
+    } else if ($numOpcCor == 2) {
+        $opc1 = $questao['opcalternativa4'];
+        $opc2 = $questao['opccorreta'];
+        $opc3 = $questao['opcalternativa1'];
+        $opc4 = $questao['opcalternativa2'];
+        $opc5 = $questao['opcalternativa3'];
+    } else if ($numOpcCor == 3) {
+        $opc1 = $questao['opcalternativa3'];
+        $opc2 = $questao['opcalternativa4'];
+        $opc3 = $questao['opccorreta'];
+        $opc4 = $questao['opcalternativa1'];
+        $opc5 = $questao['opcalternativa2'];
+    } else if ($numOpcCor == 4) {
+        $opc1 = $questao['opcalternativa2'];
+        $opc2 = $questao['opcalternativa3'];
+        $opc3 = $questao['opcalternativa4'];
+        $opc4 = $questao['opccorreta'];
+        $opc5 = $questao['opcalternativa1'];
+    } else {
+        $opc1 = $questao['opcalternativa1'];
+        $opc2 = $questao['opcalternativa2'];
+        $opc3 = $questao['opcalternativa3'];
+        $opc4 = $questao['opcalternativa4'];
+        $opc5 = $questao['opccorreta'];
+    }
     $dados .= "<div class='questoes'>";
     $dados .= "<div class='enunciado'>";
     $dados .= "<p>$quest)</p>";
-    $dados .= "<div>$texto</div>";
+    $dados .= "$texto";
     $dados .= "</div>";
     $dados .= "<div class='alternativas'>";
     $dados .= "<ul>";
-    foreach (range('a', 'e') as $index => $letra) {
-        $dados .= "<li>$letra) $opcoesCorretas[$index]</li>";
-    }
+    $dados .= "<li data-letter='a)'>$opc1</li>";
+    $dados .= "<li data-letter='b)'>$opc2</li>";
+    $dados .= "<li data-letter='c)'>$opc3</li>";
+    $dados .= "<li data-letter='d)'>$opc4</li>";
+    $dados .= "<li data-letter='e)'>$opc5</li>";
     $dados .= "</ul>";
     $dados .= "</div>";
     $dados .= "</div>";
