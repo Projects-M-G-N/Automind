@@ -131,7 +131,7 @@ if (isset($_POST['cadastrarQuest'])) {
 
     $numOpcCor = $_POST['opcCorreta'];
 
-    $sql_quest = $gestor->prepare("INSERT INTO questao VALUES (NULL, :prof, :assunto, :texto, :opcCor, :alt1, :alt2, :alt3, :alt4, :numopc, :visu, :dificuldade, :data_cad)");
+    $sql_quest = $gestor->prepare("INSERT INTO item VALUES (NULL, :prof, :assunto, :texto, :opcCor, :alt1, :alt2, :alt3, :alt4, :numopc, :visu, :dificuldade, :data_cad)");
     $sql_quest->execute(
         [
             ":prof" => $prof,

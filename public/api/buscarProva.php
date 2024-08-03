@@ -6,7 +6,7 @@ $id_prova = filter_input(INPUT_GET, 'idProva', FILTER_DEFAULT);
 $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
 
 $numeroQuest = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova='$id_prova'")->fetch()['quant'];
-$resultados = $gestor->query("SELECT questao.* FROM questao, provas WHERE provas.idprova='$id_prova' AND provas.questoes=questao.id");
+$resultados = $gestor->query("SELECT item.* FROM item, provas WHERE provas.idprova='$id_prova' AND provas.itens=item.id");
 
 $listaResult = array();
 array_push($listaResult, $numeroQuest);

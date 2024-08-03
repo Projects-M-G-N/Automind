@@ -16,13 +16,13 @@
     $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";charset=utf8", 'root', '');
     $email = $_SESSION['usuario'];
     $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
-    $questoes = $gestor->query("SELECT * FROM questao WHERE visu='Publico' OR idprofessor='$usuario'");
+    $questoes = $gestor->query("SELECT * FROM item WHERE visu='Publico' OR idprofessor='$usuario'");
     ?>
     <header>
         <nav>
-        <div class="logo">
+            <div class="logo">
                 <img src="./public/assets/img/logo1.jpg" altg="logozinha">
-        </div>
+            </div>
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
                 <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Item</a></li>
@@ -34,7 +34,7 @@
 
     <main>
         <div class="questoes">
-            <input type="hidden" name="" id="idUsu" value="<?= $usuario?>">
+            <input type="hidden" name="" id="idUsu" value="<?= $usuario ?>">
             <?php
             while ($questao = $questoes->fetch(PDO::FETCH_ASSOC)) {
                 $id_quest = $questao['id'];
@@ -72,28 +72,28 @@
                     $opc4 = $questao['opcalternativa4'];
                     $opc5 = $questao['opccorreta'];
                 }
-                
+
             ?>
-                    <div class="questao" id="quest<?= $id_quest?>">
-                        <h4>Dificuldade: <?= $dificuldade?></h4>
-                        <?= $texto ?>
-                        <div class="alternativas">
-                            <ul>
-                                <li class="<?= $numOpcCor == 1 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc1?></li>
-                                <li class="<?= $numOpcCor == 2 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc2?></li>
-                                <li class="<?= $numOpcCor == 3 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc3?></li>
-                                <li class="<?= $numOpcCor == 4 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc4?></li>
-                                <li class="<?= $numOpcCor == 5 ? "altCorreta alternativa" : "alternativa"?>"><?= $opc5?></li>
-                            </ul>
-                        </div>
-                        <button class="add" onclick="addQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= $id_quest?>" value="<?= $id_quest?>">
-                            Adicionar Item
-                        </button>
-                        <button class="notCad" onclick="remQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= 'rem' . $id_quest?>">
-                            Item não Cadastrado
-                        </button>
+                <div class="questao" id="quest<?= $id_quest ?>">
+                    <h4>Dificuldade: <?= $dificuldade ?></h4>
+                    <?= $texto ?>
+                    <div class="alternativas">
+                        <ul>
+                            <li class="<?= $numOpcCor == 1 ? "altCorreta alternativa" : "alternativa" ?>"><?= $opc1 ?></li>
+                            <li class="<?= $numOpcCor == 2 ? "altCorreta alternativa" : "alternativa" ?>"><?= $opc2 ?></li>
+                            <li class="<?= $numOpcCor == 3 ? "altCorreta alternativa" : "alternativa" ?>"><?= $opc3 ?></li>
+                            <li class="<?= $numOpcCor == 4 ? "altCorreta alternativa" : "alternativa" ?>"><?= $opc4 ?></li>
+                            <li class="<?= $numOpcCor == 5 ? "altCorreta alternativa" : "alternativa" ?>"><?= $opc5 ?></li>
+                        </ul>
                     </div>
-            <?php  }?>
+                    <button class="add" onclick="addQuest(<?= $id_quest ?>, <?= $usuario ?>)" id="<?= $id_quest ?>" value="<?= $id_quest ?>">
+                        Adicionar Item
+                    </button>
+                    <button class="notCad" onclick="remQuest(<?= $id_quest ?>, <?= $usuario ?>)" id="<?= 'rem' . $id_quest ?>">
+                        Item não Cadastrado
+                    </button>
+                </div>
+            <?php  } ?>
         </div>
         <div class="prova">
             <div class="popUp">
@@ -103,7 +103,7 @@
                 <div class="listaQuestoes">
                     <h4>Itens:</h4>
                     <ul>
-                        
+
                     </ul>
                 </div>
             </div>

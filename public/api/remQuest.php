@@ -9,6 +9,6 @@ $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";char
 
 $prova = $gestor->query("SELECT id FROM prova WHERE emitido='false' AND id_prof='$id_prof' LIMIT 1")->fetch()['id'];
 
-$resultado = $gestor->query("DELETE FROM provas WHERE idprova='$prova' AND usuario='$id_prof' AND questoes='$id_ques'");
+$resultado = $gestor->query("DELETE FROM provas WHERE idprova='$prova' AND usuario='$id_prof' AND itens='$id_ques'");
 
 echo json_encode($resultado);

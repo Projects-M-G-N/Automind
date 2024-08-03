@@ -9,7 +9,7 @@ $email = $_SESSION['usuario'];
 $nome = $gestor->query("SELECT nome FROM usuarios WHERE email='$email'")->fetch()['nome'];
 $idProva = $_GET['id'];
 $quantQuest = $gestor->query("SELECT COUNT(id) as quest FROM provas WHERE idprova='$idProva'")->fetch()['quest'];
-$questoes = $gestor->query("SELECT questao.* FROM provas, questao WHERE provas.idprova='$idProva' AND provas.questoes=questao.id");
+$questoes = $gestor->query("SELECT item.* FROM provas, item WHERE provas.idprova='$idProva' AND provas.itens=item.id");
 $dompdf = new Dompdf(['enable_remote' => true]);
 
 $dados = "<!DOCTYPE html>";

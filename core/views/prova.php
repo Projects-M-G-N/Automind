@@ -8,7 +8,7 @@ $gestor = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'automind' . ";char
 $email = $_SESSION['usuario'];
 $usuario = $gestor->query("SELECT id FROM usuarios WHERE email='$email'")->fetch()['id'];
 $nomeUsuario = $gestor->query("SELECT nome FROM usuarios WHERE id='$usuario'")->fetch()['nome'];
-$questoes = $gestor->query("SELECT questao.* FROM provas, questao WHERE provas.idprova='$idProva' AND provas.questoes=questao.id");
+$questoes = $gestor->query("SELECT item.* FROM provas, item WHERE provas.idprova='$idProva' AND provas.itens=item.id");
 $gabarito = $gestor->query("SELECT COUNT(id) as quant FROM provas WHERE idprova='$idProva'")->fetch()['quant'];
 
 ?>

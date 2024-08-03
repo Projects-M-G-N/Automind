@@ -10,7 +10,7 @@ $turma = $_POST['turma'];
 $quantQuest = $_POST['quantQuest'];
 $bimestre = $_POST['bimestre'];
 
-$quest = $gestor->query("SELECT questao.id FROM questao WHERE idprofessor=$prof AND turmaquestao=$turma AND bimestrequestao=$bimestre")->fetchAll(PDO::FETCH_ASSOC);
+$quest = $gestor->query("SELECT item.id FROM item WHERE idprofessor=$prof AND turmaquestao=$turma AND bimestrequestao=$bimestre")->fetchAll(PDO::FETCH_ASSOC);
 
 $alunos = $gestor->query("SELECT alunos.id FROM alunos, turma WHERE alunos.curso = turma.id AND turma.id = $turma")->fetchAll(PDO::FETCH_ASSOC);
 
