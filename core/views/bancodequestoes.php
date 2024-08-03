@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= APP_NAME ?> | Banco de Questões</title>
+    <title><?= APP_NAME ?> | Banco de itens</title>
     <link rel="stylesheet" href="./public/assets/css/bancodequestoes.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
@@ -25,8 +25,8 @@
         </div>
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
-                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
-                <li><a href="./?a=provas" class="gerar-prova" id="provasFeitasBtn">Ver Provas Já Feitas</a></li>
+                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Item</a></li>
+                <li><a href="./?a=provas" class="gerar-prova" id="provasFeitasBtn">Minhas Avaliações</a></li>
             </ul>
             <a href="./?a=logout">Sair</a>
         </nav>
@@ -87,10 +87,10 @@
                             </ul>
                         </div>
                         <button class="add" onclick="addQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= $id_quest?>" value="<?= $id_quest?>">
-                            Adicionar Questão
+                            Adicionar Item
                         </button>
                         <button class="notCad" onclick="remQuest(<?= $id_quest?>, <?= $usuario?>)" id="<?= 'rem' . $id_quest?>">
-                            Questão não Cadastrada
+                            Item não Cadastrado
                         </button>
                     </div>
             <?php  }?>
@@ -101,7 +101,7 @@
                     <canvas id="graficoDif"></canvas>
                 </div>
                 <div class="listaQuestoes">
-                    <h4>Questões:</h4>
+                    <h4>Itens:</h4>
                     <ul>
                         
                     </ul>

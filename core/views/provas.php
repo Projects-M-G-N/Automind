@@ -12,7 +12,7 @@ $cont = $gestor->query("SELECT COUNT(id) as num FROM prova")->fetch()['num'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= APP_NAME ?> | Provas</title>
+    <title><?= APP_NAME ?> | Avaliações</title>
     <link rel="stylesheet" href="./public/assets/css/provas.css">
     <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
 </head>
@@ -27,8 +27,8 @@ $cont = $gestor->query("SELECT COUNT(id) as num FROM prova")->fetch()['num'];
 
             <ul>
                 <li><a href="./" class="gerar-prova" id="provasFeitasBtn">Início</a></li>
-                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
-                <li><a href="./?a=bancodequestoes" class="gerar-prova" id="bancoQuestoesBtn">Banco de Questões</a></li>
+                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Item</a></li>
+                <li><a href="./?a=bancodequestoes" class="gerar-prova" id="bancoQuestoesBtn">Banco de Itens</a></li>
             </ul>
             <a href="./?a=logout">Sair</a>
         </nav>

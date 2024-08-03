@@ -92,7 +92,7 @@ header .botoes button {
 
 header .botoes button:hover {
     color: fff;
-    background-color: var(--caixa);
+    background-color: #1c3d70;
     border: 1px solid var(--secondary-color);
 }
 

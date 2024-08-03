@@ -17,9 +17,9 @@
                 <img src="./public/assets/img/logo1.jpg" altg="logozinha">
             </div>
             <ul>
-                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Questão</a></li>
-                <li><a href="./?a=provas" class="gerar-prova" id="provasFeitasBtn">Ver Provas Já Feitas</a></li>
-                <li><a href="./?a=bancodequestoes" class="gerar-prova" id="bancoQuestoesBtn">Banco de Questões</a></li>
+                <li><a href="./?a=cadQuest" class="gerar-prova" id="cadQuestaoBtn">Cadastrar Item</a></li>
+                <li><a href="./?a=provas" class="gerar-prova" id="provasFeitasBtn">Minhas Avaliações</a></li>
+                <li><a href="./?a=bancodequestoes" class="gerar-prova" id="bancoQuestoesBtn">Banco de Itens</a></li>
             </ul>
             <a href="./?a=logout">Sair</a>
         </nav>
@@ -52,9 +52,9 @@
             <span class="close-btn" id="close-btn">&times;</span>
             <h2>O que você deseja fazer?</h2>
             <p>Escolha uma das opções abaixo para começar:</p>
-            <a href="./?a=cadQuest" class="modal-btn" id="cadQuestaoBtn">Cadastrar Questão</a>
-            <a href="./?a=provas" class="modal-btn" id="provasFeitasBtnModal">Ver Provas Já Feitas</a>
-            <a href="./?a=bancodequestoes" class="modal-btn" id="bancoQuestoesBtn">Banco de Questões</a>
+            <a href="./?a=cadQuest" class="modal-btn" id="cadQuestaoBtn">Cadastro do Item</a>
+            <a href="./?a=provas" class="modal-btn" id="provasFeitasBtnModal">Minhas Avaliações</a>
+            <a href="./?a=bancodequestoes" class="modal-btn" id="bancoQuestoesBtn">Banco de Itens</a>
         </div>
     </div>
 

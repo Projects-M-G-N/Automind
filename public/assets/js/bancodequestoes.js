@@ -4,14 +4,14 @@ async function addQuest(id, idProf) {
     var btnCad = document.getElementById(id);
     var btnRem = document.getElementById("rem" + id);
     const dados = await fetch('./public/api/cadQuestao.php?idQuest=' + id + '&idProf=' + idProf);
-    btnCad.innerHTML = "<i class='bi bi-check2'></i> Questão cadastrada";
+    btnCad.innerHTML = "<i class='bi bi-check2'></i> Item cadastrado";
     btnCad.classList.add('cad');
     btnCad.classList.remove('add');
     btnCad.disabled = true;
     btnRem.classList.remove('notCad');
     btnRem.classList.add('rem');
     btnRem.disabled = false;
-    btnRem.innerHTML = "<i class='bi bi-trash'></i> Remover Questão";
+    btnRem.innerHTML = "<i class='bi bi-trash'></i> Remover Item";
     check(idProf);
 }
 
@@ -19,14 +19,14 @@ async function remQuest(id, prof) {
     var btnRem = document.getElementById("rem" + id);
     var btnCad = document.getElementById(id);
     const dados = await fetch('./public/api/remQuest.php?idQuest=' + id + '&idProf=' + prof);
-    btnRem.innerHTML = "Questão não cadastrada";
+    btnRem.innerHTML = "Item não cadastrado";
     btnRem.classList.add('notCad');
     btnRem.classList.remove('rem');
     btnRem.disabled = true;
     btnCad.classList.remove('cad');
     btnCad.classList.add('add');
     btnCad.disabled = false;
-    btnCad.innerHTML = "Adicionar Questão";
+    btnCad.innerHTML = "Adicionar Item";
     check(prof);
 }
 
@@ -44,14 +44,14 @@ async function check(id) {
         const element = questoes[index];
         const remove = listRem[index];
         if (lista.indexOf(parseInt(element.value)) > -1) {
-            element.innerHTML = "<i class='bi bi-check2'></i> Questão cadastrada";
+            element.innerHTML = "<i class='bi bi-check2'></i> Item cadastrado";
             element.classList.add('cad');
             element.classList.remove('add');
             element.disabled = true;
             remove.classList.add('rem');
             remove.classList.remove('notCad');
             remove.disabled = false;
-            remove.innerHTML = "<i class='bi bi-trash'></i> Remover Questão"
+            remove.innerHTML = "<i class='bi bi-trash'></i> Remover Item"
         }
     }
     grafico(lista);
@@ -104,7 +104,7 @@ function listarQuestoes(ids) {
     lista.innerHTML = ''
     for (let index = 0; index < ids.length; index++) {
         const element = ids[index];
-        lista.innerHTML += "<a href='#quest" + element + "'><li>Questão " + (index + 1) +"</li></a>";
+        lista.innerHTML += "<a href='#quest" + element + "'><li>Item " + (index + 1) +"</li></a>";
     }
 }
 

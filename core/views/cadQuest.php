@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= APP_NAME ?> | Cadastro Questão</title>
+  <title><?= APP_NAME ?> | Cadastro do Item</title>
   <link rel="stylesheet" href="./public/assets/css/cadQuest.css">
   <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="./public/trumbowyg/dist/ui/trumbowyg.css">
@@ -22,36 +22,36 @@
 
     <div class="quest">
   <div class="quests">
-    <h3>Cadastro de Questão</h3>
+    <h3>Cadastro do Item</h3>
 
-    <label for="cadQuest">Enunciado da Questão:</label>
+    <label for="cadQuest">Enunciado:</label>
     <textarea name="cadQuest" id="cadQuest" required></textarea>
 
-    <label for="opc1">Opção 1:</label>
+    <label for="opc1">Alternativa 1:</label>
     <div class="input-group">
       <input type="radio" name="opcCorreta" id="opcCorreta1" value="1" checked>
       <textarea name="opc1" id="opc1" class="opcs" required></textarea>
     </div>
 
-    <label for="opc2">Opção 2:</label>
+    <label for="opc2">Alternativa 2:</label>
     <div class="input-group">
       <input type="radio" name="opcCorreta" id="opcCorret2" value="2">
       <textarea name="opc2" id="opc2" class="opcs" required></textarea>
     </div>
 
-    <label for="opc3">Opção 3:</label>
+    <label for="opc3">Alternativa 3:</label>
     <div class="input-group">
       <input type="radio" name="opcCorreta" id="opcCorreta3" value="3">
       <textarea name="opc3" id="opc3" class="opcs" required></textarea>
     </div>
 
-    <label for="opc4">Opção 4:</label>
+    <label for="opc4">Alternativa 4:</label>
     <div class="input-group">
       <input type="radio" name="opcCorreta" id="opcCorreta4" value="4">
       <textarea name="opc4" id="opc4" class="opcs" required></textarea>
     </div>
 
-    <label for="opc5">Opção 5:</label>
+    <label for="opc5">Alternativa 5:</label>
     <div class="input-group">
       <input type="radio" name="opcCorreta" id="opcCorreta5" value="5">
       <textarea name="opc5" id="opc5" class="opcs" required></textarea>
@@ -62,7 +62,7 @@
 
       <div class="form-right">
         <div class="form-section">
-          <h3>Matéria</h3>
+          <h3>Diciplinas</h3>
 
           <select name="assunto" id="assunto">
             <?php
@@ -106,11 +106,10 @@
           </div>
         </div>
 
-        <!-- Botão "Cadastrar Questão" -->
         <div class="form-section" style="text-align: center;">
-          <input type="submit" value="Cadastrar Questão" name="cadastrarQuest">
+          <input type="submit" value="Cadastrar Item" name="cadastrarQuest">
         </div>
-        <a href="./?a=bancodequestoes" class="gerar-prova">Ver banco de Questões</a> <br>
+        <a href="./?a=bancodequestoes" class="gerar-prova">banco de Itens</a> <br>
         <a href="./?a=inicio" class="gerar-prova"> voltar ao inicio</a>
       </div>
 
