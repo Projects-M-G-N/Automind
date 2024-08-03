@@ -144,6 +144,11 @@ header {
     color: var(--text-color);
 }
 
+img {
+    max-width: 500px;
+    max-height: 5p0px;
+}
+
 .main-prova {
     margin-top: 20px;
 }

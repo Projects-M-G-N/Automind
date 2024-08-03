@@ -91,8 +91,8 @@ header .botoes button {
 }
 
 header .botoes button:hover {
-    color: var(--secondary-color);
-    background-color: #fff;
+    color: fff;
+    background-color: var(--caixa);
     border: 1px solid var(--secondary-color);
 }
 
@@ -159,9 +159,9 @@ main {
 }
 
 #about .entrar button:hover {
-    color: var(--secondary-color);
-    background-color: #fff;
-    outline: 2x solid var(--secondary-color);
+    color: fff;
+    background-color: var(--caixa);
+    border: 1px solid var(--secondary-color);
 }
 
 #about .imagens-slide {
@@ -219,8 +219,9 @@ main {
 }
 
 #servicos .servico:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 36px var(--shadow-color);
+    color: fff;
+    background-color: var(--caixa);
+    border: 1px solid var(--secondary-color);
 }
 
 #servicos h2 {
@@ -292,8 +293,8 @@ main {
 }
 
 #cadastro .propa button:hover {
-    color: var(--secondary-color);
-    background-color: #fff;
+    color: fff;
+    background-color: var(--caixa);
     border: 1px solid var(--secondary-color);
 }
 
