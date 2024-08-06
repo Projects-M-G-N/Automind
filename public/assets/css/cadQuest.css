@@ -50,7 +50,7 @@ body {
 }
 
 .form-section {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 h3 {
@@ -68,7 +68,7 @@ h4 {
 
 label {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
     font-weight: bold;
     color: var(--text-color);
     font-size: 1rem;
@@ -80,7 +80,7 @@ select {
     width: 100%;
     padding: 14px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     font-size: 1rem;

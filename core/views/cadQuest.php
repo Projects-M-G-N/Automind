@@ -14,6 +14,7 @@
   <script type="text/javascript" src="./public/Trumbowyg/dist/langs/pt_br.js"></script>
   <script src="./public/trumbowyg/dist/plugins/upload/trumbowyg.upload.js"></script>
   <script src="./public/trumbowyg/dist/plugins/mathml/trumbowyg.mathml.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -62,7 +63,7 @@
 
       <div class="form-right">
         <div class="form-section">
-          <h3>Diciplinas</h3>
+          <h3>Diciplina</h3>
 
           <select name="assunto" id="assunto">
             <?php
@@ -85,6 +86,11 @@
         <div class="form-section">
           <h3>Dificuldade</h3>
 
+          <div class="info">
+          <button id="openModalBtn"><i class="fas fa-info-circle"></i></button>
+            <span>Como classificar a dificuldade de uma questão</span>
+          </div>
+          
           <select name="dif" id="dif">
             <option value="fácil">Fácil</option>
             <option value="médio">Médio</option>
