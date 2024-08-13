@@ -87,10 +87,10 @@
           <h3>Dificuldade</h3>
 
           <div class="info">
-          <button id="openModalBtn"><i class="fas fa-info-circle"></i></button>
+            <button id="openModalBtn" onclick="window.location.href='./?a=Bloom';"><i class="fas fa-info-circle"></i></button>
             <span>Como classificar a dificuldade de uma questão</span>
           </div>
-          
+
           <select name="dif" id="dif">
             <option value="fácil">Fácil</option>
             <option value="médio">Médio</option>

@@ -79,6 +79,15 @@
 
         }
 
+        public function Bloom()
+        {
+
+            Functions::Layout([
+                'Bloom'
+            ]);
+
+        }
+
     }
 
 ?>

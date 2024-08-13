@@ -10,6 +10,7 @@
         'gerarProvas' => 'main@gerarProvas',
         'logout' => 'main@logout',
         'pdf' => 'main@pdf',
+        'Bloom' => 'main@Bloom'
     ];
 
     // Ação por defeito

@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #03045e;
+    color: #1f2937;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+header {
+    background: #03045e;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.difficulty-level {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 40px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.difficulty-level:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: #03045e;
+    color: #ffffff;
+}
+
+h2 {
+    color: #0077b6;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #0077b6;
+}
+
