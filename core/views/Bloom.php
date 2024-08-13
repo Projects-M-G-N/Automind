@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="difficulty-level">
-            <h2>Questões Fáceis</h2>
+            <h2>Fácil</h2>
             <p>
                 São aquelas que dependem principalmente de conceitos memorizados,
                 como definições ou fórmulas básicas. Elas exigem a capacidade de repetir informações
@@ -29,7 +29,7 @@
         </div>
 
         <div class="difficulty-level">
-            <h2>Questões Intermediárias</h2>
+            <h2>Intermediário</h2>
             <p>
                 Requerem a habilidade de interpretar e aplicar conceitos em novas situações. Elas exigem
                 que o estudante use a compreensão adquirida para resolver problemas e realizar tarefas em
@@ -41,7 +41,7 @@
         </div>
 
         <div class="difficulty-level">
-            <h2>Questões Difíceis</h2>
+            <h2>Difícil</h2>
             <p>
                 Exigem a capacidade de distinguir e analisar informações complexas, dividindo elas em partes
                 menores para entender como elas se encaixam no todo. Isso envolve diferenciar entre vários
