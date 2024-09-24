@@ -42,12 +42,6 @@ header h1 {
     transition: transform 0.3s ease-in-out;
 }
 
-.difficulty-level:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    background: #03045e;
-    color: #ffffff;
-}
 
 h2 {
     color: #0077b6;
