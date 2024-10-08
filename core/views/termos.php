@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termos e Condições de Uso</title>
+    <link rel="shortcut icon" href="./public/assets/img/logo.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #7ca2ca, #2563eb); /* Gradiente de fundo */
+            background: linear-gradient(135deg, #7ca2ca, #2563eb);
             margin: 0;
             padding: 0;
         }
@@ -123,25 +124,9 @@
         <ul>
             <li>Por email: <a href="mailto:AutomindGNK@gmail.com">AutomindGNK@gmail.com</a></li>
         </ul>
-
-        <button id="download-pdf">Baixar PDF</button>
     </div>
     <div class="footer">
         &copy; 2024 AutoMind. Todos os direitos reservados.
     </div>
-
-    <script>
-        document.getElementById('download-pdf').addEventListener('click', () => {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-        
-            doc.text('Termos e Condições de Uso', 10, 10);
-            doc.text('Última atualização: 22/06/2024', 10, 20);
-            doc.text('Bem-vindo ao AutoMind! AutoMind é uma plataforma de criação de provas customizáveis utilizando a Teoria de Resposta ao Item TRI.', 10, 30);
-           
-            doc.save('termos-e-condicoes.pdf');
-        });
-    </script>
 </body>
 </html>
