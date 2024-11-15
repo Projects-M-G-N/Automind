@@ -103,7 +103,7 @@ INSERT INTO usuarios VALUES (NULL, 'teste', 'teste@gmail.com', '1234567890', 1),
 
 INSERT INTO administrador VALUES (2);
 
-INSERT INTO item (id, idprofessor, materia, texto_questao, opccorreta, opcalternativa1, opcalternativa2, opcalternativa3, opcalternativa4, numopccor, visu, dificuldade, data_cad) VALUES
+/*INSERT INTO item (id, idprofessor, materia, texto_questao, opccorreta, opcalternativa1, opcalternativa2, opcalternativa3, opcalternativa4, numopccor, visu, dificuldade, data_cad) VALUES
 (NULL, 3, 6, 'Em um experimento, um bloco é lançado horizontalmente sobre uma superfície plana e rugosa com uma velocidade inicial de 10 m/s. Sabendo que o bloco para completamente após percorrer 50 m, qual o coeficiente de atrito cinético entre o bloco e a superfície?', '0,1', '0,2', '0,1', '0,3', '0,4', 2, 'publico', 'médio', NOW()),
 (NULL, 3, 6, 'Uma mola ideal é comprimida por uma força de 20 N, resultando em uma deformação de 0,4 m. Qual é a constante elástica da mola?', '50 N/m', '50 N/m', '40 N/m', '60 N/m', '30 N/m', 1, 'publico', 'fácil', NOW()),
 (NULL, 3, 6, 'Um carro se move em linha reta com uma aceleração constante de 2 m/s². Se sua velocidade inicial é de 5 m/s, qual será sua velocidade após 3 segundos?', '11 m/s', '9 m/s', '11 m/s', '10 m/s', '12 m/s', 3, 'publico', 'fácil', NOW()),
@@ -113,4 +113,4 @@ INSERT INTO item (id, idprofessor, materia, texto_questao, opccorreta, opcaltern
 (NULL, 3, 6, 'Qual é a potência dissipada por uma lâmpada de resistência 100 Ω quando submetida a uma tensão de 220 V?', '484 W', '440 W', '484 W', '500 W', '450 W', 2, 'publico', 'médio', NOW()),
 (NULL, 3, 6, 'Um gás ideal ocupa um volume de 2 L a uma pressão de 3 atm e temperatura de 300 K. Se o volume for reduzido para 1 L e a pressão aumentar para 6 atm, qual será a nova temperatura do gás?', '300 K', '300 K', '450 K', '150 K', '200 K', 1, 'publico', 'médio', NOW()),
 (NULL, 3, 6, 'Um corpo de massa 2 kg está a 5 m de altura em relação ao solo. Qual é a energia potencial gravitacional desse corpo?', '100 J', '50 J', '100 J', '150 J', '200 J', 2, 'publico', 'fácil', NOW()),
-(NULL, 3, 6, 'Um transformador ideal tem 200 espiras no primário e 50 espiras no secundário. Se a tensão no primário é de 120 V, qual será a tensão no secundário?', '30 V', '20 V', '30 V', '40 V', '50 V', 3, 'publico', 'dificil', NOW());
+(NULL, 3, 6, 'Um transformador ideal tem 200 espiras no primário e 50 espiras no secundário. Se a tensão no primário é de 120 V, qual será a tensão no secundário?', '30 V', '20 V', '30 V', '40 V', '50 V', 3, 'publico', 'dificil', NOW());*/
